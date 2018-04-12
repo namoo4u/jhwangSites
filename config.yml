@@ -55,7 +55,7 @@ params:
     #name : "cerulean"
     # list of possible theme names that can be used
     # name = "cerulean"
-    # name = "cosmo"
+    name : "cosmo"
     # name = "cyborg"
     # name = "default"
     #name : "flatly"
@@ -69,7 +69,7 @@ params:
     # name = "spacelabs"
     #name : "superhero"
     # name = "united"
-    name : "yeti"
+    # name : "yeti"
 
 author:
   name: "Jupil Hwang"
