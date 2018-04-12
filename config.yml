@@ -16,14 +16,17 @@ googleAnalytics : ""
 #theme : "hugo-material-docs"
 #theme : "hugo-universal-theme"
 theme : "hugo-multi-bootswatch"
-
+ 
 indexes:
   category : "categories"
   tag : "tags"
 
+permalinks:
+  post : "/blog/:year/:month/:day/:title"
+
 params:
   languagecode : "en-US"
-  Author : "Jupil Hwang (@jhwang)"
+  Author : "Jupil Hwang (@jupil_hwang)"
   googlefonts : "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700"
   fontfamily : "San Francisco Display,Malgun Gothic,'맑은 고딕',Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif"
   logofontfamily : "San Francisco Display,Malgun Gothic,'맑은 고딕',Lobster, cursive"
@@ -45,9 +48,10 @@ params:
     blog_navbar_link : "Blog"
     posts_list_header : "Posts"
     date_format : "2006.01.02"
+    use_summaries : false
 
   theme :
-    inverse : true
+    inverse : false
     #name : "cerulean"
     # list of possible theme names that can be used
     # name = "cerulean"
@@ -57,15 +61,15 @@ params:
     #name : "flatly"
     # name = "journal"
     # name = "lumen"
-    # name = "paper"
+    # name : "paper"
     # name = "readable"
     # name = "sandstone"
     # name = "simplex"
-    name : "slate"
+    #name : "slate"
     # name = "spacelabs"
     #name : "superhero"
     # name = "united"
-    # name = "yeti"
+    name : "yeti"
 
 author:
   name: "Jupil Hwang"
