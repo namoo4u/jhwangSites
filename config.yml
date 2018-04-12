@@ -8,7 +8,7 @@ pluralizelisttitles : false
 comments: true
 disqusShortname : "namoo4u-github-io"
 copyright : "JHwang All rights reserved"
-googleAnalytics : ""
+googleAnalytics : "UA-117423189-1"
 
 #theme : "hyde-x"
 #theme : "casper"
