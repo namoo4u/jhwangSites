@@ -19,6 +19,11 @@ Packer는 hashcorp에서 만든 오픈소스로 Machine Image생성 툴이다. A
 물론 기본 이미지를 Provisioning하고 Ansible이나 기타 Tool을 통해서 Configuration이 가능하지만, Packer를 사용하면 미리 이미지를 만들어서 배포 후 바로 실행 할 수 있다.
 
 #### 사전에 알아야 할 사항
+OCI
+  - compartment ID
+  - tenancy ID
+  - fingerprint
+
 
 #### 간단 예제 : Redis Server
 ```json
