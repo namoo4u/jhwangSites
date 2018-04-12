@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/namoo4u/namoo4u.github.io.git
+	branch = master
