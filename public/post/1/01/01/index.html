@@ -68,115 +68,35 @@
 			<br>
 			
 
-<p>DocCS</p>
+<h3 id="storage-cs-만들기">Storage CS 만들기``</h3>
 
-<h4 id="oauth-token">OAUTH_TOKEN</h4>
+<p>####. Authentication token 가져오기</p>
 
-<h5 id="curl">Curl</h5>
-
-<ul>
-<li>Accept : application/xml or application/json</li>
-<li>Authorization:
-
-<ul>
-<li>Authorization: Basic abclajdlfa=</li>
-<li>Authorization: Bearer eyJlad..adljfalsd</li>
-</ul></li>
-<li>Content-Length</li>
-<li>Content-Type
-
-<ul>
-<li>application/json</li>
-</ul></li>
-<li>Accept-Language: fr</li>
-</ul>
-
-<h5 id="using-oauth">Using OAuth</h5>
-
-<ul>
-<li>base url : <a href="https://documents-krdemo.documents.us2.oraclecloud.com/documents/web?IdcService=GET_OAUTH_TOKEN">https://documents-krdemo.documents.us2.oraclecloud.com/documents/web?IdcService=GET_OAUTH_TOKEN</a></li>
-<li>Reponse
-```
-{</li>
-</ul>
-
-<p>&ldquo;LocalData&rdquo;: {
-&ldquo;IdcService&rdquo;: &ldquo;GET_OAUTH_TOKEN&rdquo;,
-&ldquo;StatusCode&rdquo;: &ldquo;0&rdquo;,
-&ldquo;StatusMessage&rdquo;: &ldquo;You are logged in as &lsquo;U9133ACF5AE2AF282FD7F23A723FD68419FE&rsquo;.&rdquo;,
-&ldquo;StatusMessageKey&rdquo;: &ldquo;!csUserLoggedIn,U9133ACF5AE2AF282FD7F23A723FD68419FE&rdquo;,
-&ldquo;dUser&rdquo;: &ldquo;U9133ACF5AE2AF282FD7F23A723FD68419FE&rdquo;,
-&ldquo;dUserFullName&rdquo;: &ldquo;Jupil Hwang&rdquo;,
-&ldquo;expiration&rdquo;: &ldquo;604799&rdquo;,
-&ldquo;idcToken&rdquo;: &ldquo;1481347104797:C7968F3B2E31D84A029F65AF0FD970A9&rdquo;,
-&ldquo;localizedForResponse&rdquo;: &ldquo;1&rdquo;,
-&ldquo;tokenValue&rdquo;: &ldquo;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIng1dCI6IkxLRERYN2VyRUxYcm5fc0Zwc0RFZkt6ejg3YyIsImtpZCI6ImtyZGVtby5jZXJ0In0.eyJzdWIiOiJqdXBpbC5od2FuZ0BvcmFjbGUuY29tIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZCI6Imp1cGlsLmh3YW5nQG9yYWNsZS5jb20iLCJpc3MiOiJrcmRlbW8iLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6ImtyZGVtb1NlcnZpY2VQcm9maWxlIiwiaWF0IjoxNDgxMTc0MzA1LCJvcmFjbGUub2F1dGgucHJuLmlkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwiZXhwIjoxNDgxNzc5MTA0LCJhdWQiOlsiaHR0cHM6Ly9kb2N1bWVudHMta3JkZW1vLmRvY3VtZW50cy51czIub3JhY2xlY2xvdWQuY29tOjQ0My9kb2N1bWVudHMiXSwib3JhY2xlLm9hdXRoLnN1Yi5pZF90eXBlIjoiTERBUF9VSUQiLCJwcm4iOiJqdXBpbC5od2FuZ0BvcmFjbGUuY29tIiwianRpIjoiZDA0ZjQ2ODYtNjVhMy00YWIyLTk2NjItMmEzODA2M2I0ZTYzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJkZDdmMmYyNy0zN2QyLTRhMTktYjY3NS02ZWU0NWZhODk0NDUiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJodHRwczovL2RvY3VtZW50cy1rcmRlbW8uZG9jdW1lbnRzLnVzMi5vcmFjbGVjbG91ZC5jb206NDQzL2RvY3VtZW50cyIsInVzZXIudGVuYW50Lm5hbWUiOiJrcmRlbW8iLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6IjQ2NjkzMTY5NDk2MjI0MjA3In0.QUsPt6rXmGnVUyDxeMSKYhKxMFTSnuEqM5zybYlR9TZ1atkCDKdMNuC8euZp2SX45L43gVQbjUmyb-PdJ-jFYnv_c73QBZVcU7h8Kae2UrL39BGRF6dOmhp9b1fi6Ldi7L6GaK393MHgspel0v3vOlpDykISeis-arJEvYJsc10Bj5JO_ZFCP9AWVz4FwtpXFMtuiCiA2DtjAdQDo97qh0NYq2HFQCF4muTjV5KPrqi9_wRTNy4pdywezHLmk5PEqlsTGo2w7opo02t1WnlM6d1weGSr2hDKWv3WMn1WNN6moWNHmBKQk2tYNOe9690qWHo3WNYcDa1nBHDnO3OP3A&rdquo;
-},</p>
-
-<p>&ldquo;ResultSets&rdquo;: {</p>
-
-<p>}
-}</p>
-
-<pre><code></code></pre>
-
-<p>curl -iv -H &lsquo;Authorization:Bearer token&rsquo; -X GET {Docs External URL}/api/1.1/folder/items</p>
-
-<pre><code>
-##### Using Baic Authorization
-- Base64 encode
+<pre><code>curl -v -X GET -H 'X-Storage-User: Storage-&lt;Identity Domain&gt;:&lt;User Name&gt;' -H 'X-Storage-Pass:&lt;Password&gt;' https://storage.us2.oraclecloud.com/auth/v1.0
 </code></pre>
 
-<p>jupil.hwang@oracle.com:W3lc0m31#</p>
-
-<p>&ndash; encode &ndash;&gt;
-  Authorization:Basic anVwaWwuaHdhbmdAb3JhY2xlLmNvbTpXM2xjMG0zMSM=</p>
-
-<pre><code>```bash
-curl -iv -H 'Authorization:Basic anVwaWwuaHdhbmdAb3JhY2xlLmNvbTpXM2xjMG0zMSM=' -X GET https://documents-krdemo.documents.us2.oraclecloud.com/documents/api/1.1/folders/items
+<pre><code>curl -v -X GET -H 'X-Storage-User: Storage-jcsdemo0060:cloud.admin' -H 'X-Storage-Pass: dIrty@7TiMBer' https://storage.us2.oraclecloud.com/auth/v1.0
 </code></pre>
 
-<p>Response</p>
+<p>&lt; X-Auth-Token: AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d
+&lt; X-Storage-Url: <a href="https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060">https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060</a></p>
 
-<pre><code class="language-json">{
-&quot;count&quot;: &quot;1&quot;,
-&quot;errorCode&quot;: &quot;0&quot;,
-&quot;hasMore&quot;: &quot;0&quot;,
-&quot;limit&quot;: &quot;100&quot;,
-&quot;offset&quot;: &quot;0&quot;,
-&quot;ownerFolderID&quot;: &quot;self&quot;,
-&quot;totalResults&quot;: &quot;1&quot;,
-&quot;items&quot;: [
-{
-&quot;type&quot;: &quot;folder&quot;,
-&quot;id&quot;: &quot;FC0370A6544CA32F53428D9D723FD68419FE3B212942&quot;,
-&quot;parentID&quot;: &quot;self&quot;,
-&quot;name&quot;: &quot;AutomaticWorkflow&quot;,
-&quot;ownedBy&quot;: {
-&quot;displayName&quot;: &quot;Jupil Hwang&quot;,
-&quot;id&quot;: &quot;U9133ACF5AE2AF282FD7F23A723FD68419FE&quot;,
-&quot;type&quot;: &quot;user&quot;
-}
-,
-&quot;createdBy&quot;: {
-&quot;displayName&quot;: &quot;Jupil Hwang&quot;,
-&quot;id&quot;: &quot;U9133ACF5AE2AF282FD7F23A723FD68419FE&quot;,
-&quot;type&quot;: &quot;user&quot;
-}
-,
-&quot;modifiedBy&quot;: {
-&quot;displayName&quot;: &quot;Jupil Hwang&quot;,
-&quot;id&quot;: &quot;U9133ACF5AE2AF282FD7F23A723FD68419FE&quot;,
-&quot;type&quot;: &quot;user&quot;
-}
-,
-&quot;createdTime&quot;: &quot;2016-12-08T05:10:38Z&quot;,
-&quot;modifiedTime&quot;: &quot;2016-12-08T05:10:38Z&quot;,
-&quot;size&quot;: &quot;0&quot;,
-&quot;childItemsCount&quot;: &quot;0&quot;
-}
-]
-}
+<h4 id="create-a-container">Create a Container</h4>
+
+<pre><code>curl -v -H 'X-Auth-Token:AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d' -X PUT https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060/HCMDEMO
+</code></pre>
+
+<p>&lt; HTTP/1.1 201 Created</p>
+
+<h4 id="storage-cs-상태확인">Storage CS 상태확인</h4>
+
+<pre><code>curl -v -H 'X-Auth-Token:AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d' -X GET https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060/HCMDEMO
+</code></pre>
+
+<h3 id="dbaas-cs-만들기">DBaaS CS 만들기</h3>
+
+<pre><code>curl -V -H 'identityDomainId:jcsdemo0060' -H 'Authorization: ' -H 'X-ID-TENANT_NAME:jcsdemo0060' -X POST /paas/service/dbcs/api/v1.1/instances/{identityDomainId} \
+-D '
 </code></pre>
 
 		</div>
