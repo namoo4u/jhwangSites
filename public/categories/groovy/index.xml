@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Groovy on Just Do It!! YOLO</title>
+    <link>https://namoo4u.github.io/categories/groovy/</link>
+    <description>Recent content in Groovy on Just Do It!! YOLO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US.UTF8</language>
+    <managingEditor>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</managingEditor>
+    <webMaster>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</webMaster>
+    <copyright>JHwang All rights reserved</copyright>
+    <lastBuildDate>Fri, 11 Nov 2016 17:29:55 +0900</lastBuildDate>
+    
+	<atom:link href="https://namoo4u.github.io/categories/groovy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lambda expressions and Stream API with Groovy or JAVA8</title>
+      <link>https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</link>
+      <pubDate>Fri, 11 Nov 2016 17:29:55 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</guid>
+      <description>Lambda expressions and Stream API with Groovy and JAVA 8 Iteration  groovy  def numbers = [1, 2, 3, 4, 5, 6] numbers.each { e -&amp;gt; println e } numbers.each { println it }   java  List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6); numbers.forEach(e -&amp;gt; System.out.println(e)); numbers.forEach(System.out::println);  collect  groovy  def numbers = [1, 2, 3, 4, 5, 6] numbers.collect { it * 2 }.</description>
+    </item>
+    
+  </channel>
+</rss>

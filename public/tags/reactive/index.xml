@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reactive on Just Do It!! YOLO</title>
+    <link>https://namoo4u.github.io/tags/reactive/</link>
+    <description>Recent content in Reactive on Just Do It!! YOLO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US.UTF8</language>
+    <managingEditor>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</managingEditor>
+    <webMaster>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</webMaster>
+    <copyright>JHwang All rights reserved</copyright>
+    <lastBuildDate>Wed, 09 Nov 2016 13:07:41 +0900</lastBuildDate>
+    
+	<atom:link href="https://namoo4u.github.io/tags/reactive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reactive Programming with Groovy</title>
+      <link>https://namoo4u.github.io/post/2016/11/09/reactive-programming-with-groovy/</link>
+      <pubDate>Wed, 09 Nov 2016 13:07:41 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/09/reactive-programming-with-groovy/</guid>
+      <description>Reactive Streams, Reactive Extensions (Rx)  The Problem :  Performacen : our pages should render within 1000 milliseconds The Rise of microservices : free up resources with Async Operations &amp;amp; Non-Blocking I/O   What is reactive stream (Rx) ? collections + time Single abstration over data from many sources Observer Pattern  Push (not pull) based Iterators  Stream Based Funcational Programming  Imperative vs Reactive Stream  // Iterative List numbers = 1.</description>
+    </item>
+    
+  </channel>
+</rss>

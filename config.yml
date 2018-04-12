@@ -1,0 +1,80 @@
+baseurl : "https://namoo4u.github.io/"
+builddrafts : true
+canonifyurls : true
+languageCode : "en-US.UTF8"
+title : "Just Do It!! YOLO"
+pygmentsuseclasses : true
+pluralizelisttitles : false
+comments: true
+disqusShortname : "namoo4u-github-io"
+copyright : "JHwang All rights reserved"
+googleAnalytics : ""
+
+#theme : "hyde-x"
+#theme : "casper"
+#theme : "hugo_theme_robust"
+#theme : "hugo-material-docs"
+#theme : "hugo-universal-theme"
+theme : "hugo-multi-bootswatch"
+
+indexes:
+  category : "categories"
+  tag : "tags"
+
+params:
+  languagecode : "en-US"
+  Author : "Jupil Hwang (@jhwang)"
+  googlefonts : "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700"
+  fontfamily : "San Francisco Display,Malgun Gothic,'맑은 고딕',Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif"
+  logofontfamily : "San Francisco Display,Malgun Gothic,'맑은 고딕',Lobster, cursive"
+  facebook : "https://www.facebook.com/jupilhwang"
+  twitter : "https://twitter.com/namoo4u"
+  github : "https://github.com/namoo4u"
+  linkedin : "https://www.linkedin.com/in/namoo4u"
+  email : "jupil.hwang@gmail.com"
+  copyright : "JHwang All rights reserved"
+  pygmentsCodeFences : "true"
+  pygmentsUseClasses : "true"
+
+  hightlight:
+    style : "github"
+    languages : ["go","sh", "yaml", "json", "dockerfile"]
+
+  strings:
+    home_navbar_link : "Home"
+    blog_navbar_link : "Blog"
+    posts_list_header : "Posts"
+    date_format : "2006.01.02"
+
+  theme :
+    inverse : true
+    #name : "cerulean"
+    # list of possible theme names that can be used
+    # name = "cerulean"
+    # name = "cosmo"
+    # name = "cyborg"
+    # name = "default"
+    #name : "flatly"
+    # name = "journal"
+    # name = "lumen"
+    # name = "paper"
+    # name = "readable"
+    # name = "sandstone"
+    # name = "simplex"
+    name : "slate"
+    # name = "spacelabs"
+    #name : "superhero"
+    # name = "united"
+    # name = "yeti"
+
+author:
+  name: "Jupil Hwang"
+  email : "jupil.hwang <at> gmail <dot> com"
+
+permalinks:
+  blog: "/blog/:year/:month/:day/:slug/"
+  post: "/post/:year/:month/:day/:slug/"
+
+taxonomies:
+  tag: "tags"
+  category: "categories"

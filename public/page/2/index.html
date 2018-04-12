@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta name="generator" content="Hugo 0.38.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Just Do It!! YOLO">
+    <meta name="author" content="Jupil Hwang (@jhwang)">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://namoo4u.github.io/favicon.ico">
+
+    <title>Just Do It!! YOLO</title>
+
+   	
+    
+        <link rel="stylesheet" href="https://namoo4u.github.io//css/theme/slate.css">
+    
+
+    <link rel="stylesheet" href="https://namoo4u.github.io//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://namoo4u.github.io//css/style.css">
+
+
+    
+    <script src="https://namoo4u.github.io//js/jquery.min-2.1.4.js"></script>
+    <script src="https://namoo4u.github.io//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="https://namoo4u.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Just Do It!! YOLO" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://namoo4u.github.io/">Just Do It!! YOLO</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://namoo4u.github.io/">Home</a></li>
+                    <li><a href="https://namoo4u.github.io//post/">Blog</a></li>
+                    
+                      <li><a href="https://namoo4u.github.io/page/about/"> About </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="container">
+        
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/">Actor모델</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.17
+							</span>&nbsp;in
+							 using tags
+							
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/">SQL Server Docker image on Linux</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.17
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/linux">linux</a>
+							
+								 , 
+								<a href="https://namoo4u.github.io/categories/docker">docker</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/sql-server">SQL Server</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/docker">docker</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/linux">linux</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/ms">ms</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h2 id="sql-server-on-linux">SQL Server on Linux</h2>
+
+<p>정말로 놀라운 소식이 아닐수 없다. <strong>&ldquo;Microsoft is back&rdquo;</strong> 이란 말이 헛말이 아니라는 것이 요즘 MS에서 나오는 새로운 소식드에서 느낄 수 있다. Visual Studio on mac 에 이어서 몇달전에 발표한 SQL Server on Linux 가 실체를 드러냈다. 리눅스 서버에 새롭게 설치를 할 수도 있겠지만 놀랍게도 Docker image를 통해서 손쉽게 배포를 할 수 있도록 한 것이 또 다른 점이라 할 수 있다.. 이제는 거의 모든 회사에서 새로운 제품을 출시하고 나서 Docker image를 통해서 테스트/운영을 할 수 있도록 제공하는 것이 기본이 되어 버렸다. 이미 Microsoft에서는 수 많은 docker image 를 docker hub에 올려놨다.</p>
+
+<pre><code class="language-docker">docker search Microsoft
+</code></pre>
+
+<p><img src="https://namoo4u.github.io/images/docker_search_microsoft.png" width="950px"></p>
+
+<h4 id="requirements-for-docker">Requirements for Docker</h4>
+
+<ul>
+<li>Docker Engine 1.8+</li>
+<li>Minimum of 4 GB of disk storage</li>
+<li>Minimum of 4 GB of RAM</li>
+</ul>
+
+<h4 id="pull-and-run-the-docker-image">Pull and run the Docker image</h4>
+
+<pre><code class="language-docker">docker run -d -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=P@55w0rd' -p 1433:1433 -v /home/jhwang/.mssql:/var/opt/mssql --name mssql microsoft/mssql-server-linux
+</code></pre>
+
+<ul>
+<li>-e SA_PASSWORD : SA 패스워드 지정</li>
+<li>-p 1433:1433 : MS SQL Server 포트 지정</li>
+<li>-v <host directory>:/var/opt/mssql : host machine의 디렉토리 볼륨을 마운팅한다.</li>
+</ul>
+
+<p>docker image download</p>
+
+<p><img src="https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_01.png" width="950px"></p>
+
+<p>docker 실행 이후 프로세스</p>
+
+<p><img src='https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_02.png' width=950px></p>
+
+<p>docker logs mssql</p>
+
+<p><img src='https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_04.png' width=950px></p>
+
+<p>docker container 안에 설치된 mssql</p>
+
+<p><img src='https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_03.png' width=950px></p>
+
+<h4 id="connect-ms-sql-server-with-ide">Connect MS SQL Server with IDE</h4>
+
+<p>IDE에서 JDBC Driver를 추가하고 MS SQL Server에 연결하기 위해서, 새로운 연결을 생성하고, 테스트를 하는데 제대로 연결이 되지 않는 문제가 있다.
+<img src='https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_05.png' width=640px></p>
+
+<p><strong>docker run 시 SA_PASSWORD는 ms sql server의 Password 정책에 맞아야 한다, 초기에 welcome1 으로 했다가 연결이 되지 않는 문제가 있었는데, Password를 P@55w0rd 로 변경후 제대로 연결이 됨</strong>
+<img src='https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_06.png' width=640px></p>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/">Digital Experience Workshop at Seoul (Nov 14, 2016)</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.14
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/oracle">oracle</a>
+							
+								 , 
+								<a href="https://namoo4u.github.io/categories/cloud">cloud</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/oracle">oracle</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/cloud">cloud</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/dx">dx</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/digital-experince">digital experince</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h2 id="digital-experience">Digital Experience</h2>
+
+<h3 id="top-3-features">Top 3 features</h3>
+
+<ul>
+<li>Secutiry</li>
+<li>Social</li>
+<li>Mobile</li>
+</ul>
+
+<h3 id="use-cases">Use Cases</h3>
+
+<ul>
+<li>Coordinating with Business Partners</li>
+<li>Sales Collaboration</li>
+<li>Support of Mobile Field Workers</li>
+</ul>
+
+<h3 id="digital-workplace-collaboration">Digital Workplace Collaboration</h3>
+
+<ul>
+<li>Connections
+
+<ul>
+<li>Real-time conversations and social collaboration</li>
+<li>Social Graph based discovery of content and conversations</li>
+<li>Content centric activity stream</li>
+<li>&ldquo;buddy&rdquo;</li>
+</ul></li>
+<li>Context
+
+<ul>
+<li>Integrated within business workflows</li>
+<li>Embedded within applications</li>
+<li>Unified on-premises and cloud content management</li>
+<li>Multiple content centric mobile experience</li>
+</ul></li>
+<li>Control
+
+<ul>
+<li>Choice of user &amp; content</li>
+</ul></li>
+</ul>
+
+<h3 id="context-is-everything">Context is everything</h3>
+
+<ul>
+<li>Business Apps integratation
+
+<ul>
+<li>Sales Cloud, Eloqua, Service Cloud, SRM</li>
+<li>On-Premises : Siebel, EBS</li>
+</ul></li>
+<li>PAAS Integrations
+
+<ul>
+<li>Proces CS, Sites CS</li>
+</ul></li>
+<li>Hybrid ECM</li>
+<li>RICH Platform</li>
+</ul>
+
+<p>Architected to be Platform
+- UI components Embeddable within custom application
+- Framework to extend on Premises, Saas &amp; PAAS applications
+- Rich set of APIS for 3rd party integrations</p>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/">Lambda expressions and Stream API with Groovy or JAVA8</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.11
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/groovy">groovy</a>
+							
+								 , 
+								<a href="https://namoo4u.github.io/categories/programming">programming</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/groovy">groovy</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/lambda-expressions">lambda expressions</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/stream-api">stream api</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h3 id="lambda-expressions-and-stream-api-with-groovy-and-java-8">Lambda expressions and Stream API with Groovy and JAVA 8</h3>
+
+<h4 id="iteration">Iteration</h4>
+
+<ul>
+<li>groovy</li>
+</ul>
+
+<pre><code class="language-groovy">def numbers = [1, 2, 3, 4, 5, 6]
+numbers.each { e -&gt; println e }
+numbers.each { println it }
+</code></pre>
+
+<ul>
+<li>java</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+numbers.forEach(e -&gt; System.out.println(e));
+numbers.forEach(System.out::println);
+</code></pre>
+
+<h4 id="collect">collect</h4>
+
+<ul>
+<li>groovy</li>
+</ul>
+
+<pre><code>def numbers = [1, 2, 3, 4, 5, 6]
+numbers.collect { it * 2 }.each { e -&gt; println e }
+println numbers.collect { it * 2 }
+</code></pre>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+numbers.stream()
+ .map(e -&gt; e * 2)
+ .forEach(System.out::println);
+
+System.out.println(
+  numbers.stream()
+   .map(e -&gt; e * 2)
+   .collect(Collectors.toList()));
+</code></pre>
+
+<h4 id="find">find</h4>
+
+<ul>
+<li>groovy</li>
+</ul>
+
+<pre><code class="language-groovy">def numbers = [1, 2, 3, 4, 5, 6]
+println numbers.find { it % 2 == 0}
+</code></pre>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+System.out.println(
+    numbers.stream()
+           .filter(e -&gt; e % 2 == 0)
+           .findFirst());
+
+System.out.println(
+    numbers.stream()
+           .filter(e -&gt; e % 2 == 0)
+           .findFirst()
+           .get());
+
+System.out.println(
+    numbers.stream()
+           .filter(e -&gt; e % 2 == 0)
+           .findFirst()
+           .orElse(0));
+</code></pre>
+
+<h4 id="findall">findAll</h4>
+
+<ul>
+<li>groovy</li>
+</ul>
+
+<pre><code class="language-groovy">def numbers = [1, 2, 3, 4, 5, 6]
+println numbers.findAll { it % 2 == 0}
+</code></pre>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+System.out.println(
+  numbers.stream()
+             .filter(e -&gt; e % 2 == 0)
+             .collect(Collectors.toList()));
+</code></pre>
+
+<h4 id="inject">inject</h4>
+
+<ul>
+<li>groovy</li>
+</ul>
+
+<pre><code class="language-groovy">def numbers = [1, 2, 3, 4, 5, 6]
+println numbers.collect { it * 2 }.inject(0) { c, e -&gt; c + e }
+</code></pre>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+System.out.println(
+  numbers.stream()
+             .map(e -&gt; e * 2)
+             .reduce(0, (c, e) -&gt; c + e));
+
+System.out.println(
+  numbers.stream()
+             .map(e -&gt; e * 2)
+             .reduce(0, Math::addExact));
+</code></pre>
+
+<h4 id="join">join</h4>
+
+<ul>
+<li>groovy</li>
+</ul>
+
+<pre><code>def names = [‘Jack’, ‘Sara’, ‘Jill’]
+println names.collect {it.toUpperCase() }.join(‘, ‘)
+</code></pre>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">List&lt;String&gt; names = Arrays.asList(“Jack”, “Sara”, “Jill”);
+
+System.out.println(
+  names.stream()
+           .map(String::toUpperCase)
+           .collect(joining(“, “)));
+</code></pre>
+
+<h4 id="lazy-evalution">lazy evalution</h4>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">public class Sample {
+  public static boolean isGT3(int number) {
+    System.out.println(“isGT3 ” + number);
+    return number &gt; 3;
+  }
+
+  public static boolean isEven(int number) {
+    System.out.println(“isEven ” + number);
+    return number % 2 == 0;
+  }
+
+  public static int doubleIt(int number) {
+    System.out.println(“doubleIt ” + number);
+    return number * 2;
+  }
+
+  public static void main(String[] args) {
+    List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 5, 4, 6, 7, 8, 9, 10);
+    int result = numbers.stream()
+                        .filter(Sample::isGT3)
+                        .filter(Sample::isEven)
+                        .map(Sample::doubleIt)
+                        .findFirst()
+                        .get();
+
+    System.out.println(“Result: ” + result);
+    System.out.println(“Let’s see the effect of laziness”);
+    numbers.stream()
+           .filter(Sample::isGT3)
+           .filter(Sample::isEven)
+           .map(Sample::doubleIt);
+
+    System.out.println(“No work expended”);
+
+  }
+}
+</code></pre>
+
+<h4 id="infinite-series">infinite series</h4>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">import java.util.*;
+import java.util.stream.Stream;
+import static java.util.stream.Collectors.toList;
+
+public class Sample {
+  public static List&lt;Integer&gt; seriesOfDouble(int size) {
+      return Stream.iterate(1, e -&gt; e * 2)
+                   .limit(size)
+                   .collect(toList());
+  }
+
+  public static void main(String[] args) {
+      System.out.println(seriesOfDouble(5));
+      System.out.println(seriesOfDouble(10));
+  }
+}
+</code></pre>
+
+<h4 id="parallel-collections">parallel collections</h4>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">import java.util.*;
+import java.util.stream.Stream;
+
+public class Sample {
+  public static int doubleIt(int number) {
+        try { Thread.sleep(1000); } catch(Exception ex) {} //assume a computation intensive code here
+        return number * 2;
+  }
+
+  public static int doubleAndTotal(Stream&lt;Integer&gt; values) {
+        long start = System.nanoTime();
+        try {
+          return values.mapToInt(Sample::doubleIt)
+                       .sum();
+        } finally {
+          long end = System.nanoTime();
+          System.out.println(“Time taken (s): ” + (end – start) / 1.0e9);
+        }
+  }
+
+  public static void main(String[] args) {
+        List&lt;Integer&gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        System.out.println(doubleAndTotal(numbers.stream()));
+        System.out.println(doubleAndTotal(numbers.parallelStream()));
+  }
+}
+</code></pre>
+
+<h4 id="invoke-dynamic">invoke dynamic</h4>
+
+<ul>
+<li>java 8</li>
+</ul>
+
+<pre><code class="language-java">import java.util.*;
+
+public class UsingLambdas {
+  public static void main(String[] args) {
+        List&lt;Integer&gt; values = Arrays.asList(1, 2, 3);
+        values.forEach(e -&gt; System.out.println(e));
+        values.forEach(e -&gt; System.out.println(e));
+        values.forEach(e -&gt; System.out.println(e));
+        values.forEach(e -&gt; System.out.println(e));
+        values.forEach(e -&gt; System.out.println(e));
+  }
+}
+
+//javac UsingLambdas
+//ls (or dir)
+//See the lack of inner classes.
+//Do javap -c UsingLambdas
+//examine the bytecode and look for invokedynamic
+//now remove the .class files before procedding to the other example
+</code></pre>
+
+<h4 id="new-groovy">new (Groovy)</h4>
+
+<ul>
+<li>groovy</li>
+</ul>
+
+<pre><code class="language-groovy">boolean isGT3(int number) {
+  println “isGT3 $number”
+  number &gt; 3
+}
+
+boolean isEven(int number) {
+  println “isEven $number”
+  number % 2 == 0
+}
+
+int doubleIt(int number) {
+  println “doubleIt $number”
+  number * 2
+}
+
+def numbers = [1, 2, 3, 5, 4, 6, 7, 8, 9, 10]
+//traditional Groovy functional style is eager.
+def eagerResult = numbers.findAll { isGT3(it) }.findAll { isEven(it) }.collect { doubleIt(it) }.find { it }
+println “Eager Result: $eagerResult”
+//We can use Java 8 Streams and be lazy – meaning efficient
+def result = numbers.stream()
+                        .filter { isGT3(it) }
+                        .filter { isEven(it) }
+                        .map { doubleIt(it) }
+                        .findFirst()
+                        .get()
+println “Result: $result”
+println “Let’s see the effect of laziness”
+numbers.stream()
+           .filter { isGT3(it) }
+           .filter { isEven(it) }
+           .map { doubleIt(it) }
+println “No work expended”
+</code></pre>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/11/network-cloud-service/">Network Cloud Service</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.11
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/oracle">Oracle</a>
+							
+								 , 
+								<a href="https://namoo4u.github.io/categories/cloud">Cloud</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/network">network</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/oracle">oracle</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/cloud">cloud</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h2 id="osi-network-layer">OSI - Network Layer</h2>
+
+<ul>
+<li>Application</li>
+<li>Prsentation</li>
+<li>Session</li>
+<li>Transport</li>
+<li>Network</li>
+<li>Data Link</li>
+<li>Physical</li>
+</ul>
+
+<h2 id="vlans">VLANs</h2>
+
+<p>tag, trunk</p>
+
+<h2 id="ip-routing">IP Routing</h2>
+
+<ul>
+<li>Bandwidth
+-</li>
+</ul>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/09/reactive-programming-with-groovy/">Reactive Programming with Groovy</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.09
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/programming">Programming</a>
+							
+								 , 
+								<a href="https://namoo4u.github.io/categories/architecture">Architecture</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/groovy">groovy</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/reactive">reactive</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/programming">programming</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h3 id="reactive-streams-reactive-extensions-rx">Reactive Streams, Reactive Extensions (Rx)</h3>
+
+<ul>
+<li>The Problem :
+
+<ul>
+<li>Performacen : our pages should render within 1000 milliseconds</li>
+<li>The Rise of microservices : free up resources with Async Operations &amp; Non-Blocking I/O</li>
+</ul></li>
+</ul>
+
+<h4 id="what-is-reactive-stream-rx">What is reactive stream (Rx) ?</h4>
+
+<h5 id="collections-time">collections + time</h5>
+
+<h5 id="single-abstration-over-data-from-many-sources">Single abstration over data from many sources</h5>
+
+<h5 id="observer-pattern">Observer Pattern</h5>
+
+<ul>
+<li>Push (not pull) based Iterators</li>
+</ul>
+
+<h5 id="stream-based-funcational-programming">Stream Based Funcational Programming</h5>
+
+<ul>
+<li>Imperative vs Reactive Stream</li>
+</ul>
+
+<pre><code>// Iterative
+  List numbers = 1..100
+  int max = numbers.size()
+  Mpa result = [count:0, sum:0]
+  for (int i=0; i&lt;max; i++) {
+    // only work with even numbers
+    if (numbers[i] % 2 == 0)  {
+      result.count ++
+      result.sum += numbers[i]
+    }
+  }
+  println &quot;Results were ${result}&quot;
+
+// Reactive Stream
+  rx.Obserable.from(1..100)
+    .filter({int num -&gt; num %2 == 0})
+    .reduce([count:0, sum:0], {Map data, int num --&gt;
+        data.count ++
+        data.sum += num
+        data
+      })
+      .subscribe({println &quot;Result were ${it}&quot;})
+
+</code></pre>
+
+<ul>
+<li>Groovy Collections supports stream-like Operations
+if this make sense to you, then you&rsquo;re ready for Rx</li>
+</ul>
+
+<pre><code>result = (1..100).collect { if (it % 2 == 0) {it}}
+  .grep()
+  .inject([count:0, sum:0]){ acc, val -&gt;
+    acc.count ++
+    acc.sum += sum
+    acc
+  }
+println &quot;Result were: ${result}&quot;
+</code></pre>
+
+<h5 id="streams-with-extensions-for-reactive-programming">Streams with Extensions for Reactive Programming</h5>
+
+<h5 id="rx-makes-async-behavior-easy">Rx makes Async behavior easy!</h5>
+
+<h5 id="reactive-pull-backpressure">(Reactive Pull) Backpressure</h5>
+
+<h4 id="rx-simplifies-complex-work">Rx Simplifies Complex work</h4>
+
+<ul>
+<li>RxJava : Bring Reactive Streams to the JVM</li>
+<li>But Quickly switch to rxGroovy</li>
+</ul>
+
+<pre><code>rx.Obserable.from(1..1000)
+  .filter(new Func&lt;Integer, Boolean&gt;()  {
+      @Override
+      Boolean call(Integer integer) {
+        return integer % 2 == 0
+      }
+    })
+  .map(new Func&lt;integer, Integer&gt;() {
+    @Override
+    Integer call(Integer integer) {
+      integer * integer
+    }
+  })
+  .subscribe(new Action&lt;Integer&gt;()  {
+      @Override
+      void call(Integer integer)  {
+        System.out.println(&quot;Have even square: &quot;+ integer)
+      }
+  })
+</code></pre>
+
+<pre><code>@Grapes(
+    @Grab('io.reactivex:rxgroovy:1.0.3')
+  )
+  import rx.*
+
+rx.Observable.from(1..1000)
+  .filter {it % 2 == 0}
+  .map {it * it}
+  .subscribe {
+    println &quot;Have even square: ${it}&quot;
+  }
+</code></pre>
+
+<h4 id="ratpack">Ratpack</h4>
+
+<ul>
+<li>High performance web framework</li>
+<li>Non-opinionated</li>
+<li>Non-Blocking Network Stack</li>
+<li>Built on Reactive Streams, Netty, Java 8, Guice</li>
+<li>Fully embodies reactive</li>
+<li>Deterministic Asynchronous code</li>
+</ul>
+
+<h4 id="akka">Akka</h4>
+
+<h4 id="reactor">Reactor</h4>
+
+<p>출처 : <a href="http://www.slideshare.net/StevePember/reactive-streams-and-the-wide-world-of-groovy-64526341">Reactive Streams and the Wide World of Groovy</a></p>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/08/hugo-blog%EB%A5%BC-github.io-page-%EB%A1%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%ED%95%98%EA%B8%B0/">Hugo Blog를 github.io page 로 서비스하기</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.08
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/blog">Blog</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/blog">blog</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/hugo">hugo</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/github.io">github.io</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h3 id="hugo-blog-server">Hugo Blog Server</h3>
+
+<p>Hugo blog를 github.com 의 page 에서 서비스 하기 위해서는 우선 두개의 Repository 를 생성한다.
+하나는 hugo md 파일을 관리하기 위한 repository 이고 하나는 html 로 redner 된 html을 서비스 하기 위한 page repository 이다.</p>
+
+<ul>
+<li>hugosite.git</li>
+<li>&lt;사용자계정&gt;.github.io.git</li>
+</ul>
+
+<h4 id="git-repository-설정하기">git repository 설정하기</h4>
+
+<pre><code class="language-bash">cd hugosite
+
+# 초기 설정하기
+git init
+
+# hugo
+git remote add origin https://github.com/namoo4u/hugosite.git
+
+# 그리고 public 폴더를 hugosite의 subsite 로 등록한다.
+git submodule add -b master https://github.com/namoo4u/namoo4u.github.io.git public
+
+</code></pre>
+
+<h4 id="새로운-hugo-content-만들기">새로운 hugo content 만들기</h4>
+
+<pre><code class="language-bash">hugo new &quot;post/새로운 post글.md&quot;
+</code></pre>
+
+<h4 id="새로-작성한-글을-github-io-페이지에-올리기">새로 작성한 글을 github.io 페이지에 올리기</h4>
+
+<p>Hugo 사이트에 deploy.sh 이 있는 데 이것을 가져다가 사용할 수도 있고, 그냥 bash 에서 git 명령어를 통해서 deploy 할 수도 있다.</p>
+
+<pre><code class="language-git">#!/bin/bash
+
+cd hugosite
+hugo
+cd public
+git add -A
+msg=&quot;rebuild `date`&quot;
+git commit -m &quot;$msg&quot;
+git push origin master
+</code></pre>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/">Bare Meta Cloud Services are now available</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.11.08
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/oracle">oracle</a>
+							
+								 , 
+								<a href="https://namoo4u.github.io/categories/cloud">cloud</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/bare-metal">Bare Metal</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/iaas">IaaS</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/oracle">oracle</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/cloud">cloud</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h3 id="bare-metal-cloud-services">Bare Metal Cloud Services</h3>
+
+<h4 id="지원-서비스">지원 서비스</h4>
+
+<ul>
+<li>Integrated network block storage</li>
+<li>object storage</li>
+<li>identity and access management</li>
+<li>VPN Connectivity</li>
+
+<li><p>Software-defined Virtual Cloud Network (VCN)</p>
+
+<ul>
+<li>secure, elastic, extension of on-premises network</li>
+</ul></li>
+
+<li><p>Market leading price-perfomance</p>
+
+<ul>
+<li>Best in class - predictable, consistent performance</li>
+<li>NVMe (Non-Volatile Memory Express) SSD for fastest IOPs and low latency</li>
+</ul></li>
+
+<li><p>Massive Enterprise Scale</p>
+
+<ul>
+<li>Access 100s of cores of decicated compute in a fast provisioned cloud model</li>
+<li>Elasticity, scale, flexibility &amp; choice of development</li>
+</ul></li>
+
+<li><p>Secuity Hardening</p>
+
+<ul>
+<li>Deliver clean hosts with customer root access</li>
+<li>Overlay network with no sigle point of failure</li>
+</ul></li>
+
+<li><p>Governance and Visibility</p>
+
+<ul>
+<li>Comprehensive software defiened managedment (network, users, quotas, provisioning, performance</li>
+</ul></li>
+</ul>
+
+<h4 id="가능-region">가능 Region</h4>
+
+<ul>
+<li>Phoenix (3개의 Availablity Domains : ADs - one milisecond between ADs)</li>
+<li>Arizona</li>
+</ul>
+
+<h4 id="oracle-offers">Oracle offers</h4>
+
+<ul>
+<li>Our flat, non-blocking network enables customers to utilize maximum network bandwidth with mere microseconds of latency between nodes</li>
+<li>Denser servers and NVMe storage enable as much as four million IOPs per bare metal instance</li>
+<li>A host of features, including fully isolated bare metal instances, a high-security network, and complete virtual and physical network decoupling, enable uncompromised security</li>
+<li>Customizable resource compartmentalization and highly flexible access control provide strong governance</li>
+<li>Complete flexibility and workload portability: run your OS, your hypervisor, or your entire stack</li>
+</ul>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/10/31/%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%95%EB%A6%AC/">배우기 정리</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.10.31
+							</span>&nbsp;in
+							 using tags
+							
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h4 id="programming">Programming</h4>
+
+<ul>
+<li>Groovy</li>
+<li>Go lang</li>
+<li>Javascript
+
+<ul>
+<li>Angular js 2</li>
+<li>RxJS</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<ul>
+<li>Scala</li>
+</ul>
+</blockquote>
+
+<h4 id="framework">Framework</h4>
+
+<ul>
+<li>Reactive Programming
+
+<ul>
+<li>AKKA</li>
+<li>RxJava</li>
+</ul></li>
+<li>Ratpack</li>
+<li>Springboot</li>
+</ul>
+
+<h4 id="tools">Tools</h4>
+
+<ul>
+<li>Jenkins
+
+<ul>
+<li>pipeline</li>
+</ul></li>
+</ul>
+
+<h4 id="mobile">Mobile</h4>
+
+<ul>
+<li>Native Script</li>
+</ul>
+
+<h4 id="cloud">Cloud</h4>
+
+<ul>
+<li>Open Stack</li>
+<li>Docker + Kubernete</li>
+</ul>
+
+<h4 id="hw">HW</h4>
+
+<ul>
+<li>Aduino</li>
+<li>Raspberry Pi</li>
+</ul>
+
+<h4 id="lanuage">Lanuage</h4>
+
+<ul>
+<li>English</li>
+</ul>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+            	
+		
+			<div class="row">
+				
+				<div class="col-md-offset-1 col-md-10">
+					<h3><a href="https://namoo4u.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/">WiFi Network in Arch Network Using Terminal</a></h3>
+						<small><span class="label label-primary">
+							
+								2016.10.27
+							</span>&nbsp;in
+							
+								
+								<a href="https://namoo4u.github.io/categories/linux">Linux</a>
+							 using tags
+							
+								
+							<a href="https://namoo4u.github.io/tags/linux">linux</a>
+						
+								 , 
+							<a href="https://namoo4u.github.io/tags/wireless">wireless</a>
+						
+					</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+					<br>
+					
+						
+
+<h3 id="scanning-network">Scanning Network</h3>
+
+<blockquote>
+<p>Arch Linux 에서 iwconfig 이나 iwlist 를 사용할 수 없다면, wireless_tools 가 설치되어 있는지 확인해 보자.
+$ pacman -S wirelesss_tools</p>
+</blockquote>
+
+<pre><code># 네트워크 인터페이스 이름을 알기 위해서
+iwconfig
+
+# 인터페이스 이름을 알았다면
+ip link set &lt;interface&gt; up
+
+# 접속 가능한 WiFi network 을 스캔해 보자
+iwlist &lt;interface&gt; scan | less
+
+#
+ip link set &lt;interface&gt; down
+</code></pre>
+
+<h3 id="1번-방법-setup-a-wifi-using-netctl">1번 방법)  Setup A WiFi using &ldquo;netctl&rdquo;</h3>
+
+<pre><code># network card 가 가능한지 확인해 본다.
+lspci -k
+
+# netctl configuration 을 이용해서 설정
+netctl
+
+#
+</code></pre>
+
+<h3 id="2번-방법-wifi-menu-를-이용한-방법">2번 방법) wifi-menu 를 이용한 방법</h3>
+
+<pre><code>wifi-menu
+
+</code></pre>
+
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr>
+				</div>
+			</div>
+		
+	
+
+        
+	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="text-center">
+                    
+
+<ul class="pagination">
+    
+    <li>
+        <a href="https://namoo4u.github.io/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li
+    >
+    <a href="https://namoo4u.github.io/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="https://namoo4u.github.io/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    class="active"><a href="https://namoo4u.github.io/page/2/">2</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li
+    ><a href="https://namoo4u.github.io/page/3/">3</a></li>
+    
+    
+    <li
+    >
+    <a href="https://namoo4u.github.io/page/3/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li>
+        <a href="https://namoo4u.github.io/page/3/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.38.2 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/namoo4u" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                        <a href="https://namoo4u.github.io/index.xml" target="_blank">
+                        <i class="fa fa-rss-square fa-2x"></i></a>
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

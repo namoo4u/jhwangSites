@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle on Just Do It!! YOLO</title>
+    <link>https://namoo4u.github.io/tags/oracle/</link>
+    <description>Recent content in Oracle on Just Do It!! YOLO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US.UTF8</language>
+    <managingEditor>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</managingEditor>
+    <webMaster>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</webMaster>
+    <copyright>JHwang All rights reserved</copyright>
+    <lastBuildDate>Thu, 12 Apr 2018 10:44:17 +0900</lastBuildDate>
+    
+	<atom:link href="https://namoo4u.github.io/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Packer Oci Machine Image</title>
+      <link>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</link>
+      <pubDate>Thu, 12 Apr 2018 10:44:17 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</guid>
+      <description> Packer - OCI builder Packer는 hashcorp에서 만든 Machine Image생성 툴이다. AMI, Azure, GCP뿐만 아니라, Oracle Cloud Infrastructure또한 지원을 한다.
+사전에 알아야 할 사항 </description>
+    </item>
+    
+    <item>
+      <title>Digital Experience Workshop at Seoul (Nov 14, 2016)</title>
+      <link>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</guid>
+      <description>Digital Experience Top 3 features  Secutiry Social Mobile  Use Cases  Coordinating with Business Partners Sales Collaboration Support of Mobile Field Workers  Digital Workplace Collaboration  Connections  Real-time conversations and social collaboration Social Graph based discovery of content and conversations Content centric activity stream &amp;ldquo;buddy&amp;rdquo;  Context  Integrated within business workflows Embedded within applications Unified on-premises and cloud content management Multiple content centric mobile experience  Control  Choice of user &amp;amp; content   Context is everything  Business Apps integratation  Sales Cloud, Eloqua, Service Cloud, SRM On-Premises : Siebel, EBS  PAAS Integrations  Proces CS, Sites CS  Hybrid ECM RICH Platform  Architected to be Platform - UI components Embeddable within custom application - Framework to extend on Premises, Saas &amp;amp; PAAS applications - Rich set of APIS for 3rd party integrations</description>
+    </item>
+    
+    <item>
+      <title>Network Cloud Service</title>
+      <link>https://namoo4u.github.io/post/2016/11/11/network-cloud-service/</link>
+      <pubDate>Fri, 11 Nov 2016 13:23:46 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/11/network-cloud-service/</guid>
+      <description> OSI - Network Layer  Application Prsentation Session Transport Network Data Link Physical  VLANs tag, trunk
+IP Routing  Bandwidth -  </description>
+    </item>
+    
+    <item>
+      <title>Bare Meta Cloud Services are now available</title>
+      <link>https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</link>
+      <pubDate>Tue, 08 Nov 2016 12:52:55 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</guid>
+      <description>Bare Metal Cloud Services 지원 서비스  Integrated network block storage object storage identity and access management VPN Connectivity Software-defined Virtual Cloud Network (VCN)
+ secure, elastic, extension of on-premises network  Market leading price-perfomance
+ Best in class - predictable, consistent performance NVMe (Non-Volatile Memory Express) SSD for fastest IOPs and low latency  Massive Enterprise Scale
+ Access 100s of cores of decicated compute in a fast provisioned cloud model Elasticity, scale, flexibility &amp;amp; choice of development  Secuity Hardening</description>
+    </item>
+    
+  </channel>
+</rss>

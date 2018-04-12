@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Just Do It!! YOLO on Just Do It!! YOLO</title>
+    <link>https://namoo4u.github.io/</link>
+    <description>Recent content in Just Do It!! YOLO on Just Do It!! YOLO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US.UTF8</language>
+    <managingEditor>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</managingEditor>
+    <webMaster>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</webMaster>
+    <copyright>JHwang All rights reserved</copyright>
+    <lastBuildDate>Thu, 12 Apr 2018 10:44:17 +0900</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+      
+        
+          <item>
+            <title>Packer Oci Machine Image</title>
+            <link>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</link>
+            <pubDate>Thu, 12 Apr 2018 10:44:17 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</guid>
+            <description>
+
+&lt;h3 id=&#34;packer-oci-builder&#34;&gt;Packer - OCI builder&lt;/h3&gt;
+
+&lt;p&gt;Packer는 hashcorp에서 만든 Machine Image생성 툴이다. AMI, Azure, GCP뿐만 아니라, Oracle Cloud Infrastructure또한 지원을 한다.&lt;/p&gt;
+
+&lt;h4 id=&#34;사전에-알아야-할-사항&#34;&gt;사전에 알아야 할 사항&lt;/h4&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>lazybones 에 새로운 Template추가하기</title>
+            <link>https://namoo4u.github.io/post/2016/12/10/lazybones-%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-template%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</link>
+            <pubDate>Sat, 10 Dec 2016 15:04:27 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/12/10/lazybones-%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-template%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</guid>
+            <description>
+
+&lt;h3 id=&#34;lazybones-의-템플릿&#34;&gt;lazybones 의 템플릿&lt;/h3&gt;
+
+&lt;p&gt;lazybones 의 기본 템플릿은 list 를 통해서 볼 수 있는데, 이외의 다른 템플릿을 추가하기 위해서는 config.groovy에 새로운 Repository 를 추가해 줘야 한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lazybones list
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;${USER_HOME}/.lazybones/config.groovy&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;bintaryRepositories = [
+  &amp;quot;kyleboon/lazybones&amp;quot;,
+  &amp;quot;griffon/griffon-lazybones-templates&amp;quot;,
+  &amp;quot;pledbrook/lazybones-templates&amp;quot;
+]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;griffon javafx 를 사용하는 groovy Sample 프로젝트를 생성하기 위해서는 아래와 같이 하면 된다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lazybones create griffon-javafx-groovy griffon-javafx-groovy-sample
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;lazybones-의-추가-템플릿들&#34;&gt;lazybones 의 추가 템플릿들&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;Available templates in kyleboon/lazybones
+
+    dropwizard
+    groovy-app
+    java-basic
+    jbake
+
+Available templates in griffon/griffon-lazybones-templates
+
+    griffon-javafx-groovy
+    griffon-javafx-java
+    griffon-javafx-kotlin
+    griffon-lanterna-groovy
+    griffon-lanterna-java
+    griffon-pivot-groovy
+    griffon-pivot-java
+    griffon-plugin
+    griffon-swing-groovy
+    griffon-swing-java
+
+Available templates in pledbrook/lazybones-templates
+
+    aem-multimodule-project
+    afterburnerfx
+    afterburnergfx
+    angular-grails
+    asciidoctor-gradle
+    asciidoctor-revealjs
+    dropwizard
+    gaelyk
+    gradle-plugin
+    gradle-quickstart
+    groovy-app
+    groovy-lib
+    java-basic
+    lazybones-project
+    nebula-plugin
+    ratpack
+    ratpack-lite
+    spring-boot-actuator
+    test-handlebars
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Docker base image size늘리기</title>
+            <link>https://namoo4u.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</link>
+            <pubDate>Wed, 23 Nov 2016 14:29:35 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</guid>
+            <description>
+
+&lt;h3 id=&#34;docker-image-의-base-sizse-늘리기&#34;&gt;Docker Image 의 Base Sizse 늘리기&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-docker&#34;&gt;docker -D info
+Containers: 1
+ Running: 1
+ Paused: 0
+ Stopped: 0
+Images: 1
+Server Version: 1.12.3
+Storage Driver: devicemapper
+ Pool Name: docker-8:17-35389497-pool
+ Pool Blocksize: 65.54 kB
+ Base Device Size: 53.69 GB
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;docker 의 기본 이미지 사이즈는 10GB 이다. 일반적으로 그냥 docker 를 설치하고 이미지를 실행해서 &amp;lsquo;df -h&amp;rsquo;를 통해서 사이즈를 확인하면, 9.99GB가 나온다. 하지만 때때로 10GB가 넘는 경우가 발생한다. 외부 Volume을 연결할 수도 있겠지만, 컨테이너 자체에서 스토리지를 관리하고 싶을때도 있다.
+이런 경우, systemd docker.service 에서 아래와 같이 추가해 준다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ExecStart=/usr/bin/dockerd --storage-opt dm.basesize=50G --storage-opt dm.loopdatasize=256G -H fd://
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;덤으로 Docker 에서 사용하고 있는데 loop data size 도 변경이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;이후에 기존에 있는 이미지를 삭제하고 다시 받아와야 basesize 가 적용이 된다.&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Xiaomi Mi 4c Custom Rom build 하기</title>
+            <link>https://namoo4u.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</link>
+            <pubDate>Tue, 22 Nov 2016 17:24:30 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</guid>
+            <description>
+
+&lt;h2 id=&#34;xiaomi-custom-rom-build&#34;&gt;Xiaomi Custom Rom Build&lt;/h2&gt;
+
+&lt;h4 id=&#34;docker-image-는-ubuntu-15-10-를-기준으로-한다&#34;&gt;Docker Image 는 ubuntu:15.10 를 기준으로 한다.&lt;/h4&gt;
+
+&lt;p&gt;Docker 실행&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;docker run -it --name android ubuntu:15.10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;필요한-packages-설치&#34;&gt;필요한 Packages 설치&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;apt update -y
+apt install -y bison build-essential curl flex git gnupg gperf libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop maven openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev g++-multilib gcc-multilib lib32ncurses5-dev lib32z1-dev realpath bsdmainutils curl file screen android-tools-adb android-tools-fastboot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lib32readline-gplv2-dev 는 찾을 수 없는 package 라고 에러가 발생하여, 이를 빼고 설치를 진행한다.&lt;/p&gt;
+
+&lt;h4 id=&#34;init-repo&#34;&gt;Init repo&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;curl http://commondatastorage.googleapis.com/git-repo-downloads/repo &amp;gt; ~/bin/repo
+chmod +x ~/bin/repo
+repo init -u https://github.com/CyanogenMod/android.git -b stable/cm-13.0-ZNH5Y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;sync&#34;&gt;Sync&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;repo sync -j4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Copy device/xiaomi/libra/local_manifests/libra.xml to $ANDROID_BUILD_TOP/.repo/local_manifests/&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cp ./device/xiaomi/libra/local_manifests/libra.xml $ANDROID_BUILD_TOP/.repo/local_manifests/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;sync-1&#34;&gt;Sync&lt;/h4&gt;
+
+&lt;p&gt;repo sync -j4&lt;/p&gt;
+
+&lt;h4 id=&#34;force-sync-s&#34;&gt;Force sync&amp;rsquo;s&lt;/h4&gt;
+
+&lt;p&gt;repo sync &amp;ndash;force-sync bootable/recovery repo sync &amp;ndash;force-sync external/jpeg repo sync &amp;ndash;force-sync frameworks/base repo sync &amp;ndash;force-sync frameworks/native&lt;/p&gt;
+
+&lt;h4 id=&#34;sync-repo&#34;&gt;Sync repo&lt;/h4&gt;
+
+&lt;p&gt;repo sync -j4&lt;/p&gt;
+
+&lt;h4 id=&#34;build&#34;&gt;Build&lt;/h4&gt;
+
+&lt;p&gt;lunch cm_libra-userdebug brunch cm_libra-userdebug&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Nautilus에서 문서 선택해서 Edit시 한글입력문제</title>
+            <link>https://namoo4u.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</link>
+            <pubDate>Tue, 22 Nov 2016 14:48:38 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</guid>
+            <description>
+
+&lt;h4 id=&#34;linux-에서-한글입력-시-문제&#34;&gt;Linux 에서 한글입력 시 문제&lt;/h4&gt;
+
+&lt;p&gt;~/.xprofile 에 아래와 같이 추가한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;export XIM=&amp;quot;uim&amp;quot;
+export GTK_IM_MODULE=&#39;uim&#39;
+export QT_IM_MODULE=&#39;uim&#39;
+exec uim-xim &amp;amp;
+export XMODIFIERS=&#39;@im=uim&#39;
+exec uim-toolbar-gtk3-systray &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;WPS에서 한글입력 시 한글입력이 되지 않는 문제가 있는데, 이는 uim-xim 을 띄우고, qtconfig-qt4의 interface 에서 ime를 xim 으로 해야 wps에서 한글입력이 제대로 됨&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Natuilus 에서 문서 선택하고, 마우스 오른쪽 클릭 후 Edit를 선택하면 WPS또는 MS Office에서 한글 입력이 되지 않는 문제가 있음
+하지만, Thunar 나 Command line에서 WPS나 MS Office 를 띄우면 한글입력에 문제가 되지 않음.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; xfce4-terminal&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; wps&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; MS Office with wine&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; firefox / thunderbird&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; chrome browser&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; WPS or MS Office through nautilus&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&#34;toc_1&#34;&gt;???????????&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;&amp;ndash;&amp;gt; nautlis 를 삭제하고 재 설치 이후에는 잘 됨..&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>oh my zsh 설치하기</title>
+            <link>https://namoo4u.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
+            <pubDate>Tue, 22 Nov 2016 00:27:10 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</guid>
+            <description>&lt;p&gt;zsh 를 설치하고, oh-my-zsh 를 설치하기&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-zsh&#34;&gt;$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>nmcli 다시보기</title>
+            <link>https://namoo4u.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</link>
+            <pubDate>Mon, 21 Nov 2016 18:06:53 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</guid>
+            <description>
+
+&lt;h3 id=&#34;네트워크-설정&#34;&gt;네트워크 설정&lt;/h3&gt;
+
+&lt;p&gt;네트워크 관리를 위한 CLI (command line tool)인 nmcli 에 대해서 다시 한번 보자. (맨날 까먹으니까&amp;hellip;.. ㅠㅠ)&lt;/p&gt;
+
+&lt;p&gt;command line tool 인 nmcli 는 사용자가 직접 또는 NetworkManager를 위한 스크립트를 사용할 수 있다.
+기본적인 명령어 모양은 아래와 같다&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ netcli [OPTIONS] OBJECT { COMMAND | help }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;OBJECT&lt;/strong&gt; 는 &lt;strong&gt;general, networking, radio, connection, device, agent, monitor&lt;/strong&gt; 이다. 그리고 가장 많이 사용하는 &lt;strong&gt;OPTIONS&lt;/strong&gt;은 &lt;strong&gt;-t (&amp;ndash;terse), -p (&amp;ndash;pretty), -h (&amp;ndash;help)&lt;/strong&gt; 이다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ nmcli help
+Usage: nmcli [OPTIONS] OBJECT { COMMAND | help }
+
+OPTIONS
+  -t[erse]                                   terse output
+  -p[retty]                                  pretty output
+  -m[ode] tabular|multiline                  output mode
+  -c[olors] auto|yes|no                      whether to use colors in output
+  -f[ields] &amp;lt;field1,field2,...&amp;gt;|all|common   specify fields to output
+  -e[scape] yes|no                           escape columns separators in values
+  -a[sk]                                     ask for missing parameters
+  -s[how-secrets]                            allow displaying passwords
+  -w[ait] &amp;lt;seconds&amp;gt;                          set timeout waiting for finishing operations
+  -v[ersion]                                 show program version
+  -h[elp]                                    print this help
+
+OBJECT
+  g[eneral]       NetworkManager&#39;s general status and operations
+  n[etworking]    overall networking control
+  r[adio]         NetworkManager radio switches
+  c[onnection]    NetworkManager&#39;s connections
+  d[evice]        devices managed by NetworkManager
+  a[gent]         NetworkManager secret agent or polkit agent
+  m[onitor]       monitor NetworkManager changes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ nmcli general help
+COMMAND := { status | hostname | permissions | logging }
+
+  status
+
+  hostname [&amp;lt;hostname&amp;gt;]
+
+  permissions
+
+  logging [level &amp;lt;log level&amp;gt;] [domains &amp;lt;log domains&amp;gt;]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;NetworkManager의 상태&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli general status
+STATE      CONNECTIVITY  WIFI-HW  WIFI     WWAN-HW  WWAN    
+connected  full          enabled  enabled  enabled  enabled
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;모든 connections&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli connection show
+NAME                         UUID                                  TYPE             DEVICE
+clear-guest                  3f1408fd-b085-4949-95dd-6a96f0eb2d46  802-11-wireless  wlan0  
+#SFO FREE WIFI               efcce222-c7ec-491d-84dd-9b872038d555  802-11-wireless  --     
+AirportWiFi                  a4c579ba-dfe8-42c8-8d5c-5883ed9468be  802-11-wireless  --     
+AirportWiFi(5G)              ce323b55-87b1-49cb-a488-8b790fe34148  802-11-wireless  --     
+Alt Guests                   a61ec0fc-2550-4811-89fe-a95862454999  802-11-wireless  --     
+AppleNamoo_5G                9c51380f-a129-492b-8ad0-7847bf2057d2  802-11-wireless  --     
+Auto Ethernet (DNS)          15ded4e9-6046-4a51-9002-a30320dda81a  802-3-ethernet   --     
+Auto Ethernet (without DNS)  0550fea5-1829-4525-8eb4-ed40e80fc112  802-3-ethernet   --     
+BELLALIANT1083               6005f4f4-0c46-46d9-ad70-fae14878799f  802-11-wireless  --     
+BWWainwrightInnAndSuites     2c04eea6-9c16-4cc2-b9bc-df2030b51c71  802-11-wireless  --     
+Coex free wifi zone          b62f6437-1ef0-4e60-9357-3e847c74b5d4  802-11-wireless  --     
+DD                           9851813f-1c7c-4c9c-b79b-9c6559fc4b82  802-11-wireless  --     
+DIRECT-4c-HP M277 LaserJet   a44ab5bb-1a52-4d42-8cce-6daff0d5d830  802-11-wireless  --     
+Dell M900HD 9914             b3c3d2d6-b309-4090-8a1a-80a547d8e6c1  802-11-wireless  --     
+Dell M900HD 991a             61db4250-7775-4dee-9f61-1a90bdfdd48e  802-11-wireless  --     
+Delta-Internet               810e2710-848c-4f62-9620-3964991f64ae  802-11-wireless  --     
+Desperado 5G                 1a3d4301-f35b-4a31-8587-67b9436fe7fc  802-11-wireless  --     
+EDIYA_5G                     01a1efa4-0cb1-4232-bbeb-0dfe37e10819  802-11-wireless  --     
+FARMTOCUP02                  59282bbf-45e6-402e-a97e-65ced51734f7  802-11-wireless  -
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;현재 접속중인 connection&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli connection show --active
+NAME         UUID                                  TYPE             DEVICE
+clear-guest  3f1408fd-b085-4949-95dd-6a96f0eb2d46  802-11-wireless  wlan0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;디바이스 상태&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli device status
+DEVICE   TYPE      STATE         CONNECTION  
+wlan0    wifi      connected     clear-guest
+eth0     ethernet  disconnected  --          
+docker0  bridge    unmanaged     --          
+lo       loopback  unmanaged     --  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Command는 몇가지 option과 object들에 대해서 줄여서 표현할 수 있다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli connection modify id &#39;MyCafe&#39; 802-11-wireless.mtu 1350
+--&amp;gt;
+$ nmcli con mod MyCafe 802-11-wireless.mtu 1350
+
+$ nmcli connection add type ethernet
+--&amp;gt;
+$ nmcli c a type eth
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;nmcli-를-사용해서-인터페이스-시작-중지&#34;&gt;nmcli 를 사용해서 인터페이스 시작/중지&lt;/h3&gt;
+
+&lt;p&gt;nmcli 툴은 어떤 네트워크 인터페이스(nic)도 시작/중지 할 수 있다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;nmcli con up id bond0
+nmcli con up id port0
+nmcli dev disconnect bond0
+nmcli dev disconnect ens3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;nmcli con up my-office&lt;/p&gt;
+
+&lt;h3 id=&#34;wifi-connection&#34;&gt;WiFi Connection&lt;/h3&gt;
+
+&lt;p&gt;사용가능한 Wi-Fi access point 확인&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli dev wifi list
+*  SSID                   MODE    CHAN  RATE       SIGNAL  BARS  SECURITY         
+   ollehWiFi              Infra   1     54 Mbit/s  94      ▂▄▆█  WPA1 WPA2 802.1X
+   ollehWiFi              Infra   1     54 Mbit/s  94      ▂▄▆█                   
+   clear                  Infra   1     54 Mbit/s  84      ▂▄▆█                   
+   ollehWiFi              Infra   1     54 Mbit/s  82      ▂▄▆█                   
+   ollehWiFi              Infra   1     54 Mbit/s  82      ▂▄▆█  WPA1 WPA2 802.1X
+   aaa_msjo_403           Infra   1     54 Mbit/s  80      ▂▄▆_  WPA1 WPA2        
+   ollehWiFi              Infra   100   54 Mbit/s  77      ▂▄▆_  WPA1 WPA2 802.1X
+   olleh GiGA WiFi        Infra   100   54 Mbit/s  75      ▂▄▆_                   
+   ollehEgg_423           Infra   9     54 Mbit/s  74      ▂▄▆_  WPA1 WPA2        
+   ollehWiFi              Infra   100   54 Mbit/s  74      ▂▄▆_                   
+   SKH_ollehEgg_498       Infra   5     54 Mbit/s  69      ▂▄▆_  WPA1 WPA2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;새로운 Wi-Fi Connection을 static-ip, dns는 자동 으로 만들기&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli con add con-name MyCafe ifname wlan0 type wifi ssid MyCafe ip4 192.168.100.101/24 gw4 192.168.100.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;WPA2 password = caffeine 를 지정&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nmcli con modify MyCafe wifi-sec.key-mgme wpa-psk
+$ nmcli con mofidy MyCafe wifi-sec.psk caffeine
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+          </item>
+        
+      
+    
+      
+    
+      
+        
+          <item>
+            <title>리눅스 JVM 튜닝하기</title>
+            <link>https://namoo4u.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</link>
+            <pubDate>Fri, 18 Nov 2016 19:34:42 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</guid>
+            <description>
+
+&lt;h3 id=&#34;jvm&#34;&gt;JVM&lt;/h3&gt;
+
+&lt;p&gt;java 를 설치하고 나서, &lt;JAVA_HOME&gt;/jre/lib/security/java.security 파일을 수정해 준다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-properties&#34;&gt;#networkaddress.cache.ttl=-1
+networkaddress.cache.ttl=30
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;그리고 Linux 의 경우 /etc/nsswitch.conf 의 host 설정을 변경한다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ehco &#39;hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4&#39; &amp;gt;&amp;gt; /etc/nsswitch.conf
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>java Collections의 역습</title>
+            <link>https://namoo4u.github.io/post/2016/11/17/java-collections%EC%9D%98-%EC%97%AD%EC%8A%B5/</link>
+            <pubDate>Thu, 17 Nov 2016 17:28:32 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/17/java-collections%EC%9D%98-%EC%97%AD%EC%8A%B5/</guid>
+            <description></description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>rxGroovy다시보기</title>
+            <link>https://namoo4u.github.io/post/2016/11/17/rxgroovy%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</link>
+            <pubDate>Thu, 17 Nov 2016 17:08:54 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/17/rxgroovy%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</guid>
+            <description></description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Actor모델</title>
+            <link>https://namoo4u.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/</link>
+            <pubDate>Thu, 17 Nov 2016 17:08:34 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/</guid>
+            <description></description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>SQL Server Docker image on Linux</title>
+            <link>https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</link>
+            <pubDate>Thu, 17 Nov 2016 15:22:30 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</guid>
+            <description>
+
+&lt;h2 id=&#34;sql-server-on-linux&#34;&gt;SQL Server on Linux&lt;/h2&gt;
+
+&lt;p&gt;정말로 놀라운 소식이 아닐수 없다. &lt;strong&gt;&amp;ldquo;Microsoft is back&amp;rdquo;&lt;/strong&gt; 이란 말이 헛말이 아니라는 것이 요즘 MS에서 나오는 새로운 소식드에서 느낄 수 있다. Visual Studio on mac 에 이어서 몇달전에 발표한 SQL Server on Linux 가 실체를 드러냈다. 리눅스 서버에 새롭게 설치를 할 수도 있겠지만 놀랍게도 Docker image를 통해서 손쉽게 배포를 할 수 있도록 한 것이 또 다른 점이라 할 수 있다.. 이제는 거의 모든 회사에서 새로운 제품을 출시하고 나서 Docker image를 통해서 테스트/운영을 할 수 있도록 제공하는 것이 기본이 되어 버렸다. 이미 Microsoft에서는 수 많은 docker image 를 docker hub에 올려놨다.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-docker&#34;&gt;docker search Microsoft
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://namoo4u.github.io/images/docker_search_microsoft.png&#34; width=&#34;950px&#34;&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;requirements-for-docker&#34;&gt;Requirements for Docker&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Docker Engine 1.8+&lt;/li&gt;
+&lt;li&gt;Minimum of 4 GB of disk storage&lt;/li&gt;
+&lt;li&gt;Minimum of 4 GB of RAM&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;pull-and-run-the-docker-image&#34;&gt;Pull and run the Docker image&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-docker&#34;&gt;docker run -d -e &#39;ACCEPT_EULA=Y&#39; -e &#39;SA_PASSWORD=P@55w0rd&#39; -p 1433:1433 -v /home/jhwang/.mssql:/var/opt/mssql --name mssql microsoft/mssql-server-linux
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-e SA_PASSWORD : SA 패스워드 지정&lt;/li&gt;
+&lt;li&gt;-p 1433:1433 : MS SQL Server 포트 지정&lt;/li&gt;
+&lt;li&gt;-v &lt;host directory&gt;:/var/opt/mssql : host machine의 디렉토리 볼륨을 마운팅한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;docker image download&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_01.png&#34; width=&#34;950px&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;docker 실행 이후 프로세스&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_02.png&#39; width=950px&gt;&lt;/p&gt;
+
+&lt;p&gt;docker logs mssql&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_04.png&#39; width=950px&gt;&lt;/p&gt;
+
+&lt;p&gt;docker container 안에 설치된 mssql&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#39;https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_03.png&#39; width=950px&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;connect-ms-sql-server-with-ide&#34;&gt;Connect MS SQL Server with IDE&lt;/h4&gt;
+
+&lt;p&gt;IDE에서 JDBC Driver를 추가하고 MS SQL Server에 연결하기 위해서, 새로운 연결을 생성하고, 테스트를 하는데 제대로 연결이 되지 않는 문제가 있다.
+&lt;img src=&#39;https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_05.png&#39; width=640px&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;docker run 시 SA_PASSWORD는 ms sql server의 Password 정책에 맞아야 한다, 초기에 welcome1 으로 했다가 연결이 되지 않는 문제가 있었는데, Password를 P@55w0rd 로 변경후 제대로 연결이 됨&lt;/strong&gt;
+&lt;img src=&#39;https://namoo4u.github.io/images/docker_pull_run_mssql_on_linux_06.png&#39; width=640px&gt;&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Digital Experience Workshop at Seoul (Nov 14, 2016)</title>
+            <link>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</link>
+            <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</guid>
+            <description>
+
+&lt;h2 id=&#34;digital-experience&#34;&gt;Digital Experience&lt;/h2&gt;
+
+&lt;h3 id=&#34;top-3-features&#34;&gt;Top 3 features&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Secutiry&lt;/li&gt;
+&lt;li&gt;Social&lt;/li&gt;
+&lt;li&gt;Mobile&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Coordinating with Business Partners&lt;/li&gt;
+&lt;li&gt;Sales Collaboration&lt;/li&gt;
+&lt;li&gt;Support of Mobile Field Workers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;digital-workplace-collaboration&#34;&gt;Digital Workplace Collaboration&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Connections
+
+&lt;ul&gt;
+&lt;li&gt;Real-time conversations and social collaboration&lt;/li&gt;
+&lt;li&gt;Social Graph based discovery of content and conversations&lt;/li&gt;
+&lt;li&gt;Content centric activity stream&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;buddy&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Context
+
+&lt;ul&gt;
+&lt;li&gt;Integrated within business workflows&lt;/li&gt;
+&lt;li&gt;Embedded within applications&lt;/li&gt;
+&lt;li&gt;Unified on-premises and cloud content management&lt;/li&gt;
+&lt;li&gt;Multiple content centric mobile experience&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Control
+
+&lt;ul&gt;
+&lt;li&gt;Choice of user &amp;amp; content&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;context-is-everything&#34;&gt;Context is everything&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Business Apps integratation
+
+&lt;ul&gt;
+&lt;li&gt;Sales Cloud, Eloqua, Service Cloud, SRM&lt;/li&gt;
+&lt;li&gt;On-Premises : Siebel, EBS&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;PAAS Integrations
+
+&lt;ul&gt;
+&lt;li&gt;Proces CS, Sites CS&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Hybrid ECM&lt;/li&gt;
+&lt;li&gt;RICH Platform&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Architected to be Platform
+- UI components Embeddable within custom application
+- Framework to extend on Premises, Saas &amp;amp; PAAS applications
+- Rich set of APIS for 3rd party integrations&lt;/p&gt;
+</description>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title>Lambda expressions and Stream API with Groovy or JAVA8</title>
+            <link>https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</link>
+            <pubDate>Fri, 11 Nov 2016 17:29:55 +0900</pubDate>
+            <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+            <guid>https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</guid>
+            <description>
+
+&lt;h3 id=&#34;lambda-expressions-and-stream-api-with-groovy-and-java-8&#34;&gt;Lambda expressions and Stream API with Groovy and JAVA 8&lt;/h3&gt;
+
+&lt;h4 id=&#34;iteration&#34;&gt;Iteration&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;groovy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-groovy&#34;&gt;def numbers = [1, 2, 3, 4, 5, 6]
+numbers.each { e -&amp;gt; println e }
+numbers.each { println it }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+numbers.forEach(e -&amp;gt; System.out.println(e));
+numbers.forEach(System.out::println);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;collect&#34;&gt;collect&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;groovy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;def numbers = [1, 2, 3, 4, 5, 6]
+numbers.collect { it * 2 }.each { e -&amp;gt; println e }
+println numbers.collect { it * 2 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+numbers.stream()
+ .map(e -&amp;gt; e * 2)
+ .forEach(System.out::println);
+
+System.out.println(
+  numbers.stream()
+   .map(e -&amp;gt; e * 2)
+   .collect(Collectors.toList()));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;find&#34;&gt;find&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;groovy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-groovy&#34;&gt;def numbers = [1, 2, 3, 4, 5, 6]
+println numbers.find { it % 2 == 0}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+System.out.println(
+    numbers.stream()
+           .filter(e -&amp;gt; e % 2 == 0)
+           .findFirst());
+
+System.out.println(
+    numbers.stream()
+           .filter(e -&amp;gt; e % 2 == 0)
+           .findFirst()
+           .get());
+
+System.out.println(
+    numbers.stream()
+           .filter(e -&amp;gt; e % 2 == 0)
+           .findFirst()
+           .orElse(0));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;findall&#34;&gt;findAll&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;groovy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-groovy&#34;&gt;def numbers = [1, 2, 3, 4, 5, 6]
+println numbers.findAll { it % 2 == 0}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+System.out.println(
+  numbers.stream()
+             .filter(e -&amp;gt; e % 2 == 0)
+             .collect(Collectors.toList()));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;inject&#34;&gt;inject&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;groovy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-groovy&#34;&gt;def numbers = [1, 2, 3, 4, 5, 6]
+println numbers.collect { it * 2 }.inject(0) { c, e -&amp;gt; c + e }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+
+System.out.println(
+  numbers.stream()
+             .map(e -&amp;gt; e * 2)
+             .reduce(0, (c, e) -&amp;gt; c + e));
+
+System.out.println(
+  numbers.stream()
+             .map(e -&amp;gt; e * 2)
+             .reduce(0, Math::addExact));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;join&#34;&gt;join&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;groovy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;def names = [‘Jack’, ‘Sara’, ‘Jill’]
+println names.collect {it.toUpperCase() }.join(‘, ‘)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;List&amp;lt;String&amp;gt; names = Arrays.asList(“Jack”, “Sara”, “Jill”);
+
+System.out.println(
+  names.stream()
+           .map(String::toUpperCase)
+           .collect(joining(“, “)));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;lazy-evalution&#34;&gt;lazy evalution&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class Sample {
+  public static boolean isGT3(int number) {
+    System.out.println(“isGT3 ” + number);
+    return number &amp;gt; 3;
+  }
+
+  public static boolean isEven(int number) {
+    System.out.println(“isEven ” + number);
+    return number % 2 == 0;
+  }
+
+  public static int doubleIt(int number) {
+    System.out.println(“doubleIt ” + number);
+    return number * 2;
+  }
+
+  public static void main(String[] args) {
+    List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 5, 4, 6, 7, 8, 9, 10);
+    int result = numbers.stream()
+                        .filter(Sample::isGT3)
+                        .filter(Sample::isEven)
+                        .map(Sample::doubleIt)
+                        .findFirst()
+                        .get();
+
+    System.out.println(“Result: ” + result);
+    System.out.println(“Let’s see the effect of laziness”);
+    numbers.stream()
+           .filter(Sample::isGT3)
+           .filter(Sample::isEven)
+           .map(Sample::doubleIt);
+
+    System.out.println(“No work expended”);
+
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;infinite-series&#34;&gt;infinite series&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.*;
+import java.util.stream.Stream;
+import static java.util.stream.Collectors.toList;
+
+public class Sample {
+  public static List&amp;lt;Integer&amp;gt; seriesOfDouble(int size) {
+      return Stream.iterate(1, e -&amp;gt; e * 2)
+                   .limit(size)
+                   .collect(toList());
+  }
+
+  public static void main(String[] args) {
+      System.out.println(seriesOfDouble(5));
+      System.out.println(seriesOfDouble(10));
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;parallel-collections&#34;&gt;parallel collections&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.*;
+import java.util.stream.Stream;
+
+public class Sample {
+  public static int doubleIt(int number) {
+        try { Thread.sleep(1000); } catch(Exception ex) {} //assume a computation intensive code here
+        return number * 2;
+  }
+
+  public static int doubleAndTotal(Stream&amp;lt;Integer&amp;gt; values) {
+        long start = System.nanoTime();
+        try {
+          return values.mapToInt(Sample::doubleIt)
+                       .sum();
+        } finally {
+          long end = System.nanoTime();
+          System.out.println(“Time taken (s): ” + (end – start) / 1.0e9);
+        }
+  }
+
+  public static void main(String[] args) {
+        List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        System.out.println(doubleAndTotal(numbers.stream()));
+        System.out.println(doubleAndTotal(numbers.parallelStream()));
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;invoke-dynamic&#34;&gt;invoke dynamic&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;java 8&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;import java.util.*;
+
+public class UsingLambdas {
+  public static void main(String[] args) {
+        List&amp;lt;Integer&amp;gt; values = Arrays.asList(1, 2, 3);
+        values.forEach(e -&amp;gt; System.out.println(e));
+        values.forEach(e -&amp;gt; System.out.println(e));
+        values.forEach(e -&amp;gt; System.out.println(e));
+        values.forEach(e -&amp;gt; System.out.println(e));
+        values.forEach(e -&amp;gt; System.out.println(e));
+  }
+}
+
+//javac UsingLambdas
+//ls (or dir)
+//See the lack of inner classes.
+//Do javap -c UsingLambdas
+//examine the bytecode and look for invokedynamic
+//now remove the .class files before procedding to the other example
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;new-groovy&#34;&gt;new (Groovy)&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;groovy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-groovy&#34;&gt;boolean isGT3(int number) {
+  println “isGT3 $number”
+  number &amp;gt; 3
+}
+
+boolean isEven(int number) {
+  println “isEven $number”
+  number % 2 == 0
+}
+
+int doubleIt(int number) {
+  println “doubleIt $number”
+  number * 2
+}
+
+def numbers = [1, 2, 3, 5, 4, 6, 7, 8, 9, 10]
+//traditional Groovy functional style is eager.
+def eagerResult = numbers.findAll { isGT3(it) }.findAll { isEven(it) }.collect { doubleIt(it) }.find { it }
+println “Eager Result: $eagerResult”
+//We can use Java 8 Streams and be lazy – meaning efficient
+def result = numbers.stream()
+                        .filter { isGT3(it) }
+                        .filter { isEven(it) }
+                        .map { doubleIt(it) }
+                        .findFirst()
+                        .get()
+println “Result: $result”
+println “Let’s see the effect of laziness”
+numbers.stream()
+           .filter { isGT3(it) }
+           .filter { isEven(it) }
+           .map { doubleIt(it) }
+println “No work expended”
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+          </item>
+        
+      
+    
+  </channel>
+</rss>

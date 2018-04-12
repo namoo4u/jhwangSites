@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="author" content="Jupil Hwang (@jhwang)">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://namoo4u.github.io/favicon.ico">
+
+    <title> &middot; Just Do It!! YOLO</title>
+
+   	
+    
+        <link rel="stylesheet" href="https://namoo4u.github.io//css/theme/slate.css">
+    
+
+    <link rel="stylesheet" href="https://namoo4u.github.io//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://namoo4u.github.io//css/style.css">
+
+
+    
+    <script src="https://namoo4u.github.io//js/jquery.min-2.1.4.js"></script>
+    <script src="https://namoo4u.github.io//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Just Do It!! YOLO" />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://namoo4u.github.io/">Just Do It!! YOLO</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://namoo4u.github.io/">Home</a></li>
+                    <li><a href="https://namoo4u.github.io//post/">Blog</a></li>
+                    
+                      <li><a href="https://namoo4u.github.io/page/about/"> About </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3></h3>
+				<span class="label label-primary">0001.01.01</span> in 
+				 using tags
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			
+
+<p>DocCS</p>
+
+<h4 id="oauth-token">OAUTH_TOKEN</h4>
+
+<h5 id="curl">Curl</h5>
+
+<ul>
+<li>Accept : application/xml or application/json</li>
+<li>Authorization:
+
+<ul>
+<li>Authorization: Basic abclajdlfa=</li>
+<li>Authorization: Bearer eyJlad..adljfalsd</li>
+</ul></li>
+<li>Content-Length</li>
+<li>Content-Type
+
+<ul>
+<li>application/json</li>
+</ul></li>
+<li>Accept-Language: fr</li>
+</ul>
+
+<h5 id="using-oauth">Using OAuth</h5>
+
+<ul>
+<li>base url : <a href="https://documents-krdemo.documents.us2.oraclecloud.com/documents/web?IdcService=GET_OAUTH_TOKEN">https://documents-krdemo.documents.us2.oraclecloud.com/documents/web?IdcService=GET_OAUTH_TOKEN</a></li>
+<li>Reponse
+```
+{</li>
+</ul>
+
+<p>&ldquo;LocalData&rdquo;: {
+&ldquo;IdcService&rdquo;: &ldquo;GET_OAUTH_TOKEN&rdquo;,
+&ldquo;StatusCode&rdquo;: &ldquo;0&rdquo;,
+&ldquo;StatusMessage&rdquo;: &ldquo;You are logged in as &lsquo;U9133ACF5AE2AF282FD7F23A723FD68419FE&rsquo;.&rdquo;,
+&ldquo;StatusMessageKey&rdquo;: &ldquo;!csUserLoggedIn,U9133ACF5AE2AF282FD7F23A723FD68419FE&rdquo;,
+&ldquo;dUser&rdquo;: &ldquo;U9133ACF5AE2AF282FD7F23A723FD68419FE&rdquo;,
+&ldquo;dUserFullName&rdquo;: &ldquo;Jupil Hwang&rdquo;,
+&ldquo;expiration&rdquo;: &ldquo;604799&rdquo;,
+&ldquo;idcToken&rdquo;: &ldquo;1481347104797:C7968F3B2E31D84A029F65AF0FD970A9&rdquo;,
+&ldquo;localizedForResponse&rdquo;: &ldquo;1&rdquo;,
+&ldquo;tokenValue&rdquo;: &ldquo;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIng1dCI6IkxLRERYN2VyRUxYcm5fc0Zwc0RFZkt6ejg3YyIsImtpZCI6ImtyZGVtby5jZXJ0In0.eyJzdWIiOiJqdXBpbC5od2FuZ0BvcmFjbGUuY29tIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZCI6Imp1cGlsLmh3YW5nQG9yYWNsZS5jb20iLCJpc3MiOiJrcmRlbW8iLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6ImtyZGVtb1NlcnZpY2VQcm9maWxlIiwiaWF0IjoxNDgxMTc0MzA1LCJvcmFjbGUub2F1dGgucHJuLmlkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwiZXhwIjoxNDgxNzc5MTA0LCJhdWQiOlsiaHR0cHM6Ly9kb2N1bWVudHMta3JkZW1vLmRvY3VtZW50cy51czIub3JhY2xlY2xvdWQuY29tOjQ0My9kb2N1bWVudHMiXSwib3JhY2xlLm9hdXRoLnN1Yi5pZF90eXBlIjoiTERBUF9VSUQiLCJwcm4iOiJqdXBpbC5od2FuZ0BvcmFjbGUuY29tIiwianRpIjoiZDA0ZjQ2ODYtNjVhMy00YWIyLTk2NjItMmEzODA2M2I0ZTYzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJkZDdmMmYyNy0zN2QyLTRhMTktYjY3NS02ZWU0NWZhODk0NDUiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJodHRwczovL2RvY3VtZW50cy1rcmRlbW8uZG9jdW1lbnRzLnVzMi5vcmFjbGVjbG91ZC5jb206NDQzL2RvY3VtZW50cyIsInVzZXIudGVuYW50Lm5hbWUiOiJrcmRlbW8iLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6IjQ2NjkzMTY5NDk2MjI0MjA3In0.QUsPt6rXmGnVUyDxeMSKYhKxMFTSnuEqM5zybYlR9TZ1atkCDKdMNuC8euZp2SX45L43gVQbjUmyb-PdJ-jFYnv_c73QBZVcU7h8Kae2UrL39BGRF6dOmhp9b1fi6Ldi7L6GaK393MHgspel0v3vOlpDykISeis-arJEvYJsc10Bj5JO_ZFCP9AWVz4FwtpXFMtuiCiA2DtjAdQDo97qh0NYq2HFQCF4muTjV5KPrqi9_wRTNy4pdywezHLmk5PEqlsTGo2w7opo02t1WnlM6d1weGSr2hDKWv3WMn1WNN6moWNHmBKQk2tYNOe9690qWHo3WNYcDa1nBHDnO3OP3A&rdquo;
+},</p>
+
+<p>&ldquo;ResultSets&rdquo;: {</p>
+
+<p>}
+}</p>
+
+<pre><code></code></pre>
+
+<p>curl -iv -H &lsquo;Authorization:Bearer token&rsquo; -X GET {Docs External URL}/api/1.1/folder/items</p>
+
+<pre><code>
+##### Using Baic Authorization
+- Base64 encode
+</code></pre>
+
+<p>jupil.hwang@oracle.com:W3lc0m31#</p>
+
+<p>&ndash; encode &ndash;&gt;
+  Authorization:Basic anVwaWwuaHdhbmdAb3JhY2xlLmNvbTpXM2xjMG0zMSM=</p>
+
+<pre><code>```bash
+curl -iv -H 'Authorization:Basic anVwaWwuaHdhbmdAb3JhY2xlLmNvbTpXM2xjMG0zMSM=' -X GET https://documents-krdemo.documents.us2.oraclecloud.com/documents/api/1.1/folders/items
+</code></pre>
+
+<p>Response</p>
+
+<pre><code class="language-json">{
+&quot;count&quot;: &quot;1&quot;,
+&quot;errorCode&quot;: &quot;0&quot;,
+&quot;hasMore&quot;: &quot;0&quot;,
+&quot;limit&quot;: &quot;100&quot;,
+&quot;offset&quot;: &quot;0&quot;,
+&quot;ownerFolderID&quot;: &quot;self&quot;,
+&quot;totalResults&quot;: &quot;1&quot;,
+&quot;items&quot;: [
+{
+&quot;type&quot;: &quot;folder&quot;,
+&quot;id&quot;: &quot;FC0370A6544CA32F53428D9D723FD68419FE3B212942&quot;,
+&quot;parentID&quot;: &quot;self&quot;,
+&quot;name&quot;: &quot;AutomaticWorkflow&quot;,
+&quot;ownedBy&quot;: {
+&quot;displayName&quot;: &quot;Jupil Hwang&quot;,
+&quot;id&quot;: &quot;U9133ACF5AE2AF282FD7F23A723FD68419FE&quot;,
+&quot;type&quot;: &quot;user&quot;
+}
+,
+&quot;createdBy&quot;: {
+&quot;displayName&quot;: &quot;Jupil Hwang&quot;,
+&quot;id&quot;: &quot;U9133ACF5AE2AF282FD7F23A723FD68419FE&quot;,
+&quot;type&quot;: &quot;user&quot;
+}
+,
+&quot;modifiedBy&quot;: {
+&quot;displayName&quot;: &quot;Jupil Hwang&quot;,
+&quot;id&quot;: &quot;U9133ACF5AE2AF282FD7F23A723FD68419FE&quot;,
+&quot;type&quot;: &quot;user&quot;
+}
+,
+&quot;createdTime&quot;: &quot;2016-12-08T05:10:38Z&quot;,
+&quot;modifiedTime&quot;: &quot;2016-12-08T05:10:38Z&quot;,
+&quot;size&quot;: &quot;0&quot;,
+&quot;childItemsCount&quot;: &quot;0&quot;
+}
+]
+}
+</code></pre>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+		</div>
+	</div>
+</div>
+
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.38.2 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/namoo4u" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

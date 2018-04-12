@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/12/10/lazybones-%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-template%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2016-12-10T15:04:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</loc>
+    <lastmod>2016-11-23T14:29:35+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2016-11-22T17:24:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</loc>
+    <lastmod>2016-11-22T14:48:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2016-11-22T00:27:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</loc>
+    <lastmod>2016-11-21T18:06:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/page/about/</loc>
+    <lastmod>2016-11-18T20:06:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2016-11-18T19:34:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/17/java-collections%EC%9D%98-%EC%97%AD%EC%8A%B5/</loc>
+    <lastmod>2016-11-17T17:28:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/17/rxgroovy%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</loc>
+    <lastmod>2016-11-17T17:08:54+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/</loc>
+    <lastmod>2016-11-17T17:08:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</loc>
+    <lastmod>2016-11-17T15:22:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</loc>
+    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</loc>
+    <lastmod>2016-11-11T17:29:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/11/network-cloud-service/</loc>
+    <lastmod>2016-11-11T13:23:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/09/reactive-programming-with-groovy/</loc>
+    <lastmod>2016-11-09T13:07:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/08/hugo-blog%EB%A5%BC-github.io-page-%EB%A1%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%ED%95%98%EA%B8%B0/</loc>
+    <lastmod>2016-11-08T14:17:23+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</loc>
+    <lastmod>2016-11-08T12:52:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/10/31/%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%95%EB%A6%AC/</loc>
+    <lastmod>2016-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/</loc>
+    <lastmod>2016-10-27T11:29:14+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/10/19/ipad-retina-display%EB%A1%9C-external-monitor-%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
+    <lastmod>2016-10-19T15:46:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</loc>
+    <lastmod>2016-10-19T15:46:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/2016/10/17/network-overlay/</loc>
+    <lastmod>2016-10-17T14:05:21+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/1/01/01/</loc>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/1/01/01/</loc>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/android/</loc>
+    <lastmod>2016-11-22T17:24:30+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/android/</loc>
+    <lastmod>2016-11-22T17:24:30+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/architecture/</loc>
+    <lastmod>2016-11-09T13:07:41+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/bare-metal/</loc>
+    <lastmod>2016-11-08T12:52:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/blog/</loc>
+    <lastmod>2016-11-08T14:17:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/blog/</loc>
+    <lastmod>2016-11-08T14:17:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/</loc>
+    <lastmod>2016-11-22T17:24:30+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/cloud/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/cloud/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/code/</loc>
+    <lastmod>2016-11-18T19:34:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/digital-experince/</loc>
+    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/docker/</loc>
+    <lastmod>2016-11-23T14:29:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/docker/</loc>
+    <lastmod>2016-11-23T14:29:35+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/dx/</loc>
+    <lastmod>2016-11-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/github.io/</loc>
+    <lastmod>2016-11-08T14:17:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/groovy/</loc>
+    <lastmod>2016-11-11T17:29:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/groovy/</loc>
+    <lastmod>2016-12-10T15:04:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/hugo/</loc>
+    <lastmod>2016-11-08T14:17:23+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/iaas/</loc>
+    <lastmod>2016-11-08T12:52:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/java/</loc>
+    <lastmod>2016-11-18T19:34:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/java/</loc>
+    <lastmod>2016-11-18T19:34:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/jvm/</loc>
+    <lastmod>2016-11-18T19:34:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/lambda-expressions/</loc>
+    <lastmod>2016-11-11T17:29:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/lazybones/</loc>
+    <lastmod>2016-12-10T15:04:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/linux/</loc>
+    <lastmod>2016-11-22T14:48:38+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/linux/</loc>
+    <lastmod>2016-11-22T14:48:38+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/machine-image/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/ms/</loc>
+    <lastmod>2016-11-17T15:22:30+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/network/</loc>
+    <lastmod>2016-11-21T18:06:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/network-overay/</loc>
+    <lastmod>2016-10-19T15:46:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/nmcli/</loc>
+    <lastmod>2016-11-21T18:06:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/oci/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/oracle/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/oracle/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/packer/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/page/</loc>
+    <lastmod>2016-11-18T20:06:32+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/post/</loc>
+    <lastmod>2018-04-12T10:44:17+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/categories/programming/</loc>
+    <lastmod>2016-12-10T15:04:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/programming/</loc>
+    <lastmod>2016-12-10T15:04:27+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/reactive/</loc>
+    <lastmod>2016-11-09T13:07:41+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/security/</loc>
+    <lastmod>2016-11-18T19:34:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/sql-server/</loc>
+    <lastmod>2016-11-17T15:22:30+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/stream-api/</loc>
+    <lastmod>2016-11-11T17:29:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/</loc>
+    <lastmod>2016-11-22T17:24:30+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/uim/</loc>
+    <lastmod>2016-11-22T14:48:38+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/vlan/</loc>
+    <lastmod>2016-10-19T15:46:59+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/wireless/</loc>
+    <lastmod>2016-10-27T11:29:14+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/xiaomi/</loc>
+    <lastmod>2016-11-22T17:24:30+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://namoo4u.github.io/tags/zsh/</loc>
+    <lastmod>2016-11-22T00:27:10+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
