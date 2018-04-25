@@ -1,3 +1,5 @@
+language: go
+
 # Install the apt prerequisites
 addons:
   apt:
