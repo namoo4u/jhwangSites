@@ -15,7 +15,7 @@ googleAnalytics : "UA-117423189-1"
 #theme : "hugo_theme_robust"
 #theme : "hugo-material-docs"
 #theme : "hugo-universal-theme"
-theme : "hugo-multi-bootswatch2"
+theme : "hugo-multi-bootswatch"
 
  
 indexes:
