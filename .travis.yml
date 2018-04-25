@@ -10,7 +10,7 @@ install:
 
 # Build the website
 script:
-  - bin/hugo --theme=fresh
+  - bin/hugo
 
 # Deploy to GitHub pages
 deploy:
