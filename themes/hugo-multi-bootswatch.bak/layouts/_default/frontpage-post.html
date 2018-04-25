@@ -2,7 +2,7 @@
 		{{ if ne .Params.menu "main" }}
 			<div class="row">
 				<!-- <div class="col-md-offset-1 col-md-10"> -->
-				<div class="col-md-offset-1 col-md-10">
+				<div class="col-md-12">
 					<h3><a href="{{.Permalink}}">{{ .Title }}</a></h3>
 						<small><span class="label label-primary">
 							{{ if .Site.Params.strings.date_format }}
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-offset-1 col-md-10">
+				<div class="col-md-12">
 					<br>
 					{{ if .Site.Params.use_summaries }}
 	  					{{ if .Params.nocut }}
@@ -50,7 +50,7 @@
 		{{ end }}
 	{{ else if eq .Type "link" }}
 		<div class="row">
-			<div class="col-md-offset-1 col-md-10">
+			<div class="col-md-12">
 				<small>
 					<span class="label label-primary">
 						{{ if .Site.Params.strings.date_format }}
