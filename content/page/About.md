@@ -20,6 +20,3 @@ menu = "main"
   - Kotlin
   - Arduino
 
-
-- [Event]
-  - 5월19일 Meetup : Kafka
