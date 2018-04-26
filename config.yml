@@ -5,7 +5,7 @@ languageCode : "en-US.UTF8"
 title : "Just Do It!! YoLo "
 pygmentsuseclasses : true
 pluralizelisttitles : false
-comments: true
+comments: disqus
 disqusShortname : "namoo4u-github-io"
 copyright : "JHwang All rights reserved"
 googleAnalytics : "UA-117423189-1"
