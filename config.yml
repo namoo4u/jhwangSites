@@ -2,13 +2,17 @@ baseurl : "https://namoo4u.github.io/"
 builddrafts : true
 canonifyurls : true
 languageCode : "en-US.UTF8"
-title : "Just Do It!! YOLO"
+title : "Just Do It!! YoLo "
 pygmentsuseclasses : true
 pluralizelisttitles : false
 comments: true
 disqusShortname : "namoo4u-github-io"
 copyright : "JHwang All rights reserved"
 googleAnalytics : "UA-117423189-1"
+sitemap:
+  changefreq: daily
+  filename: sitemap.xml
+  priority: 0.5
 
 #theme : "hyde-x"
 #theme : "casper"
@@ -21,9 +25,6 @@ theme : "hugo-multi-bootswatch"
 indexes:
   category : "categories"
   tag : "tags"
-
-permalinks:
-  post : "/blog/:year/:month/:day/:title"
 
 params:
   languagecode : "en-US"
@@ -49,7 +50,7 @@ params:
     blog_navbar_link : "Blog"
     posts_list_header : "Posts"
     date_format : "2006.01.02"
-    use_summaries : false
+    use_summaries : true
 
   theme :
     inverse : false
