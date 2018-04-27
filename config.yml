@@ -21,7 +21,6 @@ sitemap:
 #theme : "hugo-universal-theme"
 theme : "hugo-multi-bootswatch"
 
- 
 indexes:
   category : "categories"
   tag : "tags"
@@ -84,3 +83,5 @@ permalinks:
 taxonomies:
   tag: "tags"
   category: "categories"
+  series: series
+
