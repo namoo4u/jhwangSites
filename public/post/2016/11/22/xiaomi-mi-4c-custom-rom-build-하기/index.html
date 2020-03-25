@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Xiaomi Mi 4c Custom Rom build 하기">
+    <meta name="author" content="Jupil Hwang (@jupil_hwang)">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://namoo4u.github.io/favicon.ico">
+
+    
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-117423189-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117423189-1');
+</script>
+    
+    <title>Xiaomi Mi 4c Custom Rom build 하기 &middot; Just Do It!! YoLo </title>
+
+   	
+    
+        <link rel="stylesheet" href="https://namoo4u.github.io//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="https://namoo4u.github.io//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://namoo4u.github.io//css/style.css">
+
+
+    
+    <script src="https://namoo4u.github.io//js/jquery.min-2.1.4.js"></script>
+    <script src="https://namoo4u.github.io//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Just Do It!! YoLo " />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://namoo4u.github.io/">Just Do It!! YoLo </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://namoo4u.github.io/">Home</a></li>
+                    <li><a href="https://namoo4u.github.io//post/">Blog</a></li>
+                    
+                      <li><a href="https://namoo4u.github.io/page/about/"> About </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>Xiaomi Mi 4c Custom Rom build 하기</h3>
+				<span class="label label-primary">2016.11.22</span> in 
+				
+					
+					<a href="https://namoo4u.github.io/categories/android">android</a>
+				 using tags
+				
+					
+					<a href="https://namoo4u.github.io/tags/android">Android</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/tags/xiaomi">Xiaomi</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<h2 id="xiaomi-custom-rom-build">Xiaomi Custom Rom Build</h2>
+<h4 id="docker-image-는-ubuntu1510-를-기준으로-한다">Docker Image 는 ubuntu:15.10 를 기준으로 한다.</h4>
+<p>Docker 실행</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker run -it --name android ubuntu:15.10
+</code></pre></div><h4 id="필요한-packages-설치">필요한 Packages 설치</h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apt update -y
+apt install -y bison build-essential curl flex git gnupg gperf libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop maven openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev g++-multilib gcc-multilib lib32ncurses5-dev lib32z1-dev realpath bsdmainutils curl file screen android-tools-adb android-tools-fastboot
+</code></pre></div><p>lib32readline-gplv2-dev 는 찾을 수 없는 package 라고 에러가 발생하여, 이를 빼고 설치를 진행한다.</p>
+<h4 id="init-repo">Init repo</h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">curl http://commondatastorage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+chmod +x ~/bin/repo
+repo init -u https://github.com/CyanogenMod/android.git -b stable/cm-13.0-ZNH5Y
+</code></pre></div><h4 id="sync">Sync</h4>
+<pre><code>repo sync -j4
+</code></pre><p>Copy device/xiaomi/libra/local_manifests/libra.xml to $ANDROID_BUILD_TOP/.repo/local_manifests/</p>
+<pre><code>cp ./device/xiaomi/libra/local_manifests/libra.xml $ANDROID_BUILD_TOP/.repo/local_manifests/
+</code></pre><h4 id="sync-1">Sync</h4>
+<p>repo sync -j4</p>
+<h4 id="force-syncs">Force sync&rsquo;s</h4>
+<p>repo sync &ndash;force-sync bootable/recovery repo sync &ndash;force-sync external/jpeg repo sync &ndash;force-sync frameworks/base repo sync &ndash;force-sync frameworks/native</p>
+<h4 id="sync-repo">Sync repo</h4>
+<p>repo sync -j4</p>
+<h4 id="build">Build</h4>
+<p>lunch cm_libra-userdebug brunch cm_libra-userdebug</p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9866004235043813",
+    enable_page_level_ads: true
+  });
+</script>
+			<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1" id="disqus_thread"></div>
+</div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://namoo4u-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	</div>
+</div>
+
+    <br><br>
+    
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.68.3 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/jupil_hwang" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

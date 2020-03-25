@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="">
+    <meta name="author" content="Jupil Hwang (@jupil_hwang)">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://namoo4u.github.io/favicon.ico">
+
+    
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-117423189-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117423189-1');
+</script>
+    
+    <title> &middot; Just Do It!! YoLo </title>
+
+   	
+    
+        <link rel="stylesheet" href="https://namoo4u.github.io//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="https://namoo4u.github.io//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://namoo4u.github.io//css/style.css">
+
+
+    
+    <script src="https://namoo4u.github.io//js/jquery.min-2.1.4.js"></script>
+    <script src="https://namoo4u.github.io//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Just Do It!! YoLo " />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://namoo4u.github.io/">Just Do It!! YoLo </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://namoo4u.github.io/">Home</a></li>
+                    <li><a href="https://namoo4u.github.io//post/">Blog</a></li>
+                    
+                      <li><a href="https://namoo4u.github.io/page/about/"> About </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3></h3>
+				<span class="label label-primary">0001.01.01</span> in 
+				 using tags
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<h3 id="storage-cs-만들기">Storage CS 만들기``</h3>
+<p>####. Authentication token 가져오기</p>
+<pre><code>curl -v -X GET -H 'X-Storage-User: Storage-&lt;Identity Domain&gt;:&lt;User Name&gt;' -H 'X-Storage-Pass:&lt;Password&gt;' https://storage.us2.oraclecloud.com/auth/v1.0
+</code></pre><pre><code>curl -v -X GET -H 'X-Storage-User: Storage-jcsdemo0060:cloud.admin' -H 'X-Storage-Pass: dIrty@7TiMBer' https://storage.us2.oraclecloud.com/auth/v1.0
+</code></pre><p>&lt; X-Auth-Token: AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d
+&lt; X-Storage-Url: <a href="https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060">https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060</a></p>
+<h4 id="create-a-container">Create a Container</h4>
+<pre><code>curl -v -H 'X-Auth-Token:AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d' -X PUT https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060/HCMDEMO
+</code></pre><p>&lt; HTTP/1.1 201 Created</p>
+<h4 id="storage-cs-상태확인">Storage CS 상태확인</h4>
+<pre><code>curl -v -H 'X-Auth-Token:AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d' -X GET https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060/HCMDEMO
+</code></pre><h3 id="dbaas-cs-만들기">DBaaS CS 만들기</h3>
+<pre><code>curl -V -H 'identityDomainId:jcsdemo0060' -H 'Authorization: ' -H 'X-ID-TENANT_NAME:jcsdemo0060' -X POST /paas/service/dbcs/api/v1.1/instances/{identityDomainId} \
+-D '
+</code></pre>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9866004235043813",
+    enable_page_level_ads: true
+  });
+</script>
+			<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1" id="disqus_thread"></div>
+</div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://namoo4u-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	</div>
+</div>
+
+    <br><br>
+    
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.68.3 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/jupil_hwang" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+
+#34;1&#34;</span><span class="p">,</span>
+<span class="nt">&#34;errorCode&#34;</span><span class="p">:</span> <span class="s2">&#34;0&#34;</span><span class="p">,</span>
+<span class="nt">&#34;hasMore&#34;</span><span class="p">:</span> <span class="s2">&#34;0&#34;</span><span class="p">,</span>
+<span class="nt">&#34;limit&#34;</span><span class="p">:</span> <span class="s2">&#34;100&#34;</span><span class="p">,</span>
+<span class="nt">&#34;offset&#34;</span><span class="p">:</span> <span class="s2">&#34;0&#34;</span><span class="p">,</span>
+<span class="nt">&#34;ownerFolderID&#34;</span><span class="p">:</span> <span class="s2">&#34;self&#34;</span><span class="p">,</span>
+<span class="nt">&#34;totalResults&#34;</span><span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+<span class="nt">&#34;items&#34;</span><span class="p">:</span> <span class="p">[</span>
+<span class="p">{</span>
+<span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;folder&#34;</span><span class="p">,</span>
+<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;FC0370A6544CA32F53428D9D723FD68419FE3B212942&#34;</span><span class="p">,</span>
+<span class="nt">&#34;parentID&#34;</span><span class="p">:</span> <span class="s2">&#34;self&#34;</span><span class="p">,</span>
+<span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;AutomaticWorkflow&#34;</span><span class="p">,</span>
+<span class="nt">&#34;ownedBy&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="nt">&#34;displayName&#34;</span><span class="p">:</span> <span class="s2">&#34;Jupil Hwang&#34;</span><span class="p">,</span>
+<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;U9133ACF5AE2AF282FD7F23A723FD68419FE&#34;</span><span class="p">,</span>
+<span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;user&#34;</span>
+<span class="p">}</span>
+<span class="p">,</span>
+<span class="nt">&#34;createdBy&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="nt">&#34;displayName&#34;</span><span class="p">:</span> <span class="s2">&#34;Jupil Hwang&#34;</span><span class="p">,</span>
+<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;U9133ACF5AE2AF282FD7F23A723FD68419FE&#34;</span><span class="p">,</span>
+<span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;user&#34;</span>
+<span class="p">}</span>
+<span class="p">,</span>
+<span class="nt">&#34;modifiedBy&#34;</span><span class="p">:</span> <span class="p">{</span>
+<span class="nt">&#34;displayName&#34;</span><span class="p">:</span> <span class="s2">&#34;Jupil Hwang&#34;</span><span class="p">,</span>
+<span class="nt">&#34;id&#34;</span><span class="p">:</span> <span class="s2">&#34;U9133ACF5AE2AF282FD7F23A723FD68419FE&#34;</span><span class="p">,</span>
+<span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;user&#34;</span>
+<span class="p">}</span>
+<span class="p">,</span>
+<span class="nt">&#34;createdTime&#34;</span><span class="p">:</span> <span class="s2">&#34;2016-12-08T05:10:38Z&#34;</span><span class="p">,</span>
+<span class="nt">&#34;modifiedTime&#34;</span><span class="p">:</span> <span class="s2">&#34;2016-12-08T05:10:38Z&#34;</span><span class="p">,</span>
+<span class="nt">&#34;size&#34;</span><span class="p">:</span> <span class="s2">&#34;0&#34;</span><span class="p">,</span>
+<span class="nt">&#34;childItemsCount&#34;</span><span class="p">:</span> <span class="s2">&#34;0&#34;</span>
+<span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9866004235043813",
+    enable_page_level_ads: true
+  });
+</script>
+			<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1" id="disqus_thread"></div>
+</div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://namoo4u-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	</div>
+</div>
+
+    <br><br>
+    
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.68.3 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/jupil_hwang" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

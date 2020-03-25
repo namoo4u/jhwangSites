@@ -1,4 +1,4 @@
-baseurl : "https://namoo4u.github.io/"
+baseurl : "https://jupilhwang.github.io/"
 builddrafts : true
 canonifyurls : true
 languageCode : "en-US.UTF8"
@@ -6,7 +6,7 @@ title : "Just Do It!! YoLo "
 pygmentsuseclasses : true
 pluralizelisttitles : false
 comments: disqus
-disqusShortname : "namoo4u-github-io"
+disqusShortname : "jupilhwang-github-io"
 copyright : "JHwang All rights reserved"
 googleAnalytics : "UA-117423189-1"
 sitemap:

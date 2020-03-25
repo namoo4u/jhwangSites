@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Lambda expressions and Stream API with Groovy or JAVA8">
+    <meta name="author" content="Jupil Hwang (@jupil_hwang)">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://namoo4u.github.io/favicon.ico">
+
+    
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-117423189-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117423189-1');
+</script>
+    
+    <title>Lambda expressions and Stream API with Groovy or JAVA8 &middot; Just Do It!! YoLo </title>
+
+   	
+    
+        <link rel="stylesheet" href="https://namoo4u.github.io//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="https://namoo4u.github.io//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://namoo4u.github.io//css/style.css">
+
+
+    
+    <script src="https://namoo4u.github.io//js/jquery.min-2.1.4.js"></script>
+    <script src="https://namoo4u.github.io//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Just Do It!! YoLo " />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://namoo4u.github.io/">Just Do It!! YoLo </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://namoo4u.github.io/">Home</a></li>
+                    <li><a href="https://namoo4u.github.io//post/">Blog</a></li>
+                    
+                      <li><a href="https://namoo4u.github.io/page/about/"> About </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>Lambda expressions and Stream API with Groovy or JAVA8</h3>
+				<span class="label label-primary">2016.11.11</span> in 
+				
+					
+					<a href="https://namoo4u.github.io/categories/groovy">groovy</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/categories/programming">programming</a>
+				 using tags
+				
+					
+					<a href="https://namoo4u.github.io/tags/groovy">groovy</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/tags/lambda-expressions">lambda expressions</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/tags/stream-api">stream api</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<h3 id="lambda-expressions-and-stream-api-with-groovy-and-java-8">Lambda expressions and Stream API with Groovy and JAVA 8</h3>
+<h4 id="iteration">Iteration</h4>
+<ul>
+<li>groovy</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="kt">def</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">]</span>
+<span class="n">numbers</span><span class="o">.</span><span class="na">each</span> <span class="o">{</span> <span class="n">e</span> <span class="o">-&gt;</span> <span class="n">println</span> <span class="n">e</span> <span class="o">}</span>
+<span class="n">numbers</span><span class="o">.</span><span class="na">each</span> <span class="o">{</span> <span class="n">println</span> <span class="n">it</span> <span class="o">}</span>
+</code></pre></div><ul>
+<li>java</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">6</span><span class="o">);</span>
+<span class="n">numbers</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+<span class="n">numbers</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+</code></pre></div><h4 id="collect">collect</h4>
+<ul>
+<li>groovy</li>
+</ul>
+<pre><code>def numbers = [1, 2, 3, 4, 5, 6]
+numbers.collect { it * 2 }.each { e -&gt; println e }
+println numbers.collect { it * 2 }
+</code></pre><ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">6</span><span class="o">);</span>
+<span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+ <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">*</span> <span class="n">2</span><span class="o">)</span>
+ <span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">::</span><span class="n">println</span><span class="o">);</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+   <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">*</span> <span class="n">2</span><span class="o">)</span>
+   <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="n">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">()));</span>
+</code></pre></div><h4 id="find">find</h4>
+<ul>
+<li>groovy</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="kt">def</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">]</span>
+<span class="n">println</span> <span class="n">numbers</span><span class="o">.</span><span class="na">find</span> <span class="o">{</span> <span class="n">it</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">}</span>
+</code></pre></div><ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">6</span><span class="o">);</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span>
+           <span class="o">.</span><span class="na">findFirst</span><span class="o">());</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span>
+           <span class="o">.</span><span class="na">findFirst</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">get</span><span class="o">());</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span>
+           <span class="o">.</span><span class="na">findFirst</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">orElse</span><span class="o">(</span><span class="n">0</span><span class="o">));</span>
+</code></pre></div><h4 id="findall">findAll</h4>
+<ul>
+<li>groovy</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="kt">def</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">]</span>
+<span class="n">println</span> <span class="n">numbers</span><span class="o">.</span><span class="na">findAll</span> <span class="o">{</span> <span class="n">it</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="o">}</span>
+</code></pre></div><ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">6</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+             <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span><span class="o">)</span>
+             <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="n">Collectors</span><span class="o">.</span><span class="na">toList</span><span class="o">()));</span>
+</code></pre></div><h4 id="inject">inject</h4>
+<ul>
+<li>groovy</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="kt">def</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">]</span>
+<span class="n">println</span> <span class="n">numbers</span><span class="o">.</span><span class="na">collect</span> <span class="o">{</span> <span class="n">it</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">}.</span><span class="na">inject</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">{</span> <span class="n">c</span><span class="o">,</span> <span class="n">e</span> <span class="o">-&gt;</span> <span class="n">c</span> <span class="o">+</span> <span class="n">e</span> <span class="o">}</span>
+</code></pre></div><ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">6</span><span class="o">);</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+             <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">*</span> <span class="n">2</span><span class="o">)</span>
+             <span class="o">.</span><span class="na">reduce</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="o">(</span><span class="n">c</span><span class="o">,</span> <span class="n">e</span><span class="o">)</span> <span class="o">-&gt;</span> <span class="n">c</span> <span class="o">+</span> <span class="n">e</span><span class="o">));</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+             <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">*</span> <span class="n">2</span><span class="o">)</span>
+             <span class="o">.</span><span class="na">reduce</span><span class="o">(</span><span class="n">0</span><span class="o">,</span> <span class="n">Math</span><span class="o">::</span><span class="n">addExact</span><span class="o">));</span>
+</code></pre></div><h4 id="join">join</h4>
+<ul>
+<li>groovy</li>
+</ul>
+<pre><code>def names = [‘Jack’, ‘Sara’, ‘Jill’]
+println names.collect {it.toUpperCase() }.join(‘, ‘)
+</code></pre><ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="err">“</span><span class="n">Jack</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">Sara</span><span class="err">”</span><span class="o">,</span> <span class="err">“</span><span class="n">Jill</span><span class="err">”</span><span class="o">);</span>
+
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="n">names</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">String</span><span class="o">::</span><span class="n">toUpperCase</span><span class="o">)</span>
+           <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="n">joining</span><span class="o">(</span><span class="err">“</span><span class="o">,</span> <span class="err">“</span><span class="o">)));</span>
+</code></pre></div><h4 id="lazy-evalution">lazy evalution</h4>
+<ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sample</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isGT3</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">“</span><span class="n">isGT3</span> <span class="err">”</span> <span class="o">+</span> <span class="n">number</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="n">3</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isEven</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">“</span><span class="n">isEven</span> <span class="err">”</span> <span class="o">+</span> <span class="n">number</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">doubleIt</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">“</span><span class="n">doubleIt</span> <span class="err">”</span> <span class="o">+</span> <span class="n">number</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="n">2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">6</span><span class="o">,</span> <span class="n">7</span><span class="o">,</span> <span class="n">8</span><span class="o">,</span> <span class="n">9</span><span class="o">,</span> <span class="n">10</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">Sample</span><span class="o">::</span><span class="n">isGT3</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">Sample</span><span class="o">::</span><span class="n">isEven</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">Sample</span><span class="o">::</span><span class="n">doubleIt</span><span class="o">)</span>
+                        <span class="o">.</span><span class="na">findFirst</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">get</span><span class="o">();</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">“</span><span class="n">Result</span><span class="o">:</span> <span class="err">”</span> <span class="o">+</span> <span class="n">result</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">“</span><span class="n">Let</span><span class="err">’</span><span class="n">s</span> <span class="n">see</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">laziness</span><span class="err">”</span><span class="o">);</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">Sample</span><span class="o">::</span><span class="n">isGT3</span><span class="o">)</span>
+           <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">Sample</span><span class="o">::</span><span class="n">isEven</span><span class="o">)</span>
+           <span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">Sample</span><span class="o">::</span><span class="n">doubleIt</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">“</span><span class="n">No</span> <span class="n">work</span> <span class="n">expended</span><span class="err">”</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="infinite-series">infinite series</h4>
+<ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.Stream</span><span class="o">;</span>
+<span class="kn">import static</span> <span class="nn">java.util.stream.Collectors.toList</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sample</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="nf">seriesOfDouble</span><span class="o">(</span><span class="kt">int</span> <span class="n">size</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">Stream</span><span class="o">.</span><span class="na">iterate</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">e</span> <span class="o">-&gt;</span> <span class="n">e</span> <span class="o">*</span> <span class="n">2</span><span class="o">)</span>
+                   <span class="o">.</span><span class="na">limit</span><span class="o">(</span><span class="n">size</span><span class="o">)</span>
+                   <span class="o">.</span><span class="na">collect</span><span class="o">(</span><span class="n">toList</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">seriesOfDouble</span><span class="o">(</span><span class="n">5</span><span class="o">));</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">seriesOfDouble</span><span class="o">(</span><span class="n">10</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="parallel-collections">parallel collections</h4>
+<ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.Stream</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sample</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">doubleIt</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span> <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="n">1000</span><span class="o">);</span> <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{}</span> <span class="c1">//assume a computation intensive code here
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="n">2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">doubleAndTotal</span><span class="o">(</span><span class="n">Stream</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">values</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">long</span> <span class="n">start</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+        <span class="k">try</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="n">values</span><span class="o">.</span><span class="na">mapToInt</span><span class="o">(</span><span class="n">Sample</span><span class="o">::</span><span class="n">doubleIt</span><span class="o">)</span>
+                       <span class="o">.</span><span class="na">sum</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+          <span class="kt">long</span> <span class="n">end</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">nanoTime</span><span class="o">();</span>
+          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">“</span><span class="n">Time</span> <span class="nf">taken</span> <span class="o">(</span><span class="n">s</span><span class="o">):</span> <span class="err">”</span> <span class="o">+</span> <span class="o">(</span><span class="n">end</span> <span class="err">–</span> <span class="n">start</span><span class="o">)</span> <span class="o">/</span> <span class="n">1</span><span class="o">.</span><span class="na">0e9</span><span class="o">);</span>
+        <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">,</span> <span class="n">4</span><span class="o">,</span> <span class="n">5</span><span class="o">,</span> <span class="n">6</span><span class="o">,</span> <span class="n">7</span><span class="o">,</span> <span class="n">8</span><span class="o">,</span> <span class="n">9</span><span class="o">,</span> <span class="n">10</span><span class="o">);</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">doubleAndTotal</span><span class="o">(</span><span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()));</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">doubleAndTotal</span><span class="o">(</span><span class="n">numbers</span><span class="o">.</span><span class="na">parallelStream</span><span class="o">()));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><h4 id="invoke-dynamic">invoke dynamic</h4>
+<ul>
+<li>java 8</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">UsingLambdas</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">values</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">);</span>
+        <span class="n">values</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+        <span class="n">values</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+        <span class="n">values</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+        <span class="n">values</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+        <span class="n">values</span><span class="o">.</span><span class="na">forEach</span><span class="o">(</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1">//javac UsingLambdas
+</span><span class="c1">//ls (or dir)
+</span><span class="c1">//See the lack of inner classes.
+</span><span class="c1">//Do javap -c UsingLambdas
+</span><span class="c1">//examine the bytecode and look for invokedynamic
+</span><span class="c1">//now remove the .class files before procedding to the other example
+</span></code></pre></div><h4 id="new-groovy">new (Groovy)</h4>
+<ul>
+<li>groovy</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="kt">boolean</span> <span class="nf">isGT3</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">println</span> <span class="err">“</span><span class="n">isGT3</span> <span class="n">$number</span><span class="err">”</span>
+  <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">3</span>
+<span class="o">}</span>
+
+<span class="kt">boolean</span> <span class="nf">isEven</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">println</span> <span class="err">“</span><span class="n">isEven</span> <span class="n">$number</span><span class="err">”</span>
+  <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="o">}</span>
+
+<span class="kt">int</span> <span class="nf">doubleIt</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">println</span> <span class="err">“</span><span class="n">doubleIt</span> <span class="n">$number</span><span class="err">”</span>
+  <span class="n">number</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="o">}</span>
+
+<span class="kt">def</span> <span class="n">numbers</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">6</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">8</span><span class="o">,</span> <span class="mi">9</span><span class="o">,</span> <span class="mi">10</span><span class="o">]</span>
+<span class="c1">//traditional Groovy functional style is eager.
+</span><span class="c1"></span><span class="kt">def</span> <span class="n">eagerResult</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="na">findAll</span> <span class="o">{</span> <span class="n">isGT3</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}.</span><span class="na">findAll</span> <span class="o">{</span> <span class="n">isEven</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}.</span><span class="na">collect</span> <span class="o">{</span> <span class="n">doubleIt</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}.</span><span class="na">find</span> <span class="o">{</span> <span class="n">it</span> <span class="o">}</span>
+<span class="n">println</span> <span class="err">“</span><span class="n">Eager</span> <span class="nl">Result:</span> <span class="n">$eagerResult</span><span class="err">”</span>
+<span class="c1">//We can use Java 8 Streams and be lazy – meaning efficient
+</span><span class="c1"></span><span class="kt">def</span> <span class="n">result</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">filter</span> <span class="o">{</span> <span class="n">isGT3</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}</span>
+                        <span class="o">.</span><span class="na">filter</span> <span class="o">{</span> <span class="n">isEven</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}</span>
+                        <span class="o">.</span><span class="na">map</span> <span class="o">{</span> <span class="n">doubleIt</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}</span>
+                        <span class="o">.</span><span class="na">findFirst</span><span class="o">()</span>
+                        <span class="o">.</span><span class="na">get</span><span class="o">()</span>
+<span class="n">println</span> <span class="err">“</span><span class="nl">Result:</span> <span class="n">$result</span><span class="err">”</span>
+<span class="n">println</span> <span class="err">“</span><span class="n">Let</span><span class="err">’</span><span class="n">s</span> <span class="n">see</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">laziness</span><span class="err">”</span>
+<span class="n">numbers</span><span class="o">.</span><span class="na">stream</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">filter</span> <span class="o">{</span> <span class="n">isGT3</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}</span>
+           <span class="o">.</span><span class="na">filter</span> <span class="o">{</span> <span class="n">isEven</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}</span>
+           <span class="o">.</span><span class="na">map</span> <span class="o">{</span> <span class="n">doubleIt</span><span class="o">(</span><span class="n">it</span><span class="o">)</span> <span class="o">}</span>
+<span class="n">println</span> <span class="err">“</span><span class="n">No</span> <span class="n">work</span> <span class="n">expended</span><span class="err">”</span>
+</code></pre></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9866004235043813",
+    enable_page_level_ads: true
+  });
+</script>
+			<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1" id="disqus_thread"></div>
+</div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://namoo4u-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	</div>
+</div>
+
+    <br><br>
+    
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.68.3 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/jupil_hwang" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

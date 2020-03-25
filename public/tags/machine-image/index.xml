@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>machine image on Just Do It!! YoLo </title>
+    <link>https://namoo4u.github.io/tags/machine-image/</link>
+    <description>Recent content in machine image on Just Do It!! YoLo </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US.UTF8</language>
+    <managingEditor>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</managingEditor>
+    <webMaster>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</webMaster>
+    <copyright>JHwang All rights reserved</copyright>
+    <lastBuildDate>Thu, 12 Apr 2018 10:44:17 +0900</lastBuildDate>
+    
+	<atom:link href="https://namoo4u.github.io/tags/machine-image/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Packer Oci Machine Image</title>
+      <link>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</link>
+      <pubDate>Thu, 12 Apr 2018 10:44:17 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</guid>
+      <description>OCI builder for Packer Packer는 hashcorp에서 만든 오픈소스로 Machine Image생성 툴이다. AMI, Azure, GCP뿐만 아니라, Oracle Cloud Infrastructure또한 지원을 한다. 물론 기본 이미지를 Provisioning하고 Ansible이나 기타 Tool을 통해서 Configuration이 가능하지만, Packer를 사용하면 미리 이미지를 만들어서 배포 후 바로 실행 할 수 있다.
+사전에 알아야 할 사항   packer를 설치한다
+ Linux의 경우 손쉽게 Repository에서 다운로드해서 설치가능하다  yaourt -S packer-io or Download from packer site (https://www.packer.io/downloads.html)
+  OCI builder for packer</description>
+    </item>
+    
+  </channel>
+</rss>

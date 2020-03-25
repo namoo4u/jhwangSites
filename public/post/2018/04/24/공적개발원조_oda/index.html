@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="공적개발원조_ODA">
+    <meta name="author" content="Jupil Hwang (@jupil_hwang)">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://namoo4u.github.io/favicon.ico">
+
+    
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-117423189-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117423189-1');
+</script>
+    
+    <title>공적개발원조_ODA &middot; Just Do It!! YoLo </title>
+
+   	
+    
+        <link rel="stylesheet" href="https://namoo4u.github.io//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="https://namoo4u.github.io//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://namoo4u.github.io//css/style.css">
+
+
+    
+    <script src="https://namoo4u.github.io//js/jquery.min-2.1.4.js"></script>
+    <script src="https://namoo4u.github.io//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Just Do It!! YoLo " />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://namoo4u.github.io/">Just Do It!! YoLo </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://namoo4u.github.io/">Home</a></li>
+                    <li><a href="https://namoo4u.github.io//post/">Blog</a></li>
+                    
+                      <li><a href="https://namoo4u.github.io/page/about/"> About </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>공적개발원조_ODA</h3>
+				<span class="label label-primary">2018.04.24</span> in 
+				 using tags
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<h2 id="공적개발원조-oda---development">공적개발원조 (ODA - Development)</h2>
+<p><a href="https://blog.quandl.com/api-for-economic-data">https://blog.quandl.com/api-for-economic-data</a></p>
+<p>python + wbdata + matplotlib</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">wbdata</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+ 
+<span class="c1">#set up the countries I want</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;CL&#34;</span><span class="p">,</span><span class="s2">&#34;UY&#34;</span><span class="p">,</span><span class="s2">&#34;HU&#34;</span><span class="p">]</span>
+ 
+<span class="c1">#set up the indicator I want (just build up the dict if you want more than one)</span>
+<span class="n">indicators</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;NY.GNP.PCAP.CD&#39;</span><span class="p">:</span><span class="s1">&#39;GNI per Capita&#39;</span><span class="p">}</span>
+ 
+<span class="c1">#grab indicators above for countires above and load into data frame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">wbdata</span><span class="o">.</span><span class="n">get_dataframe</span><span class="p">(</span><span class="n">indicators</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="n">countries</span><span class="p">,</span> <span class="n">convert_date</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="c1">#df is &#34;pivoted&#34;, pandas&#39; unstack fucntion helps reshape it into something plottable</span>
+<span class="n">dfu</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># a simple matplotlib plot with legend, labels and a title</span>
+<span class="n">dfu</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&#34;GNI Per Capita ($USD, Atlas Method)&#34;</span><span class="p">);</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GNI Per Capita ($USD, Atlas Method&#39;</span><span class="p">);</span>
+</code></pre></div><p><img src="https://blogs.worldbank.org/opendata/files/opendata/pyplot.png" alt=""></p>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9866004235043813",
+    enable_page_level_ads: true
+  });
+</script>
+			<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1" id="disqus_thread"></div>
+</div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://namoo4u-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	</div>
+</div>
+
+    <br><br>
+    
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.68.3 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/jupil_hwang" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+

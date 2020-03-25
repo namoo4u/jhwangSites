@@ -22,5 +22,5 @@ deploy:
   local_dir: public
   on:
     branch: master
-  repo: namoo4u/namoo4u.github.io
+  repo: jupilhwang/jupilhwang.github.io
   target_branch: master

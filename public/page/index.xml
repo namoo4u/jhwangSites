@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Page on Just Do It!! YoLo </title>
+    <link>https://namoo4u.github.io/page/</link>
+    <description>Recent content in Page on Just Do It!! YoLo </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US.UTF8</language>
+    <managingEditor>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</managingEditor>
+    <webMaster>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</webMaster>
+    <copyright>JHwang All rights reserved</copyright>
+    <lastBuildDate>Fri, 18 Nov 2016 20:06:32 +0900</lastBuildDate>
+    
+	<atom:link href="https://namoo4u.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://namoo4u.github.io/page/about/</link>
+      <pubDate>Fri, 18 Nov 2016 20:06:32 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/page/about/</guid>
+      <description>  이름 : 황주필 (@jupil.hwang / @namoo4u)
+  Software Architecture, Cloud Platform, Linux and Open Source, Container Service(Docker), Java / Groovy, ML, Docker &amp;amp; Kubernetes, Serverless, Functions, Microservice Architecture, DevOps, Blockchain, Hyperledger Fabric
+  [&amp;hellip;ing]
+ Kubernetes + Istio + (Vizceral, Zipkin) Serverless with Kubernetes and Fn Project Microservices Architecture Microprofile Blockchain - Hyperledger Fabric Kotlin Arduino    </description>
+    </item>
+    
+  </channel>
+</rss>

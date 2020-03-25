@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Just Do It!! YoLo </title>
+    <link>https://namoo4u.github.io/tags/linux/</link>
+    <description>Recent content in linux on Just Do It!! YoLo </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US.UTF8</language>
+    <managingEditor>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</managingEditor>
+    <webMaster>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</webMaster>
+    <copyright>JHwang All rights reserved</copyright>
+    <lastBuildDate>Tue, 22 Nov 2016 14:48:38 +0900</lastBuildDate>
+    
+	<atom:link href="https://namoo4u.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nautilus에서 문서 선택해서 Edit시 한글입력문제</title>
+      <link>https://namoo4u.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</link>
+      <pubDate>Tue, 22 Nov 2016 14:48:38 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</guid>
+      <description>Linux 에서 한글입력 시 문제 ~/.xprofile 에 아래와 같이 추가한다.
+export XIM=&amp;#34;uim&amp;#34; export GTK_IM_MODULE=&amp;#39;uim&amp;#39; export QT_IM_MODULE=&amp;#39;uim&amp;#39; exec uim-xim &amp;amp; export XMODIFIERS=&amp;#39;@im=uim&amp;#39; exec uim-toolbar-gtk3-systray &amp;amp;   WPS에서 한글입력 시 한글입력이 되지 않는 문제가 있는데, 이는 uim-xim 을 띄우고, qtconfig-qt4의 interface 에서 ime를 xim 으로 해야 wps에서 한글입력이 제대로 됨
+  Natuilus 에서 문서 선택하고, 마우스 오른쪽 클릭 후 Edit를 선택하면 WPS또는 MS Office에서 한글 입력이 되지 않는 문제가 있음 하지만, Thunar 나 Command line에서 WPS나 MS Office 를 띄우면 한글입력에 문제가 되지 않음.</description>
+    </item>
+    
+    <item>
+      <title>oh my zsh 설치하기</title>
+      <link>https://namoo4u.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
+      <pubDate>Tue, 22 Nov 2016 00:27:10 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</guid>
+      <description>zsh 를 설치하고, oh-my-zsh 를 설치하기
+$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh </description>
+    </item>
+    
+    <item>
+      <title>nmcli 다시보기</title>
+      <link>https://namoo4u.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</link>
+      <pubDate>Mon, 21 Nov 2016 18:06:53 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</guid>
+      <description>네트워크 설정 네트워크 관리를 위한 CLI (command line tool)인 nmcli 에 대해서 다시 한번 보자. (맨날 까먹으니까&amp;hellip;.. ㅠㅠ)
+command line tool 인 nmcli 는 사용자가 직접 또는 NetworkManager를 위한 스크립트를 사용할 수 있다. 기본적인 명령어 모양은 아래와 같다
+$ netcli [OPTIONS] OBJECT { COMMAND | help } OBJECT 는 general, networking, radio, connection, device, agent, monitor 이다. 그리고 가장 많이 사용하는 OPTIONS은 -t (&amp;ndash;terse), -p (&amp;ndash;pretty), -h (&amp;ndash;help) 이다.
+$ nmcli help Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] terse output -p[retty] pretty output -m[ode] tabular|multiline output mode -c[olors] auto|yes|no whether to use colors in output -f[ields] &amp;lt;field1,field2,.</description>
+    </item>
+    
+    <item>
+      <title>SQL Server Docker image on Linux</title>
+      <link>https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</link>
+      <pubDate>Thu, 17 Nov 2016 15:22:30 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</guid>
+      <description>SQL Server on Linux 정말로 놀라운 소식이 아닐수 없다. &amp;ldquo;Microsoft is back&amp;rdquo; 이란 말이 헛말이 아니라는 것이 요즘 MS에서 나오는 새로운 소식드에서 느낄 수 있다. Visual Studio on mac 에 이어서 몇달전에 발표한 SQL Server on Linux 가 실체를 드러냈다. 리눅스 서버에 새롭게 설치를 할 수도 있겠지만 놀랍게도 Docker image를 통해서 손쉽게 배포를 할 수 있도록 한 것이 또 다른 점이라 할 수 있다.. 이제는 거의 모든 회사에서 새로운 제품을 출시하고 나서 Docker image를 통해서 테스트/운영을 할 수 있도록 제공하는 것이 기본이 되어 버렸다.</description>
+    </item>
+    
+    <item>
+      <title>WiFi Network in Arch Network Using Terminal</title>
+      <link>https://namoo4u.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/</link>
+      <pubDate>Thu, 27 Oct 2016 11:29:14 +0900</pubDate>
+      <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
+      <guid>https://namoo4u.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/</guid>
+      <description>Scanning Network  Arch Linux 에서 iwconfig 이나 iwlist 를 사용할 수 없다면, wireless_tools 가 설치되어 있는지 확인해 보자. $ pacman -S wirelesss_tools
+ # 네트워크 인터페이스 이름을 알기 위해서 iwconfig # 인터페이스 이름을 알았다면 ip link set &amp;lt;interface&amp;gt; up # 접속 가능한 WiFi network 을 스캔해 보자 iwlist &amp;lt;interface&amp;gt; scan | less # ip link set &amp;lt;interface&amp;gt; down 1번 방법) Setup A WiFi using &amp;ldquo;netctl&amp;rdquo; # network card 가 가능한지 확인해 본다.</description>
+    </item>
+    
+  </channel>
+</rss>

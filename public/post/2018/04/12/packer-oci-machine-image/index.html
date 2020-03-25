@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Packer Oci Machine Image">
+    <meta name="author" content="Jupil Hwang (@jupil_hwang)">
+
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="https://namoo4u.github.io/favicon.ico">
+
+    
+<script src="https://www.googletagmanager.com/gtag/js?id=UA-117423189-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117423189-1');
+</script>
+    
+    <title>Packer Oci Machine Image &middot; Just Do It!! YoLo </title>
+
+   	
+    
+        <link rel="stylesheet" href="https://namoo4u.github.io//css/theme/cosmo.css">
+    
+
+    <link rel="stylesheet" href="https://namoo4u.github.io//css/font-awesome.min.css">
+
+   	
+   	<link rel="stylesheet" href="https://namoo4u.github.io//css/style.css">
+
+
+    
+    <script src="https://namoo4u.github.io//js/jquery.min-2.1.4.js"></script>
+    <script src="https://namoo4u.github.io//js/bootstrap.min-3.3.5.js"></script>
+
+    
+    <link href="" rel="alternate" type="application/rss+xml" title="Just Do It!! YoLo " />
+</head>
+<body lang="en-US">
+    
+    <div class="container">
+    <div class="row">
+        <div class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://namoo4u.github.io/">Just Do It!! YoLo </a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://namoo4u.github.io/">Home</a></li>
+                    <li><a href="https://namoo4u.github.io//post/">Blog</a></li>
+                    
+                      <li><a href="https://namoo4u.github.io/page/about/"> About </a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<h3>Packer Oci Machine Image</h3>
+				<span class="label label-primary">2018.04.12</span> in 
+				
+					
+					<a href="https://namoo4u.github.io/categories/oracle">oracle</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/categories/cloud">cloud</a>
+				 using tags
+				
+					
+					<a href="https://namoo4u.github.io/tags/oracle">oracle</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/tags/cloud">cloud</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/tags/packer">packer</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/tags/oci">oci</a>
+				
+					 , 
+					<a href="https://namoo4u.github.io/tags/machine-image">machine image</a>
+				
+			</small>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<br>
+			<h3 id="oci-builder-for-packer">OCI builder for Packer</h3>
+<p>Packer는 hashcorp에서 만든 오픈소스로 Machine Image생성 툴이다. AMI, Azure, GCP뿐만 아니라, Oracle Cloud Infrastructure또한 지원을 한다.
+물론 기본 이미지를 Provisioning하고 Ansible이나 기타 Tool을 통해서 Configuration이 가능하지만, Packer를 사용하면 미리 이미지를 만들어서 배포 후 바로 실행 할 수 있다.</p>
+<h4 id="사전에-알아야-할-사항">사전에 알아야 할 사항</h4>
+<ul>
+<li>
+<p>packer를 설치한다</p>
+<ul>
+<li>Linux의 경우 손쉽게 Repository에서 다운로드해서 설치가능하다</li>
+</ul>
+<pre><code>yaourt -S packer-io
+</code></pre><p>or Download from packer site (<a href="https://www.packer.io/downloads.html">https://www.packer.io/downloads.html</a>)</p>
+</li>
+<li>
+<p>OCI builder for packer</p>
+<ul>
+<li><a href="https://github.com/oracle/">https://github.com/oracle/</a></li>
+</ul>
+</li>
+</ul>
+<h6 id="oracle-oci">Oracle OCI</h6>
+<ul>
+<li>Availabilty_domain</li>
+<li>base_image_ocid</li>
+<li>compartment_ocid</li>
+<li>fingerprint</li>
+<li>shape</li>
+<li>subnet_ocid</li>
+</ul>
+<h5 id="optional">optional</h5>
+<ul>
+<li>access_cfg_file : Defaults to &ldquo;$HOME/.oci/config&rdquo;</li>
+<li>image_name : Defaults to DEFAULT</li>
+<li>key_file</li>
+<li>pass_phrase</li>
+<li>region</li>
+<li>tenancy_ocid</li>
+<li>user_ocid</li>
+<li>use_private_ip</li>
+<li>user_data</li>
+<li>user_data_file : &ldquo;./boot_config/myscript.sh&rdquo;</li>
+</ul>
+<h4 id="간단-예제--redis-server">간단 예제 : Redis Server</h4>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;builders&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;availability_domain&#34;</span><span class="p">:</span> <span class="s2">&#34;UpwH:US-ASHBURN-AD-1&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;region&#34;</span><span class="p">:</span> <span class="s2">&#34;us-ashburn-1&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;base_image_ocid&#34;</span><span class="p">:</span> <span class="s2">&#34;ocid1.image.oc1.iad.aaaaaaaatjsckmcbcmuhl3n42iyuugauuupw5jmv3zkxbnwud7mkyhroddoq&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;compartment_ocid&#34;</span><span class="p">:</span> <span class="s2">&#34;ocid1.compartment.oc1..&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;image_name&#34;</span><span class="p">:</span> <span class="s2">&#34;RedisOCI&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;shape&#34;</span><span class="p">:</span> <span class="s2">&#34;VM.Standard1.1&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;ssh_username&#34;</span><span class="p">:</span> <span class="s2">&#34;ubuntu&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;subnet_ocid&#34;</span><span class="p">:</span> <span class="s2">&#34;ocid1.subnet.oc1.iad.&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;oracle-oci&#34;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&#34;provisioners&#34;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;shell&#34;</span><span class="p">,</span>
+      <span class="nt">&#34;inline&#34;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&#34;sleep 30&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;sudo apt-get update&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;sudo apt-get install -y redis-server&#34;</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">packer build redis.json
+</code></pre></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1 col-md-10">
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9866004235043813",
+    enable_page_level_ads: true
+  });
+</script>
+			<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-md-offset-1" id="disqus_thread"></div>
+</div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://namoo4u-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	</div>
+</div>
+
+    <br><br>
+    
+    <div class="container">
+        <div class="row col-md-12">
+            <footer>
+                <div class="pull-left">
+                    <p>
+                        &copy; JHwang All rights reserved ~ Powered By <a href="http://hugo.spf13.com">Hugo</a> - version: 0.68.3 ~ <a href="https://namoo4u.github.io//license">License</a>
+                    </p>
+                </div>
+
+                
+                <div class="pull-right">
+                    
+                        <a href="https://www.linkedin.com/in/namoo4u" target="_blank">
+                        <i class="fa fa-linkedin fa-2x"></i></a>
+                    
+                    
+                        <a href="https://www.facebook.com/jupilhwang" target="_blank">
+                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://twitter.com/jupil_hwang" target="_blank">
+                        <i class="fa fa-twitter-square fa-2x"></i></a>
+                    
+                    
+                        <a href="https://github.com/namoo4u" target="_blank">
+                        <i class="fa fa-github-square fa-2x"></i></a>
+                    
+                    
+                    
+                    
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    
+    </body>
+</html>
+
