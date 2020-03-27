@@ -34,14 +34,79 @@ OpenPitrix 를 사용한 App Store도 제공한다
 #### DNS Setting for K8s Master API LB
 생성된 클러스터의 Master API Server의 IP 주소를 DNS에 클러스터 생성 시 입력한 external-hostname으로 등록한다.
 
-## Pre Built-Software
-  - Helm
-  - Kubesphere
+# Software
+- Helm
+- Kubesphere
 
+## Default Storage Class 생성
+- Storage Class 생성
+```bash
+kubectl create -f -<<-EOF
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name:  thick
+provisioner: kubernetes.io/vsphere-volume
+parameters:
+  diskformat: zeroedthick
+EOF
 
-### Helm
-  - tiller 서비스 어카운트
-  ```yaml
-  
-  ```
+kubectl patch storageclass thick -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+```
+
+## Helm
+- Download CLI
+```bash
+wget https://get.helm.sh/helm-v2.16.3-linux-amd64.tar.gz
+```
+
+- tiller 서비스 어카운트/클러스터롤 생성
+```bash
+kubectl apply -f -<<-EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tiller
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: tiller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+ - kind: ServiceAccount
+   name: tiller
+   namespace: kube-system
+EOF
+```
+
+- helm init
+```bash
+helm init --service-account=tiller
+```
+- helm repo update
+helm 에서 사용할 repo 추가 및 업데이트하기
+```bash
+helm repo add stable https://kubernetes-charts.storage.googleapis.com
+helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/
+helm repo add bitnami https://charts.bitnami.com/bitnami
+
+helm repo update
+```
+
+## KubeSphere
+
+- Installing
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubesphere/ks-installer/master/kubesphere-complete-setup.yaml
+```
+
+- Verify 
+```bash
+kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
+```
 
