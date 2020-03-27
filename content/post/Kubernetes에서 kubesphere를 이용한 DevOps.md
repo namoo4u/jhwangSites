@@ -28,12 +28,12 @@ OpenPitrix 를 사용한 App Store도 제공한다.
   ```bash
   pks create-cluster k8s --external-hostname demo-cluster.k8s.kdis.local -p medium -n 5
   ```
+  ![](/img/kubesphere/pks-cluster-create.png)
 - 클러스터 생성 확인
   ```bash
   pks cluster k8s
   ```
-
-#### DNS Setting for K8s Master API LB
+- DNS Setting for K8s Master API LB
 생성된 클러스터의 Master API Server의 IP 주소를 DNS에 클러스터 생성 시 입력한 external-hostname으로 등록한다.
 
 # Software
