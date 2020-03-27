@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post on Just Do It!! YoLo </title>
-    <link>https://namoo4u.github.io/post/</link>
+    <link>https://jupilhwang.github.io/post/</link>
     <description>Recent content in Post on Just Do It!! YoLo </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US.UTF8</language>
@@ -11,24 +11,24 @@
     <copyright>JHwang All rights reserved</copyright>
     <lastBuildDate>Fri, 27 Apr 2018 10:36:21 +0900</lastBuildDate>
     
-	<atom:link href="https://namoo4u.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jupilhwang.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>코틀린_Kotlin_다시보기1</title>
-      <link>https://namoo4u.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</link>
+      <link>https://jupilhwang.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</link>
       <pubDate>Fri, 27 Apr 2018 10:36:21 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</guid>
+      <guid>https://jupilhwang.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</guid>
       <description>코틀린 kotlin 기초 기본타입 패키지 흐름제어 리턴과 점프 클래스와 오브젝트 클래스와 상속 프로퍼티와 필드 인터페이스 확장 데이터 클래스 지네릭 리제릭 함수 중첩 클래스 Enum 클래스 오브젝트 식과 선언 위임 위임 프로퍼티 함수와 람다 함수 함수선언 함수사용  중위표현 파라미터 기본인자 이름(Named)인자 Unit리턴함수 단일 식 함수 리턴 타입 지정 가변인자(Varargs)  함수범위  로컬 함수 멤버 함수  지네릭함수 인라인함수 확장함수 고차함수와 람다 꼬리 재귀함수 고차함수와 람다 고차함수 인라인함수 람다식과 임의함수 인라인 함수 noinline 비-로컬 리턴 Reified 타입 파라미터 기타 coroutines ###</description>
     </item>
     
     <item>
       <title>공적개발원조_ODA</title>
-      <link>https://namoo4u.github.io/post/2018/04/24/%EA%B3%B5%EC%A0%81%EA%B0%9C%EB%B0%9C%EC%9B%90%EC%A1%B0_oda/</link>
+      <link>https://jupilhwang.github.io/post/2018/04/24/%EA%B3%B5%EC%A0%81%EA%B0%9C%EB%B0%9C%EC%9B%90%EC%A1%B0_oda/</link>
       <pubDate>Tue, 24 Apr 2018 15:20:28 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2018/04/24/%EA%B3%B5%EC%A0%81%EA%B0%9C%EB%B0%9C%EC%9B%90%EC%A1%B0_oda/</guid>
+      <guid>https://jupilhwang.github.io/post/2018/04/24/%EA%B3%B5%EC%A0%81%EA%B0%9C%EB%B0%9C%EC%9B%90%EC%A1%B0_oda/</guid>
       <description>공적개발원조 (ODA - Development) https://blog.quandl.com/api-for-economic-data
 python + wbdata + matplotlib
 import wbdata import pandas import matplotlib.pyplot as plt #set up the countries I want countries = [&amp;#34;CL&amp;#34;,&amp;#34;UY&amp;#34;,&amp;#34;HU&amp;#34;] #set up the indicator I want (just build up the dict if you want more than one) indicators = {&amp;#39;NY.GNP.PCAP.CD&amp;#39;:&amp;#39;GNI per Capita&amp;#39;} #grab indicators above for countires above and load into data frame df = wbdata.get_dataframe(indicators, country=countries, convert_date=False) #df is &amp;#34;pivoted&amp;#34;, pandas&amp;#39; unstack fucntion helps reshape it into something plottable dfu = df.</description>
@@ -36,10 +36,10 @@ import wbdata import pandas import matplotlib.pyplot as plt #set up the countrie
     
     <item>
       <title>Packer Oci Machine Image</title>
-      <link>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</link>
+      <link>https://jupilhwang.github.io/post/2018/04/12/packer-oci-machine-image/</link>
       <pubDate>Thu, 12 Apr 2018 10:44:17 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</guid>
+      <guid>https://jupilhwang.github.io/post/2018/04/12/packer-oci-machine-image/</guid>
       <description>OCI builder for Packer Packer는 hashcorp에서 만든 오픈소스로 Machine Image생성 툴이다. AMI, Azure, GCP뿐만 아니라, Oracle Cloud Infrastructure또한 지원을 한다. 물론 기본 이미지를 Provisioning하고 Ansible이나 기타 Tool을 통해서 Configuration이 가능하지만, Packer를 사용하면 미리 이미지를 만들어서 배포 후 바로 실행 할 수 있다.
 사전에 알아야 할 사항   packer를 설치한다
  Linux의 경우 손쉽게 Repository에서 다운로드해서 설치가능하다  yaourt -S packer-io or Download from packer site (https://www.packer.io/downloads.html)
@@ -48,19 +48,19 @@ import wbdata import pandas import matplotlib.pyplot as plt #set up the countrie
     
     <item>
       <title>Kubernetes</title>
-      <link>https://namoo4u.github.io/post/2017/11/23/kubernetes/</link>
+      <link>https://jupilhwang.github.io/post/2017/11/23/kubernetes/</link>
       <pubDate>Thu, 23 Nov 2017 10:46:06 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2017/11/23/kubernetes/</guid>
+      <guid>https://jupilhwang.github.io/post/2017/11/23/kubernetes/</guid>
       <description>오라클 개발자 Meetup에서 발표한 Kubernetes 101발표자료입니다.</description>
     </item>
     
     <item>
       <title>lazybones 에 새로운 Template추가하기</title>
-      <link>https://namoo4u.github.io/post/2016/12/10/lazybones-%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-template%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/12/10/lazybones-%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-template%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</link>
       <pubDate>Sat, 10 Dec 2016 15:04:27 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/12/10/lazybones-%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-template%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/12/10/lazybones-%EC%97%90-%EC%83%88%EB%A1%9C%EC%9A%B4-template%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0/</guid>
       <description>lazybones 의 템플릿 lazybones 의 기본 템플릿은 list 를 통해서 볼 수 있는데, 이외의 다른 템플릿을 추가하기 위해서는 config.groovy에 새로운 Repository 를 추가해 줘야 한다.
 lazybones list ${USER_HOME}/.lazybones/config.groovy
 bintaryRepositories = [ &amp;quot;kyleboon/lazybones&amp;quot;, &amp;quot;griffon/griffon-lazybones-templates&amp;quot;, &amp;quot;pledbrook/lazybones-templates&amp;quot; ] griffon javafx 를 사용하는 groovy Sample 프로젝트를 생성하기 위해서는 아래와 같이 하면 된다.
@@ -69,29 +69,29 @@ lazybones create griffon-javafx-groovy griffon-javafx-groovy-sample lazybones �
     
     <item>
       <title>Docker base image size늘리기</title>
-      <link>https://namoo4u.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</link>
       <pubDate>Wed, 23 Nov 2016 14:29:35 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</guid>
       <description>Docker Image 의 Base Sizse 늘리기 docker -D infoContainers: 1 Running: 1 Paused: 0 Stopped: 0Images: 1Server Version: 1.12.3Storage Driver: devicemapper Pool Name: docker-8:17-35389497-pool Pool Blocksize: 65.54 kB Base Device Size: 53.69 GB...docker 의 기본 이미지 사이즈는 10GB 이다. 일반적으로 그냥 docker 를 설치하고 이미지를 실행해서 &amp;lsquo;df -h&#39;를 통해서 사이즈를 확인하면, 9.99GB가 나온다. 하지만 때때로 10GB가 넘는 경우가 발생한다. 외부 Volume을 연결할 수도 있겠지만, 컨테이너 자체에서 스토리지를 관리하고 싶을때도 있다. 이런 경우, systemd docker.</description>
     </item>
     
     <item>
       <title>Xiaomi Mi 4c Custom Rom build 하기</title>
-      <link>https://namoo4u.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 22 Nov 2016 17:24:30 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</guid>
       <description>Xiaomi Custom Rom Build Docker Image 는 ubuntu:15.10 를 기준으로 한다. Docker 실행
 docker run -it --name android ubuntu:15.10 필요한 Packages 설치 apt update -y apt install -y bison build-essential curl flex git gnupg gperf libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop maven openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev g++-multilib gcc-multilib lib32ncurses5-dev lib32z1-dev realpath bsdmainutils curl file screen android-tools-adb android-tools-fastboot lib32readline-gplv2-dev 는 찾을 수 없는 package 라고 에러가 발생하여, 이를 빼고 설치를 진행한다.</description>
     </item>
     
     <item>
       <title>Nautilus에서 문서 선택해서 Edit시 한글입력문제</title>
-      <link>https://namoo4u.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</link>
       <pubDate>Tue, 22 Nov 2016 14:48:38 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/22/nautilus%EC%97%90%EC%84%9C-%EB%AC%B8%EC%84%9C-%EC%84%A0%ED%83%9D%ED%95%B4%EC%84%9C-edit%EC%8B%9C-%ED%95%9C%EA%B8%80%EC%9E%85%EB%A0%A5%EB%AC%B8%EC%A0%9C/</guid>
       <description>Linux 에서 한글입력 시 문제 ~/.xprofile 에 아래와 같이 추가한다.
 export XIM=&amp;#34;uim&amp;#34; export GTK_IM_MODULE=&amp;#39;uim&amp;#39; export QT_IM_MODULE=&amp;#39;uim&amp;#39; exec uim-xim &amp;amp; export XMODIFIERS=&amp;#39;@im=uim&amp;#39; exec uim-toolbar-gtk3-systray &amp;amp;   WPS에서 한글입력 시 한글입력이 되지 않는 문제가 있는데, 이는 uim-xim 을 띄우고, qtconfig-qt4의 interface 에서 ime를 xim 으로 해야 wps에서 한글입력이 제대로 됨
   Natuilus 에서 문서 선택하고, 마우스 오른쪽 클릭 후 Edit를 선택하면 WPS또는 MS Office에서 한글 입력이 되지 않는 문제가 있음 하지만, Thunar 나 Command line에서 WPS나 MS Office 를 띄우면 한글입력에 문제가 되지 않음.</description>
@@ -99,20 +99,20 @@ export XIM=&amp;#34;uim&amp;#34; export GTK_IM_MODULE=&amp;#39;uim&amp;#39; expo
     
     <item>
       <title>oh my zsh 설치하기</title>
-      <link>https://namoo4u.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 22 Nov 2016 00:27:10 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/22/oh-my-zsh-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0/</guid>
       <description>zsh 를 설치하고, oh-my-zsh 를 설치하기
 $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh </description>
     </item>
     
     <item>
       <title>nmcli 다시보기</title>
-      <link>https://namoo4u.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</link>
       <pubDate>Mon, 21 Nov 2016 18:06:53 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/21/nmcli-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</guid>
       <description>네트워크 설정 네트워크 관리를 위한 CLI (command line tool)인 nmcli 에 대해서 다시 한번 보자. (맨날 까먹으니까&amp;hellip;.. ㅠㅠ)
 command line tool 인 nmcli 는 사용자가 직접 또는 NetworkManager를 위한 스크립트를 사용할 수 있다. 기본적인 명령어 모양은 아래와 같다
 $ netcli [OPTIONS] OBJECT { COMMAND | help } OBJECT 는 general, networking, radio, connection, device, agent, monitor 이다. 그리고 가장 많이 사용하는 OPTIONS은 -t (&amp;ndash;terse), -p (&amp;ndash;pretty), -h (&amp;ndash;help) 이다.
@@ -121,10 +121,10 @@ $ nmcli help Usage: nmcli [OPTIONS] OBJECT { COMMAND | help } OPTIONS -t[erse] t
     
     <item>
       <title>리눅스 JVM 튜닝하기</title>
-      <link>https://namoo4u.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</link>
       <pubDate>Fri, 18 Nov 2016 19:34:42 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</guid>
       <description>JVM java 를 설치하고 나서, &amp;lt;JAVA_HOME&amp;gt;/jre/lib/security/java.security 파일을 수정해 준다.
 #networkaddress.cache.ttl=-1 networkaddress.cache.ttl=30 그리고 Linux 의 경우 /etc/nsswitch.conf 의 host 설정을 변경한다.
 ehco &amp;#39;hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4&amp;#39; &amp;gt;&amp;gt; /etc/nsswitch.conf </description>
@@ -132,93 +132,93 @@ ehco &amp;#39;hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4&amp;#39; &a
     
     <item>
       <title>java Collections의 역습</title>
-      <link>https://namoo4u.github.io/post/2016/11/17/java-collections%EC%9D%98-%EC%97%AD%EC%8A%B5/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/17/java-collections%EC%9D%98-%EC%97%AD%EC%8A%B5/</link>
       <pubDate>Thu, 17 Nov 2016 17:28:32 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/17/java-collections%EC%9D%98-%EC%97%AD%EC%8A%B5/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/17/java-collections%EC%9D%98-%EC%97%AD%EC%8A%B5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rxGroovy다시보기</title>
-      <link>https://namoo4u.github.io/post/2016/11/17/rxgroovy%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/17/rxgroovy%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</link>
       <pubDate>Thu, 17 Nov 2016 17:08:54 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/17/rxgroovy%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/17/rxgroovy%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Actor모델</title>
-      <link>https://namoo4u.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/</link>
       <pubDate>Thu, 17 Nov 2016 17:08:34 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/17/actor%EB%AA%A8%EB%8D%B8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SQL Server Docker image on Linux</title>
-      <link>https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</link>
       <pubDate>Thu, 17 Nov 2016 15:22:30 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/17/sql-server-docker-image-on-linux/</guid>
       <description>SQL Server on Linux 정말로 놀라운 소식이 아닐수 없다. &amp;ldquo;Microsoft is back&amp;rdquo; 이란 말이 헛말이 아니라는 것이 요즘 MS에서 나오는 새로운 소식드에서 느낄 수 있다. Visual Studio on mac 에 이어서 몇달전에 발표한 SQL Server on Linux 가 실체를 드러냈다. 리눅스 서버에 새롭게 설치를 할 수도 있겠지만 놀랍게도 Docker image를 통해서 손쉽게 배포를 할 수 있도록 한 것이 또 다른 점이라 할 수 있다.. 이제는 거의 모든 회사에서 새로운 제품을 출시하고 나서 Docker image를 통해서 테스트/운영을 할 수 있도록 제공하는 것이 기본이 되어 버렸다.</description>
     </item>
     
     <item>
       <title>Digital Experience Workshop at Seoul (Nov 14, 2016)</title>
-      <link>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</guid>
       <description>Digital Experience Top 3 features  Secutiry Social Mobile  Use Cases  Coordinating with Business Partners Sales Collaboration Support of Mobile Field Workers  Digital Workplace Collaboration  Connections  Real-time conversations and social collaboration Social Graph based discovery of content and conversations Content centric activity stream &amp;ldquo;buddy&amp;rdquo;   Context  Integrated within business workflows Embedded within applications Unified on-premises and cloud content management Multiple content centric mobile experience   Control  Choice of user &amp;amp; content    Context is everything  Business Apps integratation  Sales Cloud, Eloqua, Service Cloud, SRM On-Premises : Siebel, EBS   PAAS Integrations  Proces CS, Sites CS   Hybrid ECM RICH Platform  Architected to be Platform</description>
     </item>
     
     <item>
       <title>Lambda expressions and Stream API with Groovy or JAVA8</title>
-      <link>https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</link>
       <pubDate>Fri, 11 Nov 2016 17:29:55 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/11/lambda-expressions-and-stream-api-with-groovy-or-java8/</guid>
       <description>Lambda expressions and Stream API with Groovy and JAVA 8 Iteration  groovy  def numbers = [1, 2, 3, 4, 5, 6] numbers.each { e -&amp;gt; println e } numbers.each { println it }  java  List&amp;lt;Integer&amp;gt; numbers = Arrays.asList(1, 2, 3, 4, 5, 6); numbers.forEach(e -&amp;gt; System.out.println(e)); numbers.forEach(System.out::println); collect  groovy  def numbers = [1, 2, 3, 4, 5, 6] numbers.collect { it * 2 }.each { e -&amp;gt; println e } println numbers.</description>
     </item>
     
     <item>
       <title>Network Cloud Service</title>
-      <link>https://namoo4u.github.io/post/2016/11/11/network-cloud-service/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/11/network-cloud-service/</link>
       <pubDate>Fri, 11 Nov 2016 13:23:46 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/11/network-cloud-service/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/11/network-cloud-service/</guid>
       <description>OSI - Network Layer  Application Prsentation Session Transport Network Data Link Physical  VLANs tag, trunk
 IP Routing  Bandwidth   </description>
     </item>
     
     <item>
       <title>Reactive Programming with Groovy</title>
-      <link>https://namoo4u.github.io/post/2016/11/09/reactive-programming-with-groovy/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/09/reactive-programming-with-groovy/</link>
       <pubDate>Wed, 09 Nov 2016 13:07:41 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/09/reactive-programming-with-groovy/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/09/reactive-programming-with-groovy/</guid>
       <description>Reactive Streams, Reactive Extensions (Rx)  The Problem :  Performacen : our pages should render within 1000 milliseconds The Rise of microservices : free up resources with Async Operations &amp;amp; Non-Blocking I/O    What is reactive stream (Rx) ? collections + time Single abstration over data from many sources Observer Pattern  Push (not pull) based Iterators  Stream Based Funcational Programming  Imperative vs Reactive Stream  // Iterative List numbers = 1.</description>
     </item>
     
     <item>
       <title>Hugo Blog를 github.io page 로 서비스하기</title>
-      <link>https://namoo4u.github.io/post/2016/11/08/hugo-blog%EB%A5%BC-github.io-page-%EB%A1%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%ED%95%98%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/08/hugo-blog%EB%A5%BC-github.io-page-%EB%A1%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 08 Nov 2016 14:17:23 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/08/hugo-blog%EB%A5%BC-github.io-page-%EB%A1%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/08/hugo-blog%EB%A5%BC-github.io-page-%EB%A1%9C-%EC%84%9C%EB%B9%84%EC%8A%A4%ED%95%98%EA%B8%B0/</guid>
       <description>Hugo Blog Server Hugo blog를 github.com 의 page 에서 서비스 하기 위해서는 우선 두개의 Repository 를 생성한다. 하나는 hugo md 파일을 관리하기 위한 repository 이고 하나는 html 로 redner 된 html을 서비스 하기 위한 page repository 이다.
  hugosite.git &amp;lt;사용자계정&amp;gt;.github.io.git  git repository 설정하기 cd hugosite # 초기 설정하기 git init # hugo git remote add origin https://github.com/namoo4u/hugosite.git # 그리고 public 폴더를 hugosite의 subsite 로 등록한다. git submodule add -b master https://github.</description>
     </item>
     
     <item>
       <title>Bare Meta Cloud Services are now available</title>
-      <link>https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</link>
       <pubDate>Tue, 08 Nov 2016 12:52:55 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</guid>
       <description>Bare Metal Cloud Services 지원 서비스   Integrated network block storage
   object storage
   identity and access management
@@ -230,29 +230,29 @@ IP Routing  Bandwidth   </description>
     
     <item>
       <title>배우기 정리</title>
-      <link>https://namoo4u.github.io/post/2016/10/31/%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%95%EB%A6%AC/</link>
+      <link>https://jupilhwang.github.io/post/2016/10/31/%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%95%EB%A6%AC/</link>
       <pubDate>Mon, 31 Oct 2016 00:00:00 +0000</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/10/31/%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%95%EB%A6%AC/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/10/31/%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%95%EB%A6%AC/</guid>
       <description>Programming  Groovy Go lang Javascript  Angular js 2  RxJS        Scala   Framework  Reactive Programming  AKKA RxJava   Ratpack Springboot  Tools  Jenkins  pipeline    Mobile  Native Script  Cloud  Open Stack Docker + Kubernete  HW  Aduino Raspberry Pi  Lanuage  English  </description>
     </item>
     
     <item>
       <title>WiFi Network in Arch Network Using Terminal</title>
-      <link>https://namoo4u.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/</link>
+      <link>https://jupilhwang.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/</link>
       <pubDate>Thu, 27 Oct 2016 11:29:14 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/10/27/wifi-network-in-arch-network-using-terminal/</guid>
       <description>Scanning Network  Arch Linux 에서 iwconfig 이나 iwlist 를 사용할 수 없다면, wireless_tools 가 설치되어 있는지 확인해 보자. $ pacman -S wirelesss_tools
  # 네트워크 인터페이스 이름을 알기 위해서 iwconfig # 인터페이스 이름을 알았다면 ip link set &amp;lt;interface&amp;gt; up # 접속 가능한 WiFi network 을 스캔해 보자 iwlist &amp;lt;interface&amp;gt; scan | less # ip link set &amp;lt;interface&amp;gt; down 1번 방법) Setup A WiFi using &amp;ldquo;netctl&amp;rdquo; # network card 가 가능한지 확인해 본다.</description>
     </item>
     
     <item>
       <title>IPad Retina Display로 External Monitor 만들기</title>
-      <link>https://namoo4u.github.io/post/2016/10/19/ipad-retina-display%EB%A1%9C-external-monitor-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/10/19/ipad-retina-display%EB%A1%9C-external-monitor-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
       <pubDate>Wed, 19 Oct 2016 15:46:59 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/10/19/ipad-retina-display%EB%A1%9C-external-monitor-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/10/19/ipad-retina-display%EB%A1%9C-external-monitor-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
       <description>부품  iPad Retina 1536x2048 9.7&amp;rdquo; (QX2) LCD to Mini DisplayPort Adapter    부품 판매 Site : AbuseMark
  부품 사진 1 :  부품 사진 2 :   가격 : JPY 3,500
   iPad Retina LCD (QX2) - iPad Air 1 / 2    판매물 1 : Aliexpress #1 가격 : $115.00
@@ -262,19 +262,19 @@ IP Routing  Bandwidth   </description>
     
     <item>
       <title>VLAN 기본</title>
-      <link>https://namoo4u.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</link>
+      <link>https://jupilhwang.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</link>
       <pubDate>Wed, 19 Oct 2016 15:46:59 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</guid>
       <description>VLAN (Virtual Local Area Network) 물지적 배치와 상관없이 논리적으로 LAN을 구성할 수 있는 기술 하나의 스위치가 있고 이 스위치에는 포트가 1~10 까지 있다고 하자. 1~5 를 VLAN 1 로 6~10을 VLAN 2 로 설정했다면 물리적으로 같은 스위치에 존재해도 VLAN 1과 VLAN 2는 서로 통신하지 못한다. 스위치의 모든 인터페이스는 동일 브로드캐스트 도메인에 포함되어 있으나 VLAN을 적용할 경우 스위치의 일부 인터페이스를 하나의 브로드캐스트 도메인으로 구성하고, 다른 인터페이스를 또다른 브로드캐스트 도메인으로 구성하여 여러 개의 도메인을 만들수 있습니다.</description>
     </item>
     
     <item>
       <title>Network Overlay</title>
-      <link>https://namoo4u.github.io/post/2016/10/17/network-overlay/</link>
+      <link>https://jupilhwang.github.io/post/2016/10/17/network-overlay/</link>
       <pubDate>Mon, 17 Oct 2016 14:05:21 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/10/17/network-overlay/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/10/17/network-overlay/</guid>
       <description>VXLAN VXLAN의 &amp;lsquo;X&#39;의 의미는 eXtensible을 뜻하며, L2 Network의 Scale(확장성)을 의미한다. VLAN기반 네트워크보다 더욱 많은 Layer 2 Segment를 구성할수 있으며, VLAN숫자의 제약(4000개)을 극복할 수 있음을 의미함
 Network Overlay Network Overlay 이야기를 여기저기에서 많이 들리고는 있지만, 실제로 이것이 무엇인지에 대해선 잘 알수가 없어서 정리해 본다. 간단하게 추상화 레이어라고 하면 될까? 기존 데이터센터 네트워크망이 어떻게 구성이 되어 있던지 Network를 넘어 구성하겠다는 것이다. 요즘 나오는 SDN(Software Defined Network)와 같은 개념이지 않나 싶다.
   Network Overlay 기술</description>
@@ -282,20 +282,20 @@ Network Overlay Network Overlay 이야기를 여기저기에서 많이 들리고
     
     <item>
       <title></title>
-      <link>https://namoo4u.github.io/post/1/01/01/</link>
+      <link>https://jupilhwang.github.io/post/1/01/01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/1/01/01/</guid>
+      <guid>https://jupilhwang.github.io/post/1/01/01/</guid>
       <description>DocCS
 OAUTH_TOKEN Curl  Accept : application/xml or application/json Authorization:  Authorization: Basic abclajdlfa= Authorization: Bearer eyJlad..adljfalsd   Content-Length Content-Type  application/json   Accept-Language: fr  Using OAuth  base url : https://documents-krdemo.documents.us2.oraclecloud.com/documents/web?IdcService=GET_OAUTH_TOKEN Reponse  { &amp;quot;LocalData&amp;quot;: { &amp;quot;IdcService&amp;quot;: &amp;quot;GET_OAUTH_TOKEN&amp;quot;, &amp;quot;StatusCode&amp;quot;: &amp;quot;0&amp;quot;, &amp;quot;StatusMessage&amp;quot;: &amp;quot;You are logged in as &#39;U9133ACF5AE2AF282FD7F23A723FD68419FE&#39;.&amp;quot;, &amp;quot;StatusMessageKey&amp;quot;: &amp;quot;!csUserLoggedIn,U9133ACF5AE2AF282FD7F23A723FD68419FE&amp;quot;, &amp;quot;dUser&amp;quot;: &amp;quot;U9133ACF5AE2AF282FD7F23A723FD68419FE&amp;quot;, &amp;quot;dUserFullName&amp;quot;: &amp;quot;Jupil Hwang&amp;quot;, &amp;quot;expiration&amp;quot;: &amp;quot;604799&amp;quot;, &amp;quot;idcToken&amp;quot;: &amp;quot;1481347104797:C7968F3B2E31D84A029F65AF0FD970A9&amp;quot;, &amp;quot;localizedForResponse&amp;quot;: &amp;quot;1&amp;quot;, &amp;quot;tokenValue&amp;quot;: &amp;quot;eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIng1dCI6IkxLRERYN2VyRUxYcm5fc0Zwc0RFZkt6ejg3YyIsImtpZCI6ImtyZGVtby5jZXJ0In0.eyJzdWIiOiJqdXBpbC5od2FuZ0BvcmFjbGUuY29tIiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZCI6Imp1cGlsLmh3YW5nQG9yYWNsZS5jb20iLCJpc3MiOiJrcmRlbW8iLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6ImtyZGVtb1NlcnZpY2VQcm9maWxlIiwiaWF0IjoxNDgxMTc0MzA1LCJvcmFjbGUub2F1dGgucHJuLmlkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC50a19jb250ZXh0IjoicmVzb3VyY2VfYWNjZXNzX3RrIiwiZXhwIjoxNDgxNzc5MTA0LCJhdWQiOlsiaHR0cHM6Ly9kb2N1bWVudHMta3JkZW1vLmRvY3VtZW50cy51czIub3JhY2xlY2xvdWQuY29tOjQ0My9kb2N1bWVudHMiXSwib3JhY2xlLm9hdXRoLnN1Yi5pZF90eXBlIjoiTERBUF9VSUQiLCJwcm4iOiJqdXBpbC5od2FuZ0BvcmFjbGUuY29tIiwianRpIjoiZDA0ZjQ2ODYtNjVhMy00YWIyLTk2NjItMmEzODA2M2I0ZTYzIiwib3JhY2xlLm9hdXRoLmNsaWVudF9vcmlnaW5faWQiOiJkZDdmMmYyNy0zN2QyLTRhMTktYjY3NS02ZWU0NWZhODk0NDUiLCJvcmFjbGUub2F1dGguc2NvcGUiOiJodHRwczovL2RvY3VtZW50cy1rcmRlbW8uZG9jdW1lbnRzLnVzMi5vcmFjbGVjbG91ZC5jb206NDQzL2RvY3VtZW50cyIsInVzZXIudGVuYW50Lm5hbWUiOiJrcmRlbW8iLCJvcmFjbGUub2F1dGguaWRfZF9pZCI6IjQ2NjkzMTY5NDk2MjI0MjA3In0.QUsPt6rXmGnVUyDxeMSKYhKxMFTSnuEqM5zybYlR9TZ1atkCDKdMNuC8euZp2SX45L43gVQbjUmyb-PdJ-jFYnv_c73QBZVcU7h8Kae2UrL39BGRF6dOmhp9b1fi6Ldi7L6GaK393MHgspel0v3vOlpDykISeis-arJEvYJsc10Bj5JO_ZFCP9AWVz4FwtpXFMtuiCiA2DtjAdQDo97qh0NYq2HFQCF4muTjV5KPrqi9_wRTNy4pdywezHLmk5PEqlsTGo2w7opo02t1WnlM6d1weGSr2hDKWv3WMn1WNN6moWNHmBKQk2tYNOe9690qWHo3WNYcDa1nBHDnO3OP3A&amp;quot; }, &amp;quot;ResultSets&amp;quot;: { } } curl -iv -H &#39;Authorization:Bearer token&#39; -X GET {Docs External URL}/api/1.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://namoo4u.github.io/post/1/01/01/</link>
+      <link>https://jupilhwang.github.io/post/1/01/01/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/1/01/01/</guid>
+      <guid>https://jupilhwang.github.io/post/1/01/01/</guid>
       <description>Storage CS 만들기`` ####. Authentication token 가져오기
 curl -v -X GET -H &#39;X-Storage-User: Storage-&amp;lt;Identity Domain&amp;gt;:&amp;lt;User Name&amp;gt;&#39; -H &#39;X-Storage-Pass:&amp;lt;Password&amp;gt;&#39; https://storage.us2.oraclecloud.com/auth/v1.0 curl -v -X GET -H &#39;X-Storage-User: Storage-jcsdemo0060:cloud.admin&#39; -H &#39;X-Storage-Pass: dIrty@7TiMBer&#39; https://storage.us2.oraclecloud.com/auth/v1.0 &amp;lt; X-Auth-Token: AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d &amp;lt; X-Storage-Url: https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060
 Create a Container curl -v -H &#39;X-Auth-Token:AUTH_tk37abcede5b5e42bae85eb2d5bf811f2d&#39; -X PUT https://storage.us2.oraclecloud.com/v1/Storage-jcsdemo0060/HCMDEMO &amp;lt; HTTP/1.1 201 Created

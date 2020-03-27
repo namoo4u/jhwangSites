@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>android on Just Do It!! YoLo </title>
-    <link>https://namoo4u.github.io/categories/android/</link>
+    <link>https://jupilhwang.github.io/categories/android/</link>
     <description>Recent content in android on Just Do It!! YoLo </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US.UTF8</language>
@@ -11,15 +11,15 @@
     <copyright>JHwang All rights reserved</copyright>
     <lastBuildDate>Tue, 22 Nov 2016 17:24:30 +0900</lastBuildDate>
     
-	<atom:link href="https://namoo4u.github.io/categories/android/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jupilhwang.github.io/categories/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Xiaomi Mi 4c Custom Rom build 하기</title>
-      <link>https://namoo4u.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</link>
       <pubDate>Tue, 22 Nov 2016 17:24:30 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/22/xiaomi-mi-4c-custom-rom-build-%ED%95%98%EA%B8%B0/</guid>
       <description>Xiaomi Custom Rom Build Docker Image 는 ubuntu:15.10 를 기준으로 한다. Docker 실행
 docker run -it --name android ubuntu:15.10 필요한 Packages 설치 apt update -y apt install -y bison build-essential curl flex git gnupg gperf libesd0-dev liblz4-tool libncurses5-dev libsdl1.2-dev libwxgtk2.8-dev libxml2 libxml2-utils lzop maven openjdk-7-jdk openjdk-7-jre pngcrush schedtool squashfs-tools xsltproc zip zlib1g-dev g++-multilib gcc-multilib lib32ncurses5-dev lib32z1-dev realpath bsdmainutils curl file screen android-tools-adb android-tools-fastboot lib32readline-gplv2-dev 는 찾을 수 없는 package 라고 에러가 발생하여, 이를 빼고 설치를 진행한다.</description>
     </item>

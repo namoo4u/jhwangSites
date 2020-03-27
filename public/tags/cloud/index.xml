@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cloud on Just Do It!! YoLo </title>
-    <link>https://namoo4u.github.io/tags/cloud/</link>
+    <link>https://jupilhwang.github.io/tags/cloud/</link>
     <description>Recent content in cloud on Just Do It!! YoLo </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US.UTF8</language>
@@ -11,15 +11,15 @@
     <copyright>JHwang All rights reserved</copyright>
     <lastBuildDate>Thu, 12 Apr 2018 10:44:17 +0900</lastBuildDate>
     
-	<atom:link href="https://namoo4u.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jupilhwang.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Packer Oci Machine Image</title>
-      <link>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</link>
+      <link>https://jupilhwang.github.io/post/2018/04/12/packer-oci-machine-image/</link>
       <pubDate>Thu, 12 Apr 2018 10:44:17 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2018/04/12/packer-oci-machine-image/</guid>
+      <guid>https://jupilhwang.github.io/post/2018/04/12/packer-oci-machine-image/</guid>
       <description>OCI builder for Packer Packer는 hashcorp에서 만든 오픈소스로 Machine Image생성 툴이다. AMI, Azure, GCP뿐만 아니라, Oracle Cloud Infrastructure또한 지원을 한다. 물론 기본 이미지를 Provisioning하고 Ansible이나 기타 Tool을 통해서 Configuration이 가능하지만, Packer를 사용하면 미리 이미지를 만들어서 배포 후 바로 실행 할 수 있다.
 사전에 알아야 할 사항   packer를 설치한다
  Linux의 경우 손쉽게 Repository에서 다운로드해서 설치가능하다  yaourt -S packer-io or Download from packer site (https://www.packer.io/downloads.html)
@@ -28,38 +28,38 @@
     
     <item>
       <title>Docker base image size늘리기</title>
-      <link>https://namoo4u.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</link>
       <pubDate>Wed, 23 Nov 2016 14:29:35 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/23/docker-base-image-size%EB%8A%98%EB%A6%AC%EA%B8%B0/</guid>
       <description>Docker Image 의 Base Sizse 늘리기 docker -D infoContainers: 1 Running: 1 Paused: 0 Stopped: 0Images: 1Server Version: 1.12.3Storage Driver: devicemapper Pool Name: docker-8:17-35389497-pool Pool Blocksize: 65.54 kB Base Device Size: 53.69 GB...docker 의 기본 이미지 사이즈는 10GB 이다. 일반적으로 그냥 docker 를 설치하고 이미지를 실행해서 &amp;lsquo;df -h&#39;를 통해서 사이즈를 확인하면, 9.99GB가 나온다. 하지만 때때로 10GB가 넘는 경우가 발생한다. 외부 Volume을 연결할 수도 있겠지만, 컨테이너 자체에서 스토리지를 관리하고 싶을때도 있다. 이런 경우, systemd docker.</description>
     </item>
     
     <item>
       <title>Digital Experience Workshop at Seoul (Nov 14, 2016)</title>
-      <link>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</link>
       <pubDate>Mon, 14 Nov 2016 00:00:00 +0000</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/14/digital-experience-workshop-at-seoul-nov-14-2016/</guid>
       <description>Digital Experience Top 3 features  Secutiry Social Mobile  Use Cases  Coordinating with Business Partners Sales Collaboration Support of Mobile Field Workers  Digital Workplace Collaboration  Connections  Real-time conversations and social collaboration Social Graph based discovery of content and conversations Content centric activity stream &amp;ldquo;buddy&amp;rdquo;   Context  Integrated within business workflows Embedded within applications Unified on-premises and cloud content management Multiple content centric mobile experience   Control  Choice of user &amp;amp; content    Context is everything  Business Apps integratation  Sales Cloud, Eloqua, Service Cloud, SRM On-Premises : Siebel, EBS   PAAS Integrations  Proces CS, Sites CS   Hybrid ECM RICH Platform  Architected to be Platform</description>
     </item>
     
     <item>
       <title>Network Cloud Service</title>
-      <link>https://namoo4u.github.io/post/2016/11/11/network-cloud-service/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/11/network-cloud-service/</link>
       <pubDate>Fri, 11 Nov 2016 13:23:46 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/11/network-cloud-service/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/11/network-cloud-service/</guid>
       <description>OSI - Network Layer  Application Prsentation Session Transport Network Data Link Physical  VLANs tag, trunk
 IP Routing  Bandwidth   </description>
     </item>
     
     <item>
       <title>Bare Meta Cloud Services are now available</title>
-      <link>https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</link>
       <pubDate>Tue, 08 Nov 2016 12:52:55 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/08/bare-meta-cloud-services-are-now-available/</guid>
       <description>Bare Metal Cloud Services 지원 서비스   Integrated network block storage
   object storage
   identity and access management

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>network overay on Just Do It!! YoLo </title>
-    <link>https://namoo4u.github.io/tags/network-overay/</link>
+    <link>https://jupilhwang.github.io/tags/network-overay/</link>
     <description>Recent content in network overay on Just Do It!! YoLo </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US.UTF8</language>
@@ -11,24 +11,24 @@
     <copyright>JHwang All rights reserved</copyright>
     <lastBuildDate>Wed, 19 Oct 2016 15:46:59 +0900</lastBuildDate>
     
-	<atom:link href="https://namoo4u.github.io/tags/network-overay/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jupilhwang.github.io/tags/network-overay/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>VLAN 기본</title>
-      <link>https://namoo4u.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</link>
+      <link>https://jupilhwang.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</link>
       <pubDate>Wed, 19 Oct 2016 15:46:59 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/10/19/vlan-%EA%B8%B0%EB%B3%B8/</guid>
       <description>VLAN (Virtual Local Area Network) 물지적 배치와 상관없이 논리적으로 LAN을 구성할 수 있는 기술 하나의 스위치가 있고 이 스위치에는 포트가 1~10 까지 있다고 하자. 1~5 를 VLAN 1 로 6~10을 VLAN 2 로 설정했다면 물리적으로 같은 스위치에 존재해도 VLAN 1과 VLAN 2는 서로 통신하지 못한다. 스위치의 모든 인터페이스는 동일 브로드캐스트 도메인에 포함되어 있으나 VLAN을 적용할 경우 스위치의 일부 인터페이스를 하나의 브로드캐스트 도메인으로 구성하고, 다른 인터페이스를 또다른 브로드캐스트 도메인으로 구성하여 여러 개의 도메인을 만들수 있습니다.</description>
     </item>
     
     <item>
       <title>Network Overlay</title>
-      <link>https://namoo4u.github.io/post/2016/10/17/network-overlay/</link>
+      <link>https://jupilhwang.github.io/post/2016/10/17/network-overlay/</link>
       <pubDate>Mon, 17 Oct 2016 14:05:21 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/10/17/network-overlay/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/10/17/network-overlay/</guid>
       <description>VXLAN VXLAN의 &amp;lsquo;X&#39;의 의미는 eXtensible을 뜻하며, L2 Network의 Scale(확장성)을 의미한다. VLAN기반 네트워크보다 더욱 많은 Layer 2 Segment를 구성할수 있으며, VLAN숫자의 제약(4000개)을 극복할 수 있음을 의미함
 Network Overlay Network Overlay 이야기를 여기저기에서 많이 들리고는 있지만, 실제로 이것이 무엇인지에 대해선 잘 알수가 없어서 정리해 본다. 간단하게 추상화 레이어라고 하면 될까? 기존 데이터센터 네트워크망이 어떻게 구성이 되어 있던지 Network를 넘어 구성하겠다는 것이다. 요즘 나오는 SDN(Software Defined Network)와 같은 개념이지 않나 싶다.
   Network Overlay 기술</description>

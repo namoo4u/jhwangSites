@@ -2,6 +2,7 @@ baseurl : "https://jupilhwang.github.io/"
 builddrafts : true
 canonifyurls : true
 languageCode : "en-US.UTF8"
+DefaultContentLanguage: "kr"
 title : "Just Do It!! YoLo "
 pygmentsuseclasses : true
 pluralizelisttitles : false
@@ -9,6 +10,7 @@ comments: disqus
 disqusShortname : "jupilhwang-github-io"
 copyright : "JHwang All rights reserved"
 googleAnalytics : "UA-117423189-1"
+paginate: 20
 sitemap:
   changefreq: daily
   filename: sitemap.xml
@@ -56,7 +58,7 @@ params:
     #name : "cerulean"
     # list of possible theme names that can be used
     # name = "cerulean"
-    name : "cosmo"
+    name : "hugo-hello-programmer-theme"
     # name = "cyborg"
     # name = "default"
     #name : "flatly"

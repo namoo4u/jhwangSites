@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>java on Just Do It!! YoLo </title>
-    <link>https://namoo4u.github.io/categories/java/</link>
+    <link>https://jupilhwang.github.io/categories/java/</link>
     <description>Recent content in java on Just Do It!! YoLo </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US.UTF8</language>
@@ -11,15 +11,15 @@
     <copyright>JHwang All rights reserved</copyright>
     <lastBuildDate>Fri, 18 Nov 2016 19:34:42 +0900</lastBuildDate>
     
-	<atom:link href="https://namoo4u.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jupilhwang.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>리눅스 JVM 튜닝하기</title>
-      <link>https://namoo4u.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</link>
+      <link>https://jupilhwang.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</link>
       <pubDate>Fri, 18 Nov 2016 19:34:42 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://jupilhwang.github.io/post/2016/11/18/%EB%A6%AC%EB%88%85%EC%8A%A4-jvm-%ED%8A%9C%EB%8B%9D%ED%95%98%EA%B8%B0/</guid>
       <description>JVM java 를 설치하고 나서, &amp;lt;JAVA_HOME&amp;gt;/jre/lib/security/java.security 파일을 수정해 준다.
 #networkaddress.cache.ttl=-1 networkaddress.cache.ttl=30 그리고 Linux 의 경우 /etc/nsswitch.conf 의 host 설정을 변경한다.
 ehco &amp;#39;hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4&amp;#39; &amp;gt;&amp;gt; /etc/nsswitch.conf </description>

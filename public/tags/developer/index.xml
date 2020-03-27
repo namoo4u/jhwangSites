@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>developer on Just Do It!! YoLo </title>
-    <link>https://namoo4u.github.io/tags/developer/</link>
+    <link>https://jupilhwang.github.io/tags/developer/</link>
     <description>Recent content in developer on Just Do It!! YoLo </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US.UTF8</language>
@@ -11,15 +11,15 @@
     <copyright>JHwang All rights reserved</copyright>
     <lastBuildDate>Fri, 27 Apr 2018 10:36:21 +0900</lastBuildDate>
     
-	<atom:link href="https://namoo4u.github.io/tags/developer/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jupilhwang.github.io/tags/developer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>코틀린_Kotlin_다시보기1</title>
-      <link>https://namoo4u.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</link>
+      <link>https://jupilhwang.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</link>
       <pubDate>Fri, 27 Apr 2018 10:36:21 +0900</pubDate>
       <author>jupil.hwang &lt;at&gt; gmail &lt;dot&gt; com (Jupil Hwang)</author>
-      <guid>https://namoo4u.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</guid>
+      <guid>https://jupilhwang.github.io/post/2018/04/27/%EC%BD%94%ED%8B%80%EB%A6%B0_kotlin_%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B01/</guid>
       <description>코틀린 kotlin 기초 기본타입 패키지 흐름제어 리턴과 점프 클래스와 오브젝트 클래스와 상속 프로퍼티와 필드 인터페이스 확장 데이터 클래스 지네릭 리제릭 함수 중첩 클래스 Enum 클래스 오브젝트 식과 선언 위임 위임 프로퍼티 함수와 람다 함수 함수선언 함수사용  중위표현 파라미터 기본인자 이름(Named)인자 Unit리턴함수 단일 식 함수 리턴 타입 지정 가변인자(Varargs)  함수범위  로컬 함수 멤버 함수  지네릭함수 인라인함수 확장함수 고차함수와 람다 꼬리 재귀함수 고차함수와 람다 고차함수 인라인함수 람다식과 임의함수 인라인 함수 noinline 비-로컬 리턴 Reified 타입 파라미터 기타 coroutines ###</description>
     </item>
     
