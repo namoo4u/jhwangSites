@@ -43,7 +43,7 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 ## Default Storage Class 생성
 
 - Storage Class 생성
-  ```bash
+  ```yaml
   kubectl create -f -<<-EOF
   kind: StorageClass
   apiVersion: storage.k8s.io/v1
@@ -64,7 +64,7 @@ OpenPitrix 를 사용한 App Store도 제공한다.
   ```
 
 - tiller 서비스 어카운트/클러스터롤 생성
-  ```bash
+  ```yaml
   kubectl apply -f -<<-EOF
   apiVersion: v1
   kind: ServiceAccount

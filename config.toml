@@ -17,46 +17,54 @@ paginate= 20
 #theme= "hugo-theme-chunky-poster"
 theme= "hugo-theme-cleanwhite"
 
+
 [outputs]
 home = ["HTML", "RSS"]
 
 [params]
-  header_image = "img/home-bg.jpg"
-  image_404 = "img/404-bg.jpg"
+header_image = "img/home-bg.jpg"
+image_404 = "img/404-bg.jpg"
 
-  languagecode = "en-US"
-  Author = "Jupil Hwang (@jupil_hwang)"
-  googlefonts = "https=//fonts.googleapis.com/css?family=Lobster|Lato=400,700"
-  fontfamily = "San Francisco Display,Malgun Gothic,'맑은 고딕',Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif"
-  logofontfamily = "San Francisco Display,Malgun Gothic,'맑은 고딕',Lobster, cursive"
-  copyright = "Jupil Hwang All rights reserved"
-  pygmentsCodeFences = "true"
-  pygmentsUseClasses = "true"
-  
-  featured_tags = "true"
-  featured_condition_size = 2
+languagecode = "en-US"
+Author = "Jupil Hwang (@jupil_hwang)"
+googlefonts = "https=//fonts.googleapis.com/css?family=Lobster|Lato=400,700"
+fontfamily = "San Francisco Display,Malgun Gothic,'맑은 고딕',Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif"
+logofontfamily = "San Francisco Display,Malgun Gothic,'맑은 고딕',Lobster, cursive"
+copyright = "Jupil Hwang All rights reserved"
+#pygmentsCodeFences = "true"
+#pygmentsUseClasses = "true"
 
-  sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
+featured_tags = "true"
+featured_condition_size = 3
+
+sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
+
+friends = false
+bookmarks = false
+about_me = true
+
+custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
+custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
 [params.social]
-  rss     = true
-  facebook = "https=//www.facebook.com/jupilhwang"
-  twitter = "https=//twitter.com/jupil_hwang"
-  github = "https=//github.com/jupilhwang"
-  linkedin = "https=//www.linkedin.com/in/namoo4u"
-  email = "jupil.hwang@gmail.com"
+rss     = true
+facebook = "https://www.facebook.com/jupilhwang"
+twitter = "https://twitter.com/jupil_hwang"
+github = "https://github.com/jupilhwang"
+linkedin = "https://www.linkedin.com/in/namoo4u"
+email = "jupil.hwang@gmail.com"
 
 [[params.omit_categories]]
-  title = "BLOG"
-  href = "/blogs"
+title = "BLOG"
+href = "/blogs"
 
 [[params.addtional_menus]]
-  title =  "BOOKS"
-  href =  "/top/books/"
+title =  "BOOKS"
+href =  "/top/books/"
 
 [[params.addtional_menus]]
-  title =  "ABOUT"
-  href =  "/page/about"
+title =  "ABOUT"
+href =  "/page/about"
 
 [markup]
   [markup.tableOfContents]
