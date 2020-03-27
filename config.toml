@@ -38,6 +38,7 @@ featured_tags = "true"
 featured_condition_size = 3
 
 sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
+sidebar_avatar = "/img/jhwang.jpg"
 
 friends = false
 bookmarks = false
