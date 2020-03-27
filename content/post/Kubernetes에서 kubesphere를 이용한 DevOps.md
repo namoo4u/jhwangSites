@@ -149,8 +149,27 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 
 # Deploy Sample Application
 
-## Nginx Web Application
+## Create Workspace / Project
+- workspace 생성
+![](/img/kubesphere/ks-workspace.png)
 
+- project 생성
+  - project는 쿠버네티스의 네임스페이스로 생성된다.
+  ![](/img/kubesphere/ks-project.png)
+
+  - 네임스페이스의 리소스 쿼터를 지정한다.
+  ![](/img/kubesphere/ks-project-resource-quota.png)
+
+
+## Nginx Web Application
+- kubesphere > App Store > Nginx > Deploy
+  ![](/img/kubesphere/nginx-deploy.png)
+
+- 디플로이먼트 확인
+  ![](/img/kubesphere/nginx-deployment.png)
+
+- 서비스 확인
+  ![](/img/kubesphere/nginx-services.png)
 
 ## Create Spring Boot Application and Containerize
 - start.spring.io 로 sample download
