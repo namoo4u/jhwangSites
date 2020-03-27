@@ -8,7 +8,7 @@ pygmentsuseclasses : true
 pluralizelisttitles : false
 comments: disqus
 disqusShortname : "jupilhwang-github-io"
-copyright : "JHwang All rights reserved"
+copyright : "Jupil Hwang All rights reserved"
 googleAnalytics : "UA-117423189-1"
 paginate: 20
 sitemap:
@@ -21,7 +21,9 @@ sitemap:
 #theme : "hugo_theme_robust"
 #theme : "hugo-material-docs"
 #theme : "hugo-universal-theme"
-theme : "hugo-multi-bootswatch"
+#theme : "hugo-multi-bootswatch"
+#thene: "hugo-hello-programmer-theme"
+theme: "hugo-theme-chunky-poster"
 
 indexes:
   category : "categories"
@@ -38,7 +40,7 @@ params:
   github : "https://github.com/namoo4u"
   linkedin : "https://www.linkedin.com/in/namoo4u"
   email : "jupil.hwang@gmail.com"
-  copyright : "JHwang All rights reserved"
+  copyright : "Jupil Hwang All rights reserved"
   pygmentsCodeFences : "true"
   pygmentsUseClasses : "true"
 
@@ -58,7 +60,7 @@ params:
     #name : "cerulean"
     # list of possible theme names that can be used
     # name = "cerulean"
-    name : "hugo-hello-programmer-theme"
+    name : "cosmo"
     # name = "cyborg"
     # name = "default"
     #name : "flatly"
@@ -74,6 +76,7 @@ params:
     # name = "united"
     # name : "yeti"
 
+authors: [jupil-hwang]
 author:
   name: "Jupil Hwang"
   email : "jupil.hwang <at> gmail <dot> com"
