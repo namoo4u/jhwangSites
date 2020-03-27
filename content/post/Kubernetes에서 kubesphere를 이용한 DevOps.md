@@ -33,9 +33,32 @@ OpenPitrix 를 사용한 App Store도 제공한다.
   ```bash
   pks cluster k8s
   ```
+  ![](/img/kubesphere/pks-cluster-create-02.png)
+  - bosh cli로 생성된 K8s 클러스터 VM 확인 
+  ![](/img/kubesphere/pks-cluster-create-03.png)
 - DNS Setting for K8s Master API LB
 생성된 클러스터의 Master API Server의 IP 주소를 DNS에 클러스터 생성 시 입력한 external-hostname으로 등록한다.
+![](/img/kubesphere/k8s-api-dns.png)
 
+- EPMC : Enterprise PKS
+  - summay
+![](/img/kubesphere/epmc-k8s-cluster-summary.png)
+  - ndoes
+![](/img/kubesphere/epmc-k8s-cluster-nodes.png)
+  - namespaces
+![](/img/kubesphere/epmc-k8s-cluster-namespaces.png)
+
+- Get Kubernetes Credentials for Kubectl cli
+  ```bash
+  pks get-credentials k8s
+  ```
+  - kubectl cli 확인
+  ```bash
+  kubectl cluster-info
+  kubectl api-resources
+  ```
+  ![](/img/kubesphere/kubectl-cluster-info.png)
+  ![](/img/kubesphere/kubectl-api-resources.png)
 # Software
 - Helm
 - Kubesphere
@@ -111,3 +134,46 @@ OpenPitrix 를 사용한 App Store도 제공한다.
   ```bash
   kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
   ```
+
+
+# Deploy Sample Application
+
+## Nginx Web Application
+
+
+## Create Spring Boot Application and Containerize
+- start.spring.io 로 sample download
+  ```bash
+  spring init --build gradle --java-version=1.8  --dependencies=web,thymeleaf,actuator
+  ```
+
+- add WelcomeController to DemoApplication.java
+  ```java
+  @Controller
+  class WelcomeController {
+    @GetMapping("/")
+    public String main(Model model)	{
+      return "welcome";
+    }
+  }
+  ```
+- add welcome.html to resources/templates folder
+  ```html
+  <body bgcolor="lightgreen">
+  <h1>
+      Hello World
+  </h1>
+  </body>
+  ```
+
+
+- Run Sample Application 
+  ```bash
+  ./gradlew bootRun
+  ```
+
+- Containerize with Docker and Dockerfile
+
+- Containerize with Jib
+
+
