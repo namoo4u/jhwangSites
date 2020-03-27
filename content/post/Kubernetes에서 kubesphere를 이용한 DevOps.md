@@ -134,6 +134,17 @@ OpenPitrix 를 사용한 App Store도 제공한다.
   ```bash
   kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
   ```
+  ![](/img/kubesphere/kubesphere-install-log.png)
+
+- Browsing kubesphere web ui
+  ![](/img/kubesphere/kubesphere-web-ui.png)
+
+  - Logging 부분의 Elastic Search가 설치되어 있지 않고, Istio 와 Monitoring 에서 실행되지 않고 에러가 나는 부분이 있다. 
+  ks-installer 컨피그맵을 수정하여 추가적으로 설치한다.
+    ```bash
+    kubectl edit cm ks-installer -n kubepshere-system
+    ```
+    ![](/img/kubesphere/kubesphere-web-ui-02.png)
 
 
 # Deploy Sample Application
