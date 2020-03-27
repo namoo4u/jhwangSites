@@ -86,11 +86,10 @@ subjects:
 EOF
 ```
 
-- helm init
+helm init
 ```bash
 helm init --service-account=tiller
 ```
-- helm repo update
 helm 에서 사용할 repo 추가 및 업데이트하기
 ```bash
 helm repo add stable https://kubernetes-charts.storage.googleapis.com
@@ -102,12 +101,12 @@ helm repo update
 
 ## kubesphere
 
-- Installing
+Installing
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/kubesphere/ks-installer/master/kubesphere-complete-setup.yaml
 ```
 
-- Verify 
+Verify 
 ```bash
 kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
 ```
