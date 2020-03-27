@@ -11,6 +11,7 @@ disqusShortname = "just-do-it-2"
 preserveTaxonomyNames = true
 copyright = "Jupil Hwang All rights reserved"
 googleAnalytics = "UA-117423189-1"
+ba_track_id = "UA-117423189-1"
 paginate= 20
 #theme = "hugo-multi-bootswatch"
 #theme= "hugo-theme-chunky-poster"
