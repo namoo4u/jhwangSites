@@ -41,73 +41,73 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 - Kubesphere
 
 ## Default Storage Class 생성
-- Storage Class 생성
-```bash
-kubectl create -f -<<-EOF
-kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name:  thick
-provisioner: kubernetes.io/vsphere-volume
-parameters:
-  diskformat: zeroedthick
-EOF
 
-kubectl patch storageclass thick -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
-```
+- Storage Class 생성
+  ```bash
+  kubectl create -f -<<-EOF
+  kind: StorageClass
+  apiVersion: storage.k8s.io/v1
+  metadata:
+    name:  thick
+  provisioner: kubernetes.io/vsphere-volume
+  parameters:
+    diskformat: zeroedthick
+  EOF
+
+  kubectl patch storageclass thick -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+  ```
 
 ## Helm
 - Download CLI
-```bash
-wget https://get.helm.sh/helm-v2.16.3-linux-amd64.tar.gz
-```
+  ```bash
+  wget https://get.helm.sh/helm-v2.16.3-linux-amd64.tar.gz
+  ```
 
 - tiller 서비스 어카운트/클러스터롤 생성
-```bash
-kubectl apply -f -<<-EOF
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: tiller
-  namespace: kube-system
----
-apiVersion: rbac.authorization.k8s.io/v1beta1
-kind: ClusterRoleBinding
-metadata:
-  name: tiller
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: cluster-admin
-subjects:
- - kind: ServiceAccount
-   name: tiller
-   namespace: kube-system
-EOF
-```
+  ```bash
+  kubectl apply -f -<<-EOF
+  apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    name: tiller
+    namespace: kube-system
+  ---
+  apiVersion: rbac.authorization.k8s.io/v1beta1
+  kind: ClusterRoleBinding
+  metadata:
+    name: tiller
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: cluster-admin
+  subjects:
+  - kind: ServiceAccount
+    name: tiller
+    namespace: kube-system
+  EOF
+  ```
 
-helm init
-```bash
-helm init --service-account=tiller
-```
-helm 에서 사용할 repo 추가 및 업데이트하기
-```bash
-helm repo add stable https://kubernetes-charts.storage.googleapis.com
-helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/
-helm repo add bitnami https://charts.bitnami.com/bitnami
+- helm init
+  ```bash
+  helm init --service-account=tiller
+  ```
 
-helm repo update
-```
+- helm 에서 사용할 repo 추가 및 업데이트하기
+  ```bash
+  helm repo add stable https://kubernetes-charts.storage.googleapis.com
+  helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/
+  helm repo add bitnami https://charts.bitnami.com/bitnami
+
+  helm repo update
+  ```
 
 ## kubesphere
+- Installing
+  ```bash
+  kubectl apply -f https://raw.githubusercontent.com/kubesphere/ks-installer/master/kubesphere-complete-setup.yaml
+  ```
 
-Installing
-```bash
-kubectl apply -f https://raw.githubusercontent.com/kubesphere/ks-installer/master/kubesphere-complete-setup.yaml
-```
-
-Verify 
-```bash
-kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
-```
-
+- Verify 
+  ```bash
+  kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l app=ks-install -o jsonpath='{.items[0].metadata.name}') -f
+  ```
