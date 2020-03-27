@@ -4,10 +4,12 @@ date: 2020-03-25T10:46:06+09:00
 draft: true
 ---
 
-# Developer Portal with KubeSphere
+# Developer Portal with Kubesphere
 
-KubeSphere (https://github.com/kubesphere) 의 오픈소스 프로젝트로 쿠버네티스 클러스터에서  사용할 수 있는 웹 UI를 제공합니다. 워크스페이스/프로젝트 단위로 워크로드를 관리하고, Jenkins를 통한 파이프라인도 제공한다. 내부적으로 프로메테우스와 ElasticSearch 를 통한 모니터링/로깅을 제공한다.
-OpenPitrix 를 사용한 App Store도 제공한다
+kubesphere (https://github.com/kubesphere/kubesphere) 의 오픈소스 프로젝트로 쿠버네티스 클러스터에서  사용할 수 있는 웹 UI를 제공합니다. 워크스페이스/프로젝트 단위로 워크로드를 관리하고, Jenkins를 통한 파이프라인도 제공한다. 내부적으로 프로메테우스와 ElasticSearch 를 통한 모니터링/로깅을 제공한다.
+OpenPitrix 를 사용한 App Store도 제공한다.
+
+공식 사이트:  https://kubesphere.io
 
 ## Environments
   - PKS(Pivotal Container Service) 1.6.1
@@ -98,7 +100,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 ```
 
-## KubeSphere
+## kubesphere
 
 - Installing
 ```bash
