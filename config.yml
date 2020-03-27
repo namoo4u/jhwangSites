@@ -7,7 +7,7 @@ title : "Just Do It!! YoLo "
 pygmentsuseclasses : true
 pluralizelisttitles : false
 comments: disqus
-disqusShortname : "jupilhwang-github-io"
+disqusShortname : "namoo4u-github-io"
 copyright : "Jupil Hwang All rights reserved"
 googleAnalytics : "UA-117423189-1"
 paginate: 20
@@ -37,7 +37,7 @@ params:
   logofontfamily : "San Francisco Display,Malgun Gothic,'맑은 고딕',Lobster, cursive"
   facebook : "https://www.facebook.com/jupilhwang"
   twitter : "https://twitter.com/jupil_hwang"
-  github : "https://github.com/namoo4u"
+  github : "https://github.com/jupilhwang"
   linkedin : "https://www.linkedin.com/in/namoo4u"
   email : "jupil.hwang@gmail.com"
   copyright : "Jupil Hwang All rights reserved"
