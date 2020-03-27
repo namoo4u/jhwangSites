@@ -4,4 +4,4 @@ date: 2020-03-25T10:46:06+09:00
 draft: true
 ---
 
-![](/img/kubesphere/log.png)
+![](/img/kubesphere/logo.png)
