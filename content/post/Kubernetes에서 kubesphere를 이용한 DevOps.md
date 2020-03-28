@@ -144,7 +144,9 @@ OpenPitrix 를 사용한 App Store도 제공한다.
     ```bash
     kubectl edit cm ks-installer -n kubepshere-system
     ```
-    ![](/img/kubesphere/kubesphere-web-ui-02.png)
+    ![](/img/kubesphere/ks-web-ui-02.png)
+
+    ** node exporter 에 오류가 있는것은 나중에 확인 필요하다 **
 
 
 # Deploy Sample Application
@@ -170,6 +172,25 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 
 - 서비스 확인
   ![](/img/kubesphere/nginx-services.png)
+
+- 웹 브라우저 확인
+  ![](/img/kubesphere/nginx-web-browser.png)
+  ** 파드 IP가 NSX-T에서 Routable 로 설정되어 있어서 Windows Jumpbox 에서 바로 엑세스가 가능하다. Routable 이 아닌경우 서비스를 NodePort / LoadBalancer / Ingress 가 필요하다 **
+
+## GitLab CE
+- VCS 로 git server를 설치한다.
+  ```bash
+  helm install --name gitlab --namespaces git stable/gitlab-ce --set externalUrl=http://git.k8s.kdis.local,gitlabRootPassword=VMware1!
+  ```
+  ![](/img/kubesphere/gitlab-ce-install.png)
+- gitlab running 확인
+  ![](/img/kubesphere/gitlab-ce-running.png)
+
+- dns setting
+  helm 설치시 설정으로 external URL을 git.k8s.kdis.local 로 했기 때문에, DNS에 LoadBalancer External IP를 지정해 준다.
+
+- Browser Access 후 Project Git Repo 생성
+  ![](/img/kubespehre/gitlab-ce-project-repo.png)
 
 ## Create Spring Boot Application and Containerize
 - start.spring.io 로 sample download
@@ -202,8 +223,16 @@ OpenPitrix 를 사용한 App Store도 제공한다.
   ./gradlew bootRun
   ```
 
+- Push to Git Repo
+윈도우즈에 git 에 설치되어 있지 않은 경우, git 을 다운로드해서 설치한다.
+
 - Containerize with Docker and Dockerfile
 
 - Containerize with Jib
 
 
+## Image Builder
+- Image Builder를 생성한다
+  ![](/img/kubesphere/image-builder-create.png)
+
+- Git Repo 에 대한 Secret 와 Target image repository 가 필요하다
