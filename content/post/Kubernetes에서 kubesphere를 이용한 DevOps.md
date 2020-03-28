@@ -190,7 +190,9 @@ OpenPitrix 를 사용한 App Store도 제공한다.
   helm 설치시 설정으로 external URL을 git.k8s.kdis.local 로 했기 때문에, DNS에 LoadBalancer External IP를 지정해 준다.
 
 - Browser Access 후 Project Git Repo 생성
-  ![](/img/kubespehre/gitlab-ce-project-repo.png)
+  ![](/img/kubesphere/gitlab-ce-project-repo.png)
+
+  **http://git.k8s.kdis.local/root/hello-card.git**
 
 ## Create Spring Boot Application and Containerize
 - start.spring.io 로 sample download
@@ -226,13 +228,37 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 - Push to Git Repo
 윈도우즈에 git 에 설치되어 있지 않은 경우, git 을 다운로드해서 설치한다.
 
-- Containerize with Docker and Dockerfile
+- ~~Containerize with Docker and Dockerfile~~
 
 - Containerize with Jib
+  - build.gradle > plugins 에 아래 추가
+  ```groovy
+  plugins {
+    id("com.google.cloud.tools.jib") version "2.1.0"
+  }
+  ```
+  - Jib 설정 추가
+  ```groovy
+  jib {
+    to {
+      //image="10.195.70.131:443/biz-a-team/simple-app"
+      image="jhwangdemo/simple-app"
+      auth {
+        username="jhwangdemo"
+        password="P@ssw0rd1234"
+      }
+    }
+    from {
+      image="openjdk:8-alpine"
+    }
+    allowInsecureRegistries(true)
+  }
+  ```
 
-
-## Image Builder
+<!-- ## Image Builder
 - Image Builder를 생성한다
   ![](/img/kubesphere/image-builder-create.png)
 
-- Git Repo 에 대한 Secret 와 Target image repository 가 필요하다
+- Git Repo 에 대한 Secret 와 Target image repository 가 필요하다 -->
+
+
