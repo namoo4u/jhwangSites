@@ -254,6 +254,50 @@ OpenPitrix 를 사용한 App Store도 제공한다.
     allowInsecureRegistries(true)
   }
   ```
+- CI 파이프라인을 윈한 Jenkinsfile 예제
+  ```jenkinsfile
+  pipeline {
+    agent any
+    stages {
+      stage('Prepare') {
+        steps {
+          parallel (
+            'gradle clean': {
+              gradlew 'clean'
+            },
+            'kubectl cli': {
+              sh 'curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl'
+              sh 'chmod a+x kubectl'
+            }
+          )
+        }
+      }
+      stage('Build & Docker') {
+        steps {
+          gradlew 'jib'
+        }
+      }
+      stage("Deploy") {
+          steps {
+            withKubeConfig([ credentialsId: 'pez-205-k8s', serverUrl: 'https://k8s.run.haas-205.pez.pivotal.io:8443' ]) {
+              sh './kubectl apply -f manifest/simple-app.yaml'
+            }
+          }
+      }
+    }
+
+    post {
+      always {
+        deleteDir()
+      }
+    }
+  }
+
+  def gradlew(command)  {
+    sh "./gradlew ${command} --stacktrace"
+  }
+  ```
+
 
 <!-- ## Image Builder
 - Image Builder를 생성한다
