@@ -180,7 +180,7 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 ## GitLab CE
 - VCS 로 git server를 설치한다.
   ```bash
-  helm install --name gitlab --namespaces git stable/gitlab-ce --set externalUrl=http://git.k8s.kdis.local,gitlabRootPassword=VMware1!
+  helm install --name gitlab --namespace git stable/gitlab-ce --set externalUrl=http://git.k8s.kdis.local,gitlabRootPassword=VMware1!
   ```
   ![](/img/kubesphere/gitlab-ce-install.png)
 - gitlab running 확인
@@ -340,4 +340,45 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 
   jenkins 에서 외부 사이트를 접속할 수 없는 문제가 있어서, DNS 에 전달자(Forward)를 추가(8.8.8.8)한다.
 
-  
+
+
+## Service Mesh
+- ks-installer 에서 ServiceMesh 가 enable 이 되어야 한다.
+- Gatway 세팅
+  project > project settings > Advacned Settings 에서 
+  ![](/img/kubesphere/istio-enable-autoinject.png)
+  Application Governance 를 Enable 한다
+
+- Deploy Istio BookInfo Sample Application
+  Project > Application Workloads > Applications 에서 Deploy Sample Application 선택
+
+  http://productpage.mesh-project.10.50.50.21.nip.io/productpage?u=normal
+
+- Canary Release
+  - Create Job for Grayscale Release
+    ![](/img/kubesphere/istio-bookinfo-canary-01.png)
+    ![](/img/kubesphere/istio-bookinfo-canary-02.png)
+    ![](/img/kubesphere/istio-bookinfo-canary-03.png)
+    ![](/img/kubesphere/istio-bookinfo-canary-04.png)
+  - Grayscale Job 확인
+
+
+- Traffic Management
+  - Project > Application Workloads > Applications > Composing App > Bookinfo
+    - Tab 에서 Traffic Management 선택
+      ![](/img/kubesphere/istio-bookinfo-traffic-management.png)
+      ![](/img/kubesphere/istio-bookinfo-tracing.png)
+
+
+## App Store
+- Add App Repos
+  Workspace > Workspace Settings > App Repos > Create Repo
+
+  새로운 Helm Repo 추가
+    ![](/img/kubesphere/app-repo-create.png)
+
+- Browse App Templates
+  Project > Application Workloads > Applications > Deploy New Application > App Tempates
+
+  ![](/img/kubesphere/app-helm-templates.png)
+
