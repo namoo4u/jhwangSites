@@ -247,6 +247,7 @@ OpenPitrix 를 사용한 App Store도 제공한다.
         username="jhwangdemo"
         password="P@ssw0rd1234"
       }
+      tags=["blue", "0.0.1"]
     }
     from {
       image="openjdk:8-alpine"
@@ -305,4 +306,38 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 
 - Git Repo 에 대한 Secret 와 Target image repository 가 필요하다 -->
 
+- Revision Control
+  - 특정 버전의 ReplicaSet으로 돌아가기 위해서 사용한다
+    ![](/img/kubesphere/revison-control.png)
 
+    kubesphere 에서 버그인지 "NotFound the server could not find the requested resource" 에러가 발생한다.
+    **확인필요**
+
+  - 레플리카셋 확인
+    ```bash
+    kubectl get rs -n demo-project -o wide
+    ```
+  - 롤아웃 히스토리
+    ```bash
+    kubectl rollout history -n demo-project deploy/demo-app
+    ```
+    ![](/img/kubesphere/rollout-history.png)
+
+    특정버전의 롤아웃 히스토리
+    ```bash
+    kubectl rollout history -n demo-project deploy/demo-app --revision 3
+    ```
+  - 특정 버전으로 롤아웃
+    ```bash
+    kubectl rollout undo -n demo-project deploy/demo-app --to-revision 2
+    ```
+
+
+
+## Jenkins
+- Jenkins 는 NodePort 30180으로 기동한다.
+  관리자 Passowrd는 kubesphere 와 동일하다
+
+  jenkins 에서 외부 사이트를 접속할 수 없는 문제가 있어서, DNS 에 전달자(Forward)를 추가(8.8.8.8)한다.
+
+  
