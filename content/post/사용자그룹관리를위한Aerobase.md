@@ -14,7 +14,7 @@ aerobase.io
 - Multi-platform support: single UI and API to deliver OAuth2
 - Multi-SDK support: provides SDKs
 
-### OpenID Connect
+## OpenID Connect
 public cloud 인 https://cloud.aerobase.io/portal 에 사용자 계정을 생성하여, 사용할 수도 있다.
 
 ## 설치
@@ -30,4 +30,5 @@ public cloud 인 https://cloud.aerobase.io/portal 에 사용자 계정을 생성
   - docker run -d aerobase/aerobase
 
 - Configure the external URL
-  - 
+  - 외부접속을 위해 FQDN 설정
+  
