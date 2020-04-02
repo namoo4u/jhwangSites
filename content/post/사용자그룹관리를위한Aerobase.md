@@ -17,17 +17,21 @@ https://aerobase.io
 ## OpenID Connect
 public cloud 인 https://cloud.aerobase.io/portal 에 사용자 계정을 생성하여, 사용할 수도 있다.
 
-## 설치
+# 설치
 - Download Aerobase Server
-  - aerobase-2.42.[deb|rpm|msi]
-  - aerobase-iam-2.4.2.[deb.rpm|msi]
+  - aerobase-2.4.3.[deb|rpm|msi]
+  - aerobase-iam-2.4.3.[deb.rpm|msi]
 
 - Install packages
   - yum/apt install openjdk-8-jdk
-  - yum/apt install aerobase_-2.4.2*.[rpm/deb] aerobase-iam-2.4.2*.[rpm/deb]
-
-- Install packages with docker
-  - docker run -d aerobase/aerobase
-
+  - yum/apt install aerobase_-2.4.3*.[rpm/deb] aerobase-iam-2.4.3*.[rpm/deb]
+  
 - Configure the external URL
   - 외부접속을 위해 FQDN 설정
+
+- Run packages with docker
+  - docker run -d aerobase/aerobase
+
+
+
+
