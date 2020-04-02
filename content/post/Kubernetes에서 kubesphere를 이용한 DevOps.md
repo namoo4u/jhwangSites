@@ -148,6 +148,15 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 
     ** node exporter 에 오류가 있는것은 나중에 확인 필요하다 **
 
+    - Prometheus Node-Exporter 가 제대로 실행되지 않음
+      
+      "linux mounts: Path / is mounted on / but it is not a shared or slave mount." 오류 발생
+      
+      daemonset 에서 / Volume 을 삭제하고 다시 기동하면 정상적으로 기동함
+      ![](/img/kubesphere/ks-web-ui-03.png)
+
+      node-exporter 정상 기동 후에 CPU / Memroy / Load 가 정상적으로 표시됨
+
 
 # Deploy Sample Application
 
@@ -382,3 +391,8 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 
   ![](/img/kubesphere/app-helm-templates.png)
 
+
+
+
+
+## 기타
