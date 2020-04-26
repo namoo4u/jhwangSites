@@ -3,7 +3,6 @@ title = "Hugo Blog를 github.io page 로 서비스하기"
 date = "2016-11-08T14:17:23+09:00"
 categories  = ["Blog"]
 tags = ["blog", "hugo", "github.io"]
-
 +++
 
 ### Hugo Blog Server

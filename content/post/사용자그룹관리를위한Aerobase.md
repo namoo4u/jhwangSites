@@ -2,6 +2,7 @@
 title: "사용자/그룹 관리를 위한 Aerobase"
 date: 2020-03-31T00:00:00+00:00
 draft: true
+tags: ["IAM", "LDAP"]
 ---
 
 # Aerobase
