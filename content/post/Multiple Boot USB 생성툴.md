@@ -1,6 +1,6 @@
 ---
 title: "Ventoy: Multiple Boot USB 디스크 생성툴"
-date: 2017-11-23T10:46:06+09:00
+date: 2020-04-23T10:46:06+09:00
 draft: true
 tags: ["util", "usb", "iso"]
 ---
