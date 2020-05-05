@@ -9,4 +9,4 @@ tags: ["springboot", "r2dbc", "mysql"]
 
 
 [참고 URL]
-https://docs.microsoft.com/en-us/azure/java/spring-framework/configure-spring-data-r2dbc-with-azure-mysql
+https://docs.microsoft.com/en-us/azure/java/spring-framework/configure-spring-data-r2dbc-with-azure-mysql∏
