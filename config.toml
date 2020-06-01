@@ -38,7 +38,7 @@ copyright = "Jupil Hwang All rights reserved"
 #pygmentsUseClasses = "true"
 
 featured_tags = "true"
-featured_condition_size = 3
+featured_condition_size = 5
 
 sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
 sidebar_avatar = "/img/jhwang.jpg"
