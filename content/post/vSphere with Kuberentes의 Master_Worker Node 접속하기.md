@@ -85,7 +85,7 @@ ssh -i tkg-cluster-1-ssh-private.key root@<tkg-clsuter-node-ip>
 apiVersion: v1
 kind: Pod
 metadata:  
-  name: jumpbox  
+  name: jumpbox
   namespace: ns1
 spec:  
   containers:  
@@ -100,7 +100,7 @@ spec:
   volumes:
   - name: ssh-key
     secret:
-      secretName: tkg-cluster-1-ssh
+      secretName: tkg-cluster-ssh
 ```
 
 ![](/img/tanzu/vsphere_supervisor_jumpbox_pod.png)

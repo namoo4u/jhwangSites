@@ -89,26 +89,26 @@ OpenPitrix 를 사용한 App Store도 제공한다.
 
 - tiller 서비스 어카운트/클러스터롤 생성
   ```yaml
-  kubectl apply -f -<<-EOF
-  apiVersion: v1
-  kind: ServiceAccount
-  metadata:
-    name: tiller
-    namespace: kube-system
-  ---
-  apiVersion: rbac.authorization.k8s.io/v1beta1
-  kind: ClusterRoleBinding
-  metadata:
-    name: tiller
-  roleRef:
-    apiGroup: rbac.authorization.k8s.io
-    kind: ClusterRole
-    name: cluster-admin
-  subjects:
-  - kind: ServiceAccount
-    name: tiller
-    namespace: kube-system
-  EOF
+kubectl apply -f -<<-EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: tiller
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: tiller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: tiller
+  namespace: kube-system
+EOF
   ```
 
 - helm init
