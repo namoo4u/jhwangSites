@@ -11,7 +11,7 @@ tags: ["kubernetes", "lb", "LoadBalancer", "metallb"]
  
 # kubectl create ns metallb-system
  
-# kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.2/manifests/metallb.yaml -n metallb-system
+# kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/metallb.yaml -n metallb-system
 podsecuritypolicy.policy/controller created
 podsecuritypolicy.policy/speaker created
 serviceaccount/controller created
@@ -42,7 +42,7 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 192.168.100.50-192.168.100.65
+      - 10.193.147.200-10.193.147.250
  
 # kubectl apply -f tkg/metallb-configmap.yaml
 configmap/config created
