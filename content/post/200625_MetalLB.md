@@ -7,11 +7,16 @@ tags: ["kubernetes", "lb", "LoadBalancer", "metallb"]
 # MetalLB
 
 ```bash
-# kubectl config use-context my-cluster-admin@my-cluster
+# context 
+kubectl config use-context my-cluster-admin@my-cluster
+
+## MetalLB는 kube-proxy의 IPVS를 사용할 때 Strict ARP가 필요하다
+kubectl get configmap kbue-proxy -n kube-system -o yaml | sed -e "s/strictARP: false/strictARP: true/" | kubectl apply -f - -n kube-system
  
-# kubectl create ns metallb-system
+kubectl create ns metallb-system
  
-# kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/metallb.yaml -n metallb-system
+# Deploy MetalLB
+kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.9.3/manifests/metallb.yaml -n metallb-system
 podsecuritypolicy.policy/controller created
 podsecuritypolicy.policy/speaker created
 serviceaccount/controller created
@@ -27,10 +32,12 @@ rolebinding.rbac.authorization.k8s.io/pod-lister created
 daemonset.apps/speaker created
 deployment.apps/controller created
  
-# kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
+# MetalLB 설치시 필요
+kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
 secret/memberlist created
  
-# cat /tkg/metallb-configmap.yaml
+# 
+cat /tkg/metallb-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -44,10 +51,12 @@ data:
       addresses:
       - 10.193.147.200-10.193.147.250
  
-# kubectl apply -f tkg/metallb-configmap.yaml
+# 
+kubectl apply -f tkg/metallb-configmap.yaml
 configmap/config created
  
-# kubectl get all -n metallb-system
+# 
+kubectl get all -n metallb-system
 NAME                              READY   STATUS    RESTARTS   AGE
 pod/controller-7fb45985f9-68kxf   1/1     Running   0          29s
 pod/speaker-9kkk9                 1/1     Running   0          29s
