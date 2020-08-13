@@ -1,15 +1,3 @@
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/budparr/gohugo-theme-ananke.git
-[submodule "themes/hugo-hello-programmer-theme"]
-	path = themes/hugo-hello-programmer-theme
-	url = https://github.com/lubang/hugo-hello-programmer-theme.git
-[submodule "themes/hugo-theme-learn"]
-	path = themes/hugo-theme-learn
-	url = https://github.com/matcornic/hugo-theme-learn.git
-[submodule "themes/hugo-theme-chunky-poster"]
-	path = themes/hugo-theme-chunky-poster
-	url = https://github.com/puresyntax71/hugo-theme-chunky-poster.git
 # [submodule "themes/hugo-theme-cleanwhite"]
 # 	path = themes/hugo-theme-cleanwhite
 # 	url = https://github.com/zhaohuabing/hugo-theme-cleanwhite.git
