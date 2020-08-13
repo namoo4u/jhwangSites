@@ -76,3 +76,8 @@ href =  "/page/about"
     startLevel = 1
   [markup.highlight]
     style = "dracula"
+
+[sitemap]
+  changefreq = "daily"
+  filename = "sitemap.xml"
+  priority = 0.5
