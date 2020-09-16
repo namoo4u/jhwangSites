@@ -12,11 +12,10 @@ preserveTaxonomyNames = true
 copyright = "Jupil Hwang All rights reserved"
 googleAnalytics = "UA-117423189-1"
 ba_track_id = "UA-117423189-1"
-paginate= 2
+paginate= 24
 #theme = "hugo-multi-bootswatch"
 #theme= "hugo-theme-chunky-poster"
 theme= "hugo-theme-cleanwhite"
-
 enableRobotsTXT = true
 canonifyURLs = true
 
@@ -26,7 +25,6 @@ home = ["HTML", "RSS", "JSON"]
 [params]
 header_image = "img/home-bg.jpg"
 image_404 = "img/404-bg.jpg"
-
 languagecode = "en-US"
 Author = "Jupil Hwang (@jupil_hwang)"
 googlefonts = "https=//fonts.googleapis.com/css?family=Lobster|Lato=400,700"
@@ -35,17 +33,13 @@ logofontfamily = "San Francisco Display,Malgun Gothic,'맑은 고딕',Lobster, c
 copyright = "Jupil Hwang All rights reserved"
 #pygmentsCodeFences = "true"
 #pygmentsUseClasses = "true"
-
 featured_tags = "true"
 featured_condition_size = 5
-
 sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
 sidebar_avatar = "/img/jhwang.jpg"
-
 friends = false
 bookmarks = false
 about_me = true
-
 custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
 custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
