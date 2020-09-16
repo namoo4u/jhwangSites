@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /search/
-Allow: /post
+Allow: *
 Sitemap: https://jupilhwang.github.io/sitemap.xml
 
 
