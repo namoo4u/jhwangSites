@@ -1,2 +1,6 @@
 User-agent: *
+Disallow: /search/
+Allow: /post
+Sitemap: https://jupilhwang.github.io/sitemap.xml
+
 
