@@ -12,17 +12,16 @@ preserveTaxonomyNames = true
 copyright = "Jupil Hwang All rights reserved"
 googleAnalytics = "UA-117423189-1"
 ba_track_id = "UA-117423189-1"
-paginate= 20
+paginate= 2
 #theme = "hugo-multi-bootswatch"
 #theme= "hugo-theme-chunky-poster"
 theme= "hugo-theme-cleanwhite"
 
-enableGitInfo = true
 enableRobotsTXT = true
 canonifyURLs = true
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
 
 [params]
 header_image = "img/home-bg.jpg"
@@ -50,6 +49,11 @@ about_me = true
 custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
 custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
 [params.social]
 rss     = true
 facebook = "https://www.facebook.com/jupilhwang"
@@ -76,8 +80,3 @@ href =  "/page/about"
     startLevel = 1
   [markup.highlight]
     style = "dracula"
-
-[sitemap]
-  changefreq = "daily"
-  filename = "sitemap.xml"
-  priority = 0.5
