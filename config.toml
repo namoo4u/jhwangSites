@@ -44,7 +44,7 @@ custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animat
 custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
 [sitemap]
-ChangeFreq = "weekly"
+ChangeFreq = "daily"
 Filename = "sitemap.xml"
 Priority = 0.5
 
