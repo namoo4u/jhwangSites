@@ -36,7 +36,7 @@ cloud image 는 cloud-init과 cloud-config을 사용하도록 만들어진 image
 
 - 기본으로 ubuntu 라는 사용자가 생성되어 있으며, IP address 는 DHCP로 할당 받도록 되어 있다
 
-user-data
+meta-data
 ```
 network:
   version: 2
@@ -49,15 +49,20 @@ network:
       gateway4: 10.213.89.1
       nameservers:
         addresses: [10.192.2.10,10.192.2.11,8.8.8.8]
+```
+https://raw.githubusercontent.com/jupilhwang/cli-install/master/network
+
+user-data
+```
 users:
   - default
 ssh_pwauth: True
 chpasswd: { expire: False}
 runcmd:
   - curl -sSL https://raw.githubusercontent.com/jupilhwang/cli-install/master/init.sh | bash - 
+final_message: "The system is finally up, after $UPTIME seconds"
 ```
 
 user-data는 base64 encoded data 로 제공이 되어야 하는데, 위의 yaml을 encode 하면 아래와 같다.
 
-bmV0d29yazoKICB2ZXJzaW9uOiAyCiAgZXRoZXJuZXRzOgogICAgaWQwOgogICAgICBtYXRjaDogeyBuYW1lOiBlbnMqIH0KICAgICAgZGhjcDQ6IGZhbHNlCiAgICAgIGRoY3A2OiBmYWxzZQogICAgICBhZGRyZXNzZXM6IFsxMC4yMTMuODkuMjU0LzI0XQogICAgICBnYXRld2F5NDogMTAuMjEzLjg5LjEKICAgICAgbmFtZXNlcnZlcnM6CiAgICAgICAgYWRkcmVzc2VzOiBbMTAuMTkyLjIuMTAsMTAuMTkyLjIuMTEsOC44LjguOF0KdXNlcnM6CiAgLSBkZWZhdWx0CnNzaF9wd2F1dGg6IFRydWUKY2hwYXNzd2Q6IHsgZXhwaXJlOiBGYWxzZX0KcnVuY21kOgogIC0gY3VybCAtc1NMIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9qdXBpbGh3YW5nL2NsaS1pbnN0YWxsL21hc3Rlci9pbml0LnNoIHwgYmFzaCAtIAo=
-
+dXNlcnM6CiAgLSBkZWZhdWx0CnNzaF9wd2F1dGg6IFRydWUKY2hwYXNzd2Q6IHsgZXhwaXJlOiBGYWxzZX0KcnVuY21kOgogIC0gY3VybCAtc1NMIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9qdXBpbGh3YW5nL2NsaS1pbnN0YWxsL21hc3Rlci9pbml0LnNoIHwgYmFzaCAtIApmaW5hbF9tZXNzYWdlOiAiVGhlIHN5c3RlbSBpcyBmaW5hbGx5IHVwLCBhZnRlciAkVVBUSU1FIHNlY29uZHMiCg==
