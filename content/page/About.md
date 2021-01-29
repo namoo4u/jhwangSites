@@ -9,14 +9,12 @@ menu = "main"
 
 - 이름 :  황주필 (@jupil.hwang / @namoo4u)
 
-- Software Architecture, Cloud Platform, Linux and Open Source, Container Service(Docker), Java / Groovy, ML, Docker & Kubernetes, Serverless, Functions, Microservice Architecture, DevOps, Blockchain, Hyperledger Fabric
+- Software Architecture, Cloud Platform, Linux and Open Source, Container Service(Docker), Java / Kotlin, AI/ML/Bigdata, Kubernetes, Serverless, Microservice Architecture, DevOps, Blockchain/Hyperledger Fabric
 
 - [...ing]
-  - Kubernetes + Istio + (Vizceral, Zipkin)
-  - Serverless with Kubernetes and Fn Project
+  - Kubernetes
   - Microservices Architecture
-  - Microprofile
-  - Blockchain - Hyperledger Fabric
-  - Kotlin
-  - Arduino
+  - Kotlin Server side and Kotlin/native
+  - RSP / Arduino / Single Board Compute
+  - Spring Native : Spring Boot + GraalVM
 
