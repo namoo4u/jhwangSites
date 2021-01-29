@@ -9,7 +9,7 @@ menu = "main"
 
 - 이름 :  황주필 (@jupil.hwang / @namoo4u)
 
-- Software Architecture, Cloud Platform, Linux and Open Source, Container Service(Docker), Java / Kotlin, AI/ML/Bigdata, Kubernetes, Serverless, Microservice Architecture, DevOps, Blockchain/Hyperledger Fabric
+- Software Architect, Cloud Platform Architect, Linux and Open Source, Container Service(Docker), Java / Kotlin, AI/ML/Bigdata, Kubernetes, Serverless, Microservice Architecture, DevOps, Blockchain/Hyperledger Fabric
 
 - [...ing]
   - Kubernetes
