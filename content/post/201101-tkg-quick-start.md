@@ -200,8 +200,8 @@ vMLP 는 VMware 인프라위에 Machine Learning 워크로드를 효과적으로
 kubectl get svc -n istio-system istio-ingressgateway
 ```
 
-- kubeflow UI --> http://<endpoint> 
-- vMLP (e.g. Data Manager) UI ---> http://<endpoint>/vmlp/
-- MLflow UI ---> http://<endpoint>/mlflow/
+- kubeflow UI --> http://endpoint
+- vMLP (e.g. Data Manager) UI ---> http://endpoint/vmlp/
+- MLflow UI ---> http://endpoint/mlflow/
 
 admin@kubeflow.org / 12341234 
