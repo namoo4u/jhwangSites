@@ -91,7 +91,7 @@ kubectl apply -f contour-extension.yaml
 ```bash
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.4.0/components.yaml
 ```
-혹 x509 error 와 같은 에러가  발생하면
+혹 사설 인증서로 인해서 x509 error 와 같은 에러가  발생하면
 ```
 command:
 - /metrics-server
