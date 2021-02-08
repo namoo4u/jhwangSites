@@ -4,7 +4,7 @@ date: 2020-11-01T00:00:00+00:00
 tags: ["kubernetes", "tkg", "tanzu"]
 ---
 
-
+# TKG Components
 
 ## Storage Class
 
@@ -12,9 +12,10 @@ tags: ["kubernetes", "tkg", "tanzu"]
 ```bash
 govc tags.category.create tkg-storage-category
 govc tags.create -c tkg-storage-category tkg-storage
-goc tags.attach tkg-storage /Datacenter/datastore/LUN01
+govc tags.attach tkg-storage /Datacenter/datastore/LUN01
 ```
 
+- tkg cluster 생성 시 자동으로 만들어 진 default sc 를 삭제하고 새로 생성한다.
 ```bash
 k delete sc default
 
